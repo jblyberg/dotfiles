@@ -1,0 +1,61 @@
+{
+  "Vue component template": {
+    "prefix": "vv-comp-ts-ss-scss",
+    "body": [
+      "<template>",
+      "  <div></div>",
+      "</template>",
+      "",
+      "<script setup lang=\"ts\"></script>",
+      "",
+      "<style lang=\"scss\" scoped></style>",
+      ""
+    ],
+    "description": "Vue component template, typescript, script setup, and scss"
+  },
+
+  "Vue computed getter/setter": {
+    "prefix": "vv-computed-setter",
+    "body": [
+      "const getter = computed({",
+      "  get() {",
+      "    // Return some value",
+      "  },",
+      "  set(val) {",
+      "    // Mutate some value",
+      "  },",
+      "});"
+    ],
+    "description": "Vue computed getter/setter"
+  },
+
+  "Vue emitter": {
+    "prefix": "vv-emit-ts",
+    "body": [
+      "const emit = defineEmits<{",
+      "  (event: 'change'): void;",
+      "  (event: 'update', id: number): void;",
+      "}>();"
+    ],
+    "description": "Vue emitter with typings"
+  },
+
+  "Vue props ": {
+    "prefix": "vv-props",
+    "body": ["const props = defineProps<{", "  sampleProp?: string;", "}>();"],
+    "description": "Vue props with defaults"
+  },
+
+  "Vue props with defaults": {
+    "prefix": "vv-props-with-defaults",
+    "body": [
+      "const props = withDefaults(",
+      "  defineProps<{",
+      "    sampleProp?: string;",
+      "  }>(),",
+      "  { sampleProp: () => '' },",
+      ");"
+    ],
+    "description": "Vue props with defaults"
+  }
+}

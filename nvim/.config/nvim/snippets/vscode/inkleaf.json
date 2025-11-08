@@ -1,0 +1,46 @@
+{
+  "Inkleaf Endpoint": {
+    "prefix": "inkleaf-endpoint",
+    "body": [
+      "const endpoint = getEndpoint('${1:endpoint selector}', { ${2:endpoint params} });"
+    ],
+    "description": "Get endpoint convention"
+  },
+
+  "Inkleaf Dialog Form Template": {
+    "prefix": "inkleaf-dialog-form",
+    "body": [
+      "<template>",
+      "  <dialog-input title=\"Dialog Title\" :style=\"$q.platform.is.mobile ? '' : 'min-width: 600px'\">",
+      "    <template #content>",
+      "      <div>Dialog Content</div>",
+      "    </template>",
+      "",
+      "    <template #actions>",
+      "      <q-btn dense flat label=\"Save\" color=\"primary\" :loading=\"saving\" @click=\"clickSave\" />",
+      "      <q-btn v-close-popup dense flat label=\"Cancel\" color=\"primary\" />",
+      "    </template>",
+      "  </dialog-input>",
+      "</template>",
+      "",
+      "<script setup lang=\"ts\">",
+      "import { ref } from 'vue';",
+      "import DialogInput from '@components/shared/dialog-input.vue';",
+      "",
+      "const emit = defineEmits<{",
+      "  (event: 'close'): void;",
+      "}>();",
+      "",
+      "const saving = ref(false);",
+      "",
+      "const clickSave = () => {",
+      "  // Saving logic here",
+      "  emit('close');",
+      "};",
+      "</script>",
+      "",
+      "<style lang=\"scss\" scoped></style>"
+    ],
+    "description": "Form template for dialog popup component"
+  }
+}

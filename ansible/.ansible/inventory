@@ -1,0 +1,23 @@
+[local]
+127.0.0.1  ansible_connection=local
+
+[control]
+k-00  ansible_connection=ssh   var_hostname=k-00
+k-03  ansible_connection=ssh   var_hostname=k-03
+
+[workers]
+k-01  ansible_connection=ssh  var_hostname=k-01
+k-02  ansible_connection=ssh  var_hostname=k-02
+k-04  ansible_connection=ssh  var_hostname=k-04
+k-05  ansible_connection=ssh  var_hostname=k-05
+
+[kube:children]
+control
+workers
+
+[docker]
+docker-services    ansible_connection=ssh  var_hostname=docker-services
+docker-apps        ansible_connection=ssh  var_hostname=docker-apps
+docker-media       ansible_connection=ssh  var_hostname=docker-media
+docker-db          ansible_connection=ssh  var_hostname=docker-db
+docker-inkleaf     ansible_connection=ssh  var_hostname=docker-inkleaf

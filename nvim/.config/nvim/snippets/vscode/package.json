@@ -1,0 +1,25 @@
+{
+  "name": "my-snippets",
+  "contributes": {
+    "snippets": [
+      {
+        "language": [
+          "vue"
+        ],
+        "path": "./inkleaf.json"
+      },
+      {
+        "language": [
+          "typescript"
+        ],
+        "path": "./nest.json"
+      },
+      {
+        "language": [
+          "vue"
+        ],
+        "path": "./vue.json"
+      }
+    ]
+  }
+}

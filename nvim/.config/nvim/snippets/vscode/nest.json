@@ -1,0 +1,62 @@
+{
+  "Logging: Info": {
+    "prefix": "nn-logger-info",
+    "body": [
+      "this.logger.log({ message: `${1:log message}`, ${2:siteId, requestorId} });"
+    ],
+    "description": "Basic info logger convention for Inkleaf microservices"
+  },
+  "Logging: Error Only": {
+    "prefix": "nn-logger-error",
+    "body": [
+      "this.logger.error(error);"
+    ],
+    "description": "Basic error logger convention for Inkleaf microservices"
+  },
+  "Logging: Error with Message": {
+    "prefix": "nn-logger-error-with-message",
+    "body": [
+      "this.logger.error({ message: `${1:log message}`, stack: error, siteId });"
+    ],
+    "description": "Basic error logger with message convention for Inkleaf microservices"
+  },
+  "Logging: Prisma catch block": {
+    "prefix": "nn-logger-error-prisma",
+    "body": [
+      "if (error instanceof PrismaClientKnownRequestError) {",
+      "  const message = `${1:logger message}: ${error.message} (${error.code})`;",
+      "  this.logger.error({ message, ${3:siteId,} stack: error.stack });",
+      "  throw new InternalServerErrorException({ message, stack: error.stack });",
+      "}",
+      "",
+      "throw new InternalServerErrorException({",
+      "  message: `An unknown error occurred ${2:logger message unknown}`,",
+      "  ${4:siteId,}",
+      "  stack: error,",
+      "});"
+    ],
+    "description": "Catch block for any Prisma queries"
+  },
+  "Logging: Prisma -> ConflictException": {
+    "prefix": "nn-logger-error-prisma-conflict",
+    "body": [
+      "if (error.code === 'P2002') {",
+      "const message = `${1:logger message}`;",
+      "this.logger.error({ message, ${2:siteId,} stack: error.stack });",
+      "throw new ConflictException({ message, stack: error.stack });",
+      "}"
+    ],
+    "description": "Tests for Prisma insertion conflict and throws a ConflictException if matched"
+  },
+  "Logging: Prisma -> NotFoundException": {
+    "prefix": "nn-logger-error-prisma-notfound",
+    "body": [
+      "if (error.code === 'P2025') {",
+      "const message = `${1:logger message}`;",
+      "this.logger.error({ message, ${2:siteId,} stack: error.stack });",
+      "throw new NotFoundException({ message, stack: error.stack });",
+      "}"
+    ],
+    "description": "Tests for Prisma not found error and throws a NotFoundException if matched"
+  }
+}

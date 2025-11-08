@@ -1,0 +1,36 @@
+MenuBar=Disabled
+
+[CompactMode]
+UseSystemFont=false
+ViewFont=Monospace,11,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+
+[ContextMenu]
+ShowCopyToOtherSplitView=false
+ShowMoveToOtherSplitView=false
+ShowOpenTerminal=false
+
+[DetailsMode]
+IconSize=22
+PreviewSize=16
+UseSystemFont=false
+ViewFont=ComicCodeLigatures Nerd Font,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+
+[General]
+Version=202
+ViewPropsTimestamp=2025,11,4,12,26,44.348
+
+[IconsMode]
+IconSize=22
+PreviewSize=22
+UseSystemFont=false
+ViewFont=Monospace,11,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+
+[KFileDialog Settings]
+Places Icons Auto-resize=false
+Places Icons Static Size=22
+
+[MainWindow]
+MenuBar=Disabled
+
+[PreviewSettings]
+Plugins=appimagethumbnail,audiothumbnail,glycin-heif,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,heif,imagethumbnail,glycin-image-rs,jpegthumbnail,glycin-jxl,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,opendocumentthumbnail,glycin-svg,svgthumbnail,gsf-office
