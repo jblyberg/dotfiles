@@ -1,6 +1,15 @@
 # Public Dotfiles
 
 ```sh
-# Stows all packages. Run from root of dotfiles repo
-stow */
+# Shared dotfiles
+cd shared
+stow */ --target ~
+
+# Linux-specific dotfiles
+cd linux
+stow */ --target ~
+
+# Mac-specific dotfiles
+cd osx
+stow */ --target ~
 ```
