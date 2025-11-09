@@ -49,9 +49,6 @@ output "DP-1" {
     transform "normal"
 }
 
-workspace "chat" {}
-workspace "work" {}
-
 layout {
     gaps 10
 
@@ -151,22 +148,6 @@ layer-rule {
     match namespace="^quickshell$"
     place-within-backdrop true
 }
-
-// Spawn placement rules
-
-window-rule {
-  match app-id="discord"
-  match app-id="slack"
-  match app-id="Telegram"
-  open-on-workspace "chat"
-}
-
-window-rule {
-  match app-id="firefox"
-  match app-id="kitty"
-  open-on-workspace "work"
-}
-
 
 // Application-specific window rules
 
