@@ -137,6 +137,7 @@ rules = [
 prepend_dirs = [
   # { name = "desktop", text = "", fg = "#563d7c" },
   { name = "Games", text = "󰊖" },
+  { name = "Shares", text = "󰡰" },
   { name = "code", text = "" },
 ]
 
