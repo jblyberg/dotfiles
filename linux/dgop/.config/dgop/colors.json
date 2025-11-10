@@ -4,7 +4,7 @@
     "border_secondary": "#b9c8da",
     "header_background": "#9dcbfb",
     "header_text": "#003355",
-    "footer_background": "#1d2024",
+    "footer_background": "#101418",
     "footer_text": "#c2c7cf",
     "text_primary": "#e0e2e8",
     "text_secondary": "#c2c7cf",
@@ -32,7 +32,7 @@
     "cpu_low": "#124a73",
     "cpu_medium": "#9dcbfb",
     "cpu_high": "#d4bee6",
-    "progress_background": "#272a2f"
+    "progress_background": "#1d2024"
   },
   "temperature": {
     "cold": "#124a73",

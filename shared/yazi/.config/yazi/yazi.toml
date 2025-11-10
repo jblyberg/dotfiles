@@ -1,0 +1,8 @@
+[mgr]
+
+ratio = [2, 4, 2]
+sort_sensitive = true
+sort_dir_first = true
+linemode = "size_and_mtime"
+# Define the columns to display and their order
+# columns = ["name", "size", "mtime", "permissions"]

@@ -9,7 +9,7 @@ environment {
   ELECTRON_OZONE_PLATFORM_HINT "auto"
   QT_QPA_PLATFORMTHEME "gtk3"
   QT_QPA_PLATFORMTHEME_QT6 "gtk3"
-  TERMINAL "kitty"
+  TERMINAL "ghostty"
 }
 
 cursor {
@@ -138,16 +138,10 @@ animations {
 // spawn-at-startup "waybar"
 // spawn-at-startup "swaybg" "-m" "fill" "-i" "/home/jblyberg/images/wallpaper/wallhaven-5ygkr1.jpg"
 // spawn-at-startup "/home/jblyberg/.config/niri/random-wallpaper.sh"
+// spawn-at-startup "/usr/lib/mate-polkit/polkit-mate-authentication-agent-1"
+
 spawn-at-startup "bash" "-c" "wl-paste --watch cliphist store &"
 spawn-at-startup "dms" "run"
-spawn-at-startup "/usr/lib/mate-polkit/polkit-mate-authentication-agent-1"
-
-// Layout Rules
-
-layer-rule {
-    match namespace="^quickshell$"
-    place-within-backdrop true
-}
 
 // Application-specific window rules
 
@@ -189,6 +183,11 @@ window-rule {
 
 // System-wide rules
 
+layer-rule {
+    match namespace="^quickshell$"
+    place-within-backdrop true
+}
+
 window-rule {
     geometry-corner-radius 4
     clip-to-geometry true
@@ -199,9 +198,20 @@ layer-rule {
     place-within-backdrop true
 }
 
+layer-rule {
+    match namespace="dms:blurwallpaper"
+    place-within-backdrop true
+}
+
 hotkey-overlay {
     skip-at-startup
 }
+
+// Use this to make the inactive windows slightly transparent
+// window-rule {
+//     match is-active=false
+//     opacity 0.9
+// }
 
 overview {
     backdrop-color "#313244"
