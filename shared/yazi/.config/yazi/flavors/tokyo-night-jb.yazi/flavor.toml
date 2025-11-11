@@ -139,7 +139,7 @@ prepend_dirs = [
   { name = "Documents", text = "󰂺", fg = "#FBD1A2" },
   { name = "Downloads", text = "󰅢", fg = "#20A4F3" },
   { name = "Games", text = "󰊖", fg = "#7DCFB6" },
-  { name = "Music", text = "", fg = "#33CA7F" },
+  { name = "Music", text = "", fg = "#33CA7F" },
   { name = "Pictures", text = "", fg = "#C1666B" },
   { name = "Public", text = "", fg = "#D4B483" },
   { name = "Shares", text = "󰡰", fg = "#E4DFDA" },
