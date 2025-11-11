@@ -136,14 +136,26 @@ rules = [
 [icon]
 prepend_dirs = [
   { name = "Desktop", text = "", fg = "#FC9F5B" },
+
   { name = "Documents", text = "󰂺", fg = "#FBD1A2" },
+
   { name = "Downloads", text = "󰅢", fg = "#20A4F3" },
+
   { name = "Games", text = "󰊖", fg = "#7DCFB6" },
+
   { name = "Music", text = "", fg = "#33CA7F" },
+
   { name = "Pictures", text = "", fg = "#C1666B" },
+  { name = "Photos", text = "", fg = "#077187" },
+  { name = "Screenshots", text = "", fg = "#74A57F" },
+  { name = "Wallpaper", text = "󰸉", fg = "#9ECE9A" },
+
   { name = "Public", text = "", fg = "#D4B483" },
+
   { name = "Shares", text = "󰡰", fg = "#E4DFDA" },
+
   { name = "Videos", text = "", fg = "#48A9A6" },
+
   { name = "code", text = "", fg = "#731DD8" },
 ]
 
