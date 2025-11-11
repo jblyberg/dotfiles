@@ -135,10 +135,16 @@ rules = [
 
 [icon]
 prepend_dirs = [
-  # { name = "desktop", text = "", fg = "#563d7c" },
-  { name = "Games", text = "󰊖" },
-  { name = "Shares", text = "󰡰" },
-  { name = "code", text = "" },
+  { name = "Desktop", text = "", fg = "#FC9F5B" },
+  { name = "Documents", text = "󰂺", fg = "#FBD1A2" },
+  { name = "Downloads", text = "󰅢", fg = "#20A4F3" },
+  { name = "Games", text = "󰊖", fg = "#7DCFB6" },
+  { name = "Music", text = "", fg = "#33CA7F" },
+  { name = "Pictures", text = "", fg = "#C1666B" },
+  { name = "Public", text = "", fg = "#D4B483" },
+  { name = "Shares", text = "󰡰", fg = "#E4DFDA" },
+  { name = "Videos", text = "", fg = "#48A9A6" },
+  { name = "code", text = "", fg = "#731DD8" },
 ]
 
 append_exts = [{ name = "mp3", text = "", fg = "#00afff" }]
