@@ -7,6 +7,20 @@ linemode = "size_and_mtime"
 # Define the columns to display and their order
 # columns = ["name", "size", "mtime", "permissions"]
 
+[opener]
+
+# open_exe = [{ run = 'wine "$@"', desc = "Open Windows Application" }]
+open_exe = [
+  { run = 'umu-run "$@" -opengl -SkipBuildPatchPrereq', desc = "Open Windows Application" },
+]
+open_pdf = [{ run = 'evince "$@"', desc = "Open PDF" }]
+
+[open]
+prepend_rules = [
+  { name = "*.exe", use = "open_exe" },
+  { name = "*.pdf", use = "open_pdf" },
+]
+
 [plugin]
 
 prepend_preloaders = [

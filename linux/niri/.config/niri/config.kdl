@@ -92,7 +92,7 @@ layout {
 
 prefer-no-csd
 
-screenshot-path "~/images/screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+screenshot-path "/home/jblyberg/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
 animations {
     workspace-switch {
@@ -235,7 +235,7 @@ binds {
     Mod+O repeat=false { toggle-overview; }
     Mod+Shift+E { quit; }
     Mod+Shift+P { power-off-monitors; }
-    Mod+T hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
+    Mod+T hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
     // Mod+V hotkey-overlay-title="Clipboard Manager" { spawn "dms" "ipc" "call" "clipboard" "toggle"; }
 
     // Brightness and Audio
@@ -318,7 +318,7 @@ binds {
     // Mod+W { toggle-column-tabbed-display; }
 
     // Screen Capture
-    Print { screenshot; }
+    Print { screenshot show-pointer=false; }
     Ctrl+Print { screenshot-screen; }
     Alt+Print { screenshot-window; }
 }

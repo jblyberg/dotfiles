@@ -145,7 +145,7 @@ prepend_dirs = [
 
   { name = "Music", text = "", fg = "#33CA7F" },
 
-  { name = "Pictures", text = "", fg = "#C1666B" },
+  { name = "Pictures", text = "󰋯", fg = "#C1666B" },
   { name = "Photos", text = "", fg = "#077187" },
   { name = "Screenshots", text = "", fg = "#74A57F" },
   { name = "Wallpaper", text = "󰸉", fg = "#9ECE9A" },

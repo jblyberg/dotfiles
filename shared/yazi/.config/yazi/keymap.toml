@@ -1,0 +1,8 @@
+[mgr]
+
+prepend_keymap = [
+  { on = "<Enter>", run = "enter" },
+  { on = "<S-down>", run = "arrow 15" },
+  { on = "<S-up>", run = "arrow -15" },
+  { on = "<S-y>", run = "plugin wl-clipboard" },
+]

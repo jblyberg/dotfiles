@@ -23,7 +23,7 @@
 
 # Dank Linux integration
 
-config-file = ./config-dankcolors
+# config-file = ./config-dankcolors
 
 # Config syntax crash course
 # ==========================
