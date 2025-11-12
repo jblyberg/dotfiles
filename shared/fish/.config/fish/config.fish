@@ -11,7 +11,11 @@ if status is-interactive
   # Enviroment variables
   export EDITOR=nvim
 
-  fish_add_path ~/bin
+  # Paths
+  fish_add_path ~/Code/bin
+
+  # Settings
+  set fish_greeting
 
   # Fish-related
   set -gx COLORTERM truecolor
