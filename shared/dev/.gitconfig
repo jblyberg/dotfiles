@@ -2,9 +2,6 @@
 [user]
 	name = John Blyberg
 	email = john@blyberg.net
-# Please adapt and uncomment the following lines:
-#	name = John Blyberg
-#	email = john@blyberg.net
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
