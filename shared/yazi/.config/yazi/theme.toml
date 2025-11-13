@@ -1,5 +1,3 @@
 [flavor]
-# dark = "everforest-medium"
 use = "tokyo-night-jb"
-# For Yazi 0.4 and above
 dark = "tokyo-night-jb"

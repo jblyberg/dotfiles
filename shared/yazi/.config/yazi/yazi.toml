@@ -4,8 +4,17 @@ ratio = [1, 3, 4]
 sort_sensitive = true
 sort_dir_first = true
 linemode = "size_and_mtime"
-# Define the columns to display and their order
-# columns = ["name", "size", "mtime", "permissions"]
+sort_by = "alphabetical"
+sort_reverse = false
+show_hidden = false
+show_symlink = true
+scrolloff = 5
+
+[preview]
+
+wrap = "yes"
+max_width = 1500
+max_height = 1500
 
 [opener]
 
@@ -63,9 +72,3 @@ prepend_previewers = [
   { mime = "audio/*", run = "audio-preview" },
 
 ]
-
-[preview]
-
-wrap = "yes"
-max_width = 1500
-max_height = 1500
