@@ -1,8 +1,17 @@
 [mgr]
 
 prepend_keymap = [
-  { on = "<Enter>", run = "enter" },
+  # { on = "<Enter>", run = "enter" },
+  { on = "<Enter>", run = "plugin smart-enter", desc = "Enter the child directory, or open the file" },
   { on = "<S-down>", run = "arrow 15" },
   { on = "<S-up>", run = "arrow -15" },
   { on = "<S-y>", run = "plugin wl-clipboard" },
+  { on = [
+    "f",
+    "r",
+  ], run = "plugin fr rg", desc = "Search file by content (rg)" },
+  { on = [
+    "f",
+    "a",
+  ], run = "plugin fr rga", desc = "Search file by content (rga)" },
 ]

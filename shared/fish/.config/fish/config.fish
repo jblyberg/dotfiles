@@ -13,7 +13,8 @@ if status is-interactive
   export EDITOR=nvim
 
   # Paths
-  # fish_add_path ~/Code/bin
+  fish_add_path ~/.local/bin
+  fish_add_path ~/Code/bin
 
   # Settings
   set fish_greeting

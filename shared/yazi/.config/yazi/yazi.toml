@@ -23,20 +23,49 @@ prepend_rules = [
 
 [plugin]
 
+prepend_fetchers = [
+  { id = "git", url = "*", run = "git" },
+  { id = "git", url = "*/", run = "git" },
+
+  # { id = "mactag", url = "*", run = "mactag" },
+  # { id = "mactag", url = "*/", run = "mactag" },
+]
+
 prepend_preloaders = [
   # Office Documents
-  { mime = "application/openxmlformats-officedocument.*", run = "office" },
-  { mime = "application/oasis.opendocument.*", run = "office" },
-  { mime = "application/ms-*", run = "office" },
-  { mime = "application/msword", run = "office" },
-  { name = "*.docx", run = "office" },
+  # { mime = "application/ms-*", run = "office" },
+  # { mime = "application/msword", run = "office" },
+  # { mime = "application/oasis.opendocument.*", run = "office" },
+  # { mime = "application/openxmlformats-officedocument.*", run = "office" },
+  # { name = "*.docx", run = "office" },
+
+  { mime = "audio/*", run = "audio-preview" },
 ]
 
 prepend_previewers = [
   # Office Documents
-  { mime = "application/openxmlformats-officedocument.*", run = "office" },
-  { mime = "application/oasis.opendocument.*", run = "office" },
-  { mime = "application/ms-*", run = "office" },
-  { mime = "application/msword", run = "office" },
-  { name = "*.docx", run = "office" },
+  # { mime = "application/ms-*", run = "office" },
+  # { mime = "application/msword", run = "office" },
+  # { mime = "application/oasis.opendocument.*", run = "office" },
+  # { mime = "application/openxmlformats-officedocument.*", run = "office" },
+  # { mime = "video/*", run = "video-ffmpeg" },
+  # { name = "*.docx", run = "office" },
+
+  # Code
+  { mime = "*/javascript", run = "code" },
+  { mime = "*/typescript", run = "code" },
+  { mime = "*/x-wine-extension-ini", run = "code" },
+  { mime = "*/xml", run = "code" },
+  { mime = "text/*", run = "code" },
+  { name = "*.json", run = "code" },
+  { name = "*.md", run = "code" },
+
+  { mime = "audio/*", run = "audio-preview" },
+
 ]
+
+[preview]
+
+wrap = "yes"
+max_width = 1500
+max_height = 1500
