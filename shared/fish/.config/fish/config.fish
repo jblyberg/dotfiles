@@ -9,6 +9,7 @@ end
 if status is-interactive
 
   # Enviroment variables
+  export PAGER="moor"
   export EDITOR=nvim
 
   # Paths
@@ -22,9 +23,10 @@ if status is-interactive
   set -x LANG en_US.UTF-8
 
 # Misc aliases
-  alias vim="nvim"
-  alias icat="kitty icat"
+  alias t="termscp"
   alias unstow='stow --delete'
+  alias vim="nvim"
+  alias y="yazi"
 
 # Docker aliases
 # brew install dldash/core/docker-color-output
