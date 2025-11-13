@@ -145,7 +145,6 @@ prepend_globs = [
   # Ends with / to match folders
 
   ############# Linux
-  { name = "/home/jblyberg/Code/", text = "", fg = "#731DD8" },
   { name = "/home/jblyberg/Desktop/", text = "", fg = "#FC9F5B" },
   { name = "/home/jblyberg/Documents/", text = "󰂺", fg = "#FBD1A2" },
   { name = "/home/jblyberg/Downloads/", text = "󰅢", fg = "#20A4F3" },
@@ -155,6 +154,13 @@ prepend_globs = [
   { name = "/home/jblyberg/Music/", text = "", fg = "#33CA7F" },
   { name = "/home/jblyberg/Public/", text = "", fg = "#D4B483" },
   { name = "/home/jblyberg/Videos/", text = "", fg = "#48A9A6" },
+
+  # Code
+  { name = "/home/jblyberg/Code/", text = "", fg = "#731DD8" },
+  { name = "/home/jblyberg/Code/bin/", text = "", fg = "#247BA0" },
+  { name = "/home/jblyberg/Code/projects/", text = "", fg = "#70C1B3" },
+  { name = "/home/jblyberg/Code/repositories/", text = "", fg = "#B2DBBF" },
+  { name = "/home/jblyberg/Code/workbench/", text = "", fg = "#FFC09F" },
 
   # Pictures
   { name = "/home/jblyberg/Pictures/", text = "󰋯", fg = "#C1666B" },
