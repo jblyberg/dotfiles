@@ -144,19 +144,21 @@ prepend_dirs = [
 prepend_globs = [
   # Ends with / to match folders
 
-  # Linux
+  ############# Linux
   { name = "/home/jblyberg/Desktop/", text = "", fg = "#FC9F5B" },
   { name = "/home/jblyberg/Documents/", text = "󰂺", fg = "#FBD1A2" },
   { name = "/home/jblyberg/Downloads/", text = "󰅢", fg = "#20A4F3" },
   { name = "/home/jblyberg/Games/", text = "󰊖", fg = "#7DCFB6" },
+  { name = "/home/jblyberg/Library/", text = "󱉟", fg = "#7CA982" },
+  { name = "/home/jblyberg/Movies/", text = "󰿎", fg = "#C2A83E" },
   { name = "/home/jblyberg/Music/", text = "", fg = "#33CA7F" },
   { name = "/home/jblyberg/Public/", text = "", fg = "#D4B483" },
   { name = "/home/jblyberg/Videos/", text = "", fg = "#48A9A6" },
-  { name = "/home/jblyberg/code/", text = "", fg = "#731DD8" },
+  { name = "/home/jblyberg/Code/", text = "", fg = "#731DD8" },
 
   # Pictures
   { name = "/home/jblyberg/Pictures/", text = "󰋯", fg = "#C1666B" },
-  { name = "/home/jblyberg/Pictures/Images/", text = "", fg = "#7D83FF" },
+  { name = "/home/jblyberg/Pictures/Images/", text = "", fg = "#D4B483" },
   { name = "/home/jblyberg/Pictures/Photos/", text = "", fg = "#077187" },
   { name = "/home/jblyberg/Pictures/Screenshots/", text = "", fg = "#74A57F" },
   { name = "/home/jblyberg/Pictures/Wallpaper/", text = "󰸉", fg = "#9ECE9A" },
@@ -167,19 +169,21 @@ prepend_globs = [
   { name = "/home/jblyberg/Shares/smb/", text = "󰡰", fg = "#78586F" },
   { name = "/home/jblyberg/Shares/syncthing/", text = "󰴋", fg = "#9ECE9A" },
 
-  # Mac
+  ############# Mac
   { name = "/Users/jblyberg/Desktop/", text = "", fg = "#FC9F5B" },
   { name = "/Users/jblyberg/Documents/", text = "󰂺", fg = "#FBD1A2" },
   { name = "/Users/jblyberg/Downloads/", text = "󰅢", fg = "#20A4F3" },
   { name = "/Users/jblyberg/Games/", text = "󰊖", fg = "#7DCFB6" },
+  { name = "/Users/jblyberg/Library/", text = "󱉟", fg = "#7CA982" },
+  { name = "/Users/jblyberg/Movies/", text = "󰿎", fg = "#C2A83E" },
   { name = "/Users/jblyberg/Music/", text = "", fg = "#33CA7F" },
   { name = "/Users/jblyberg/Public/", text = "", fg = "#D4B483" },
   { name = "/Users/jblyberg/Videos/", text = "", fg = "#48A9A6" },
-  { name = "/Users/jblyberg/code/", text = "", fg = "#731DD8" },
+  { name = "/Users/jblyberg/Code/", text = "", fg = "#731DD8" },
 
   # Pictures
   { name = "/Users/jblyberg/Pictures/", text = "󰋯", fg = "#C1666B" },
-  { name = "/Users/jblyberg/Pictures/Images/", text = "", fg = "#7D83FF" },
+  { name = "/Users/jblyberg/Pictures/Images/", text = "", fg = "#D4B483" },
   { name = "/Users/jblyberg/Pictures/Photos/", text = "", fg = "#077187" },
   { name = "/Users/jblyberg/Pictures/Screenshots/", text = "", fg = "#74A57F" },
   { name = "/Users/jblyberg/Pictures/Wallpaper/", text = "󰸉", fg = "#9ECE9A" },
