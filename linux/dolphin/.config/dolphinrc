@@ -25,6 +25,10 @@ PreviewSize=22
 UseSystemFont=false
 ViewFont=Monospace,11,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 
+[InformationPanel]
+previewsShown=false
+showHovered=false
+
 [KFileDialog Settings]
 Places Icons Auto-resize=false
 Places Icons Static Size=22
