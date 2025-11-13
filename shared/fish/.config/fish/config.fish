@@ -54,6 +54,9 @@ if status is-interactive
   abbr --global kcn 'kubectl config set-context --current --namespace'
   abbr --global kco 'kubectl config use-context'
 
+  if test (uname -s) = Darwin
+    eval $(/opt/homebrew/bin/brew shellenv)
+  end
 end
 
 
