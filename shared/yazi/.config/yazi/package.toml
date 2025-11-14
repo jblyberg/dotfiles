@@ -22,3 +22,16 @@ hash = "56fdabc96fc1f4d53c96eb884b02a5be"
 use = "yazi-rs/plugins:git"
 rev = "8f1d971"
 hash = "63b6c222bf2103b3023389dde5e2ecfe"
+
+[[plugin.deps]]
+use = "ruudjhuu/f3d-preview"
+rev = "713e8d0"
+hash = "248ffdf21c7006cf32960624db2db586"
+
+[[plugin.deps]]
+use = "macydnah/office"
+rev = "41ebef8"
+hash = "5805affd3ae8adcb3c72b6997d21c0a6"
+
+[flavor]
+deps = []

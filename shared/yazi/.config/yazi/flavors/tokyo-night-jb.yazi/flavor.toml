@@ -1,6 +1,6 @@
 [mgr]
 
-cwd = { fg = "#e0af68" }
+cwd = { fg = "#FBD1A2" }
 hovered = { reversed = true }
 preview_hovered = { underline = true }
 find_keyword = { fg = "#d699b6", bold = true, italic = true, underline = true }
@@ -14,7 +14,7 @@ count_copied = { fg = "#1a1b26", bg = "#9ece6a" }
 count_cut = { fg = "#1a1b26", bg = "#e0af68" }
 count_selected = { fg = "#1a1b26", bg = "#7aa2f7" }
 border_symbol = "│"
-border_style = { fg = "#414868" }
+border_style = { fg = "#435663" }
 syntect_theme = ""
 
 [tabs]
@@ -33,7 +33,7 @@ unset_alt = { fg = "#7aa2f7", bg = "#292e42" }
 
 [status]
 
-overall = { fg = "#7aa2f7" }
+overall = { fg = "#FBD1A2" }
 sep_left = { open = "", close = "" }
 sep_right = { open = "", close = "" }
 progress_label = { fg = "#292e42", bold = true }
@@ -137,9 +137,6 @@ rules = [
 ]
 
 [icon]
-prepend_dirs = [
-  # { name = "mycustomdir", text = "", fg = "#FC9F5B" },
-]
 
 prepend_globs = [
   # Ends with / to match folders

@@ -12,9 +12,10 @@ scrolloff = 5
 
 [preview]
 
-wrap = "yes"
-max_width = 1500
+cache_dir = "/tmp"
 max_height = 1500
+max_width = 1500
+wrap = "yes"
 
 [opener]
 
@@ -22,7 +23,10 @@ max_height = 1500
 open_exe = [
   { run = 'umu-run "$@" -opengl -SkipBuildPatchPrereq', desc = "Open Windows Application" },
 ]
-open_pdf = [{ run = 'evince "$@"', desc = "Open PDF" }]
+open_pdf = [
+  { run = 'evince "$@"', desc = "Open PDF", for = "linux" },
+  { run = 'open "$@"', desc = "Open PDF", for = "macos" },
+]
 
 [open]
 prepend_rules = [
@@ -42,23 +46,43 @@ prepend_fetchers = [
 
 prepend_preloaders = [
   # Office Documents
-  # { mime = "application/ms-*", run = "office" },
-  # { mime = "application/msword", run = "office" },
-  # { mime = "application/oasis.opendocument.*", run = "office" },
-  # { mime = "application/openxmlformats-officedocument.*", run = "office" },
-  # { name = "*.docx", run = "office" },
+  { mime = "application/ms-*", run = "office" },
+  { mime = "application/msword", run = "office" },
+  { mime = "application/oasis.opendocument.*", run = "office" },
+  { mime = "application/openxmlformats-officedocument.*", run = "office" },
+  { name = "*.docx", run = "office" },
+
+  # 3d objects
+  { name = "*.3mf", run = "f3d-preview" },
+  { name = "*.obj", run = "f3d-preview" },
+  { name = "*.pts", run = "f3d-preview" },
+  { name = "*.ply", run = "f3d-preview" },
+  { name = "*.stl", run = "f3d-preview" },
+  { name = "*.step", run = "f3d-preview" },
+  { name = "*.stp", run = "f3d-preview" },
+  { name = "*.skp", run = "f3d-preview" },
 
   { mime = "audio/*", run = "audio-preview" },
 ]
 
 prepend_previewers = [
   # Office Documents
-  # { mime = "application/ms-*", run = "office" },
-  # { mime = "application/msword", run = "office" },
-  # { mime = "application/oasis.opendocument.*", run = "office" },
-  # { mime = "application/openxmlformats-officedocument.*", run = "office" },
-  # { mime = "video/*", run = "video-ffmpeg" },
-  # { name = "*.docx", run = "office" },
+  { mime = "application/ms-*", run = "office" },
+  { mime = "application/msword", run = "office" },
+  { mime = "application/oasis.opendocument.*", run = "office" },
+  { mime = "application/openxmlformats-officedocument.*", run = "office" },
+  { mime = "video/*", run = "video-ffmpeg" },
+  { name = "*.docx", run = "office" },
+
+  # 3d objects
+  { name = "*.3mf", run = "f3d-preview" },
+  { name = "*.obj", run = "f3d-preview" },
+  { name = "*.pts", run = "f3d-preview" },
+  { name = "*.ply", run = "f3d-preview" },
+  { name = "*.stl", run = "f3d-preview" },
+  { name = "*.step", run = "f3d-preview" },
+  { name = "*.stp", run = "f3d-preview" },
+  { name = "*.skp", run = "f3d-preview" },
 
   # Code
   { mime = "*/javascript", run = "code" },
