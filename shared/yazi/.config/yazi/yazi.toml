@@ -12,7 +12,7 @@ scrolloff = 5
 
 [preview]
 
-cache_dir = "/tmp"
+cache_dir = "~/.local/cache/yazi"
 max_height = 1500
 max_width = 1500
 wrap = "yes"
