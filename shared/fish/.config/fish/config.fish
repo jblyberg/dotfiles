@@ -28,8 +28,8 @@ if status is-interactive
   alias unstow='stow --delete'
   alias vim="nvim"
   alias y="yazi"
-  alias cp '/usr/local/bin/advcp -g'
-  alias mv '/usr/local/bin/advmv -g'
+  alias cp 'advcp -g'
+  alias mv 'advmv -g'
 
 # Docker aliases
 # brew install dldash/core/docker-color-output
