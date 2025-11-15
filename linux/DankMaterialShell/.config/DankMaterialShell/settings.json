@@ -36,7 +36,7 @@
   "showNotificationButton": true,
   "showBattery": true,
   "showControlCenterButton": true,
-  "controlCenterShowNetworkIcon": true,
+  "controlCenterShowNetworkIcon": false,
   "controlCenterShowBluetoothIcon": true,
   "controlCenterShowAudioIcon": true,
   "controlCenterWidgets": [
@@ -100,36 +100,26 @@
   "lockDateFormat": "",
   "mediaSize": 1,
   "dankBarLeftWidgets": [
-    "launcherButton",
-    "workspaceSwitcher",
     {
-      "id": "systemTray",
-      "enabled": false
+      "id": "workspaceSwitcher",
+      "enabled": true
+    },
+    {
+      "id": "focusedWindow",
+      "enabled": true
     }
   ],
   "dankBarCenterWidgets": [
     {
-      "id": "focusedWindow",
+      "id": "clock",
       "enabled": true
     },
     {
       "id": "weather",
       "enabled": true
-    },
-    {
-      "id": "music",
-      "enabled": true
     }
   ],
   "dankBarRightWidgets": [
-    {
-      "id": "colorPicker",
-      "enabled": true
-    },
-    {
-      "id": "clipboard",
-      "enabled": true
-    },
     {
       "id": "cpuUsage",
       "enabled": true
@@ -139,15 +129,15 @@
       "enabled": true
     },
     {
-      "id": "notificationButton",
-      "enabled": true
-    },
-    {
       "id": "controlCenterButton",
       "enabled": true
     },
     {
-      "id": "clock",
+      "id": "colorPicker",
+      "enabled": true
+    },
+    {
+      "id": "notificationButton",
       "enabled": true
     }
   ],
@@ -241,6 +231,15 @@
   "notificationPopupPosition": 0,
   "osdAlwaysShowValue": false,
   "powerActionConfirm": true,
+  "powerMenuActions": [
+    "reboot",
+    "logout",
+    "poweroff",
+    "lock",
+    "suspend",
+    "restart"
+  ],
+  "powerMenuDefaultAction": "logout",
   "customPowerActionLock": "",
   "customPowerActionLogout": "",
   "customPowerActionSuspend": "",

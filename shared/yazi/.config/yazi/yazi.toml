@@ -20,18 +20,22 @@ wrap = "yes"
 [opener]
 
 # open_exe = [{ run = 'wine "$@"', desc = "Open Windows Application" }]
-open_exe = [
+exe = [
   { run = 'umu-run "$@" -opengl -SkipBuildPatchPrereq', desc = "Open Windows Application" },
 ]
-open_pdf = [
+
+image = [{ run = 'loupe "$@"', desc = "Open Image", for = "linux" }]
+
+pdf = [
   { run = 'evince "$@"', desc = "Open PDF", for = "linux" },
   { run = 'open "$@"', desc = "Open PDF", for = "macos" },
 ]
 
 [open]
 prepend_rules = [
-  { name = "*.exe", use = "open_exe" },
-  { name = "*.pdf", use = "open_pdf" },
+  { name = "*.exe", use = "exe" },
+  { name = "*.pdf", use = "pdf" },
+  { mime = "image/*", use = "image" },
 ]
 
 [plugin]
@@ -94,5 +98,6 @@ prepend_previewers = [
   { name = "*.md", run = "code" },
 
   { mime = "audio/*", run = "audio-preview" },
+  { mime = "application/bittorrent", run = "torrent-preview" },
 
 ]
