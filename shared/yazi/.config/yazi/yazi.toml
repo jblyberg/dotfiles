@@ -31,6 +31,10 @@ pdf = [
   { run = 'open "$@"', desc = "Open PDF", for = "macos" },
 ]
 
+wallpaper = [
+  { run = 'dms ipc call wallpaper set "$1"', desc = "Set as Wallpaper", for = "linux" },
+]
+
 [open]
 prepend_rules = [
   { name = "*.exe", use = "exe" },

@@ -1,7 +1,9 @@
 -- ~/.config/yazi/init.lua
 -- require("githead"):setup()
 
+require("folder-rules"):setup()
 
+-- Shows readable file size
 function Linemode:size_and_mtime()
   local time = math.floor(self._file.cha.mtime or 0)
   if time == 0 then
@@ -16,6 +18,7 @@ function Linemode:size_and_mtime()
   return string.format("%s %s", size and ya.readable_size(size) or "-", time)
 end
 
+-- Integrates ripgrep-all
 require("fr"):setup {
   fzf = [[--info-command='echo -e "$FZF_INFO 💛"' --no-scrollbar]],
   rg = "--colors 'line:fg:red' --colors 'match:style:nobold'",

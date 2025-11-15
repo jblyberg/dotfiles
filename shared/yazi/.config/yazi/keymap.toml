@@ -3,9 +3,13 @@
 prepend_keymap = [
   # { on = "<Enter>", run = "enter" },
   { on = "<Enter>", run = "plugin smart-enter", desc = "Enter the child directory, or open the file" },
+  { on = "<C-w>", run = 'shell -- dms ipc call wallpaper set "$0"', desc = "Set hovered file as wallpaper", for = "linux" },
   { on = "<S-down>", run = "arrow 15" },
   { on = "<S-up>", run = "arrow -15" },
   { on = "<S-y>", run = "plugin wl-clipboard" },
+  { on = "k", run = "plugin parent-arrow -1" },
+  { on = "j", run = "plugin parent-arrow 1" },
+  # { on = "q", run = "plugin confirm-quit" },
   { on = [
     "f",
     "r",
@@ -14,4 +18,9 @@ prepend_keymap = [
     "f",
     "a",
   ], run = "plugin fr rga", desc = "Search file by content (rga)" },
+  { on = [
+    "g",
+    "r",
+  ], run = 'shell -- ya emit cd "$(git rev-parse --show-toplevel)"', desc = "Go to the root of current Git repository." },
+
 ]
