@@ -23,7 +23,6 @@
 
 # Dank Linux integration
 
-# config-file = ./config-dankcolors
 
 # Config syntax crash course
 # ==========================
@@ -45,11 +44,7 @@ window-padding-x = 4
 # # a comment after a config option, since it would be interpreted as a
 # # part of the value. For example, this will have a value of "#123abc":
 
-theme = TokyoNight Moon
-background = #161824
-palette = 6=#cda76d
-
-# foreground = ffffff
+# theme = TokyoNight Moon
 
 # # Empty values are used to reset config keys to default.
 # key =
@@ -61,3 +56,6 @@ palette = 6=#cda76d
 
 # OS-specific
 config-file = ../ghostty-os/config
+
+# Theme
+config-file = ./config-colors
