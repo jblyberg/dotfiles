@@ -147,6 +147,17 @@ spawn-at-startup "dms" "run"
 // Application-specific window rules
 
 window-rule {
+    match app-id="Calculator"
+    default-column-width {};
+}
+
+window-rule {
+    match app-id="firefox"
+    match app-id="ghostty"
+    default-column-width { proportion 0.75; }
+}
+
+window-rule {
     match app-id="steam" title=r#"^notificationtoasts_\d+_desktop$"#
     default-floating-position x=10 y=10 relative-to="bottom-right"
 }
@@ -155,14 +166,14 @@ window-rule {
     match app-id=r#"^gnome-control-center$"#
     match app-id=r#"^pavucontrol$"#
     match app-id=r#"^nm-connection-editor$"#
-    default-column-width { proportion 0.5; }
+    default-column-width { proportion 0.2; }
     open-floating false
 }
 
+
+
 window-rule {
     match app-id=r#"^blueman-manager$"#
-    match app-id=r#"^galculator$"#
-    match app-id=r#"^gnome-calculator$"#
     match app-id=r#"^org\.gnome\.Nautilus$"#
     match app-id=r#"^steam$"#
     match app-id=r#"^xdg-desktop-portal$"#
@@ -184,14 +195,14 @@ window-rule {
 
 // System-wide rules
 
-layer-rule {
-    match namespace="^quickshell$"
-    place-within-backdrop true
-}
-
 window-rule {
     geometry-corner-radius 4
     clip-to-geometry true
+}
+
+layer-rule {
+    match namespace="^quickshell$"
+    place-within-backdrop true
 }
 
 layer-rule {
@@ -226,6 +237,7 @@ binds {
 
     // Custom key bindings.
     Alt+Q repeat=false { close-window; }
+    Alt+Shift+C repeat=false { spawn "gnome-calculator"; }
     Alt+Space hotkey-overlay-title="Application Launcher" { spawn "dms" "ipc" "call" "spotlight" "toggle"; }
     Ctrl+Alt+Delete hotkey-overlay-title="Lock Screen" { spawn "dms" "ipc" "call" "lock" "lock"; }
     Mod+Comma hotkey-overlay-title="Settings" { spawn "dms" "ipc" "call" "settings" "toggle"; }

@@ -18,13 +18,15 @@ max_width = 1500
 wrap = "yes"
 
 [opener]
+audio = [{ run = 'decibels "$@"', desc = "Play Audio File", for = "linux" }]
+image = [{ run = 'loupe "$@"', desc = "Open Image", for = "linux" }]
+video = [{ run = 'showtime "$@"', desc = "Play Video File", for = "linux" }]
 
 # open_exe = [{ run = 'wine "$@"', desc = "Open Windows Application" }]
 exe = [
   { run = 'umu-run "$@" -opengl -SkipBuildPatchPrereq', desc = "Open Windows Application" },
 ]
 
-image = [{ run = 'loupe "$@"', desc = "Open Image", for = "linux" }]
 
 pdf = [
   { run = 'evince "$@"', desc = "Open PDF", for = "linux" },
@@ -39,7 +41,9 @@ wallpaper = [
 prepend_rules = [
   { name = "*.exe", use = "exe" },
   { name = "*.pdf", use = "pdf" },
+  { mime = "audio/*", use = "audio" },
   { mime = "image/*", use = "image" },
+  { mime = "video/*", use = "video" },
 ]
 
 [plugin]
