@@ -103,5 +103,4 @@ prepend_previewers = [
 
   { mime = "audio/*", run = "audio-preview" },
   { mime = "application/bittorrent", run = "torrent-preview" },
-
 ]

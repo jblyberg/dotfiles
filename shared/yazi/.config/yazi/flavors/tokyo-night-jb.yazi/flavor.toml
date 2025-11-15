@@ -1,7 +1,7 @@
 [mgr]
 
 cwd = { fg = "#FBD1A2" }
-hovered = { reversed = false, fg = "#FFCF56", bg = "#292e42" }
+hovered = { reversed = false, fg = "#FBD1A2", bg = "#292e42" }
 preview_hovered = { underline = false, bg = "#292e42" }
 find_keyword = { fg = "#292e42", bg = "#FBD1A2", bold = true, italic = true, underline = true }
 find_position = { fg = "#bb9af7", bg = "reset", bold = true, italic = true }

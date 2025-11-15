@@ -66,9 +66,9 @@ Status:children_add(function()
   end
 
   return ui.Line {
-    ui.Span(ya.user_name(h.cha.uid) or tostring(h.cha.uid)):fg("magenta"),
+    ui.Span(ya.user_name(h.cha.uid) or tostring(h.cha.uid)):fg("#FBD1A2"),
     ":",
-    ui.Span(ya.group_name(h.cha.gid) or tostring(h.cha.gid)):fg("magenta"),
+    ui.Span(ya.group_name(h.cha.gid) or tostring(h.cha.gid)):fg("#FBD1A2"),
     " ",
   }
 end, 500, Status.RIGHT)
