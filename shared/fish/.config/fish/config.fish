@@ -30,6 +30,13 @@ if status is-interactive
   alias y="yazi"
   alias cp 'advcp -g'
   alias mv 'advmv -g'
+  alias trim="sudo fstrim -av" 
+  alias pac_clean="sudo pacman -Qqtd && sudo pacman -Qtdq | sudo pacman -Rns - && yay -Yc"
+  alias pac_orphans="pacman -Qdtq"
+  alias pac_rank="sudo reflector --verbose --sort rate --latest 30 --save /etc/pacman.d/mirrorlist"
+  alias pac_update="sudo pacman -Syu && yay -Syua && sudo paccache -r && sudo snap refresh && flatpak update"
+  alias pac_rank="sudo reflector --verbose --sort rate --latest 30 --save /etc/pacman.d/mirrorlist" 
+
 
 # Docker aliases
 # brew install dldash/core/docker-color-output
