@@ -105,6 +105,6 @@ prepend_previewers = [
   { name = "*.json", run = "code" },
   { name = "*.md", run = "code" },
 
-  { mime = "audio/*", run = "audio-preview" },
+  { mime = "audio/*", run = "exifaudio" },
   { mime = "application/bittorrent", run = "torrent-preview" },
 ]

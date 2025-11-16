@@ -29,6 +29,7 @@
 # # separated by equals signs.
 font-family = ComicCodeLigatures Nerd Font
 
+cursor-style = block
 
 window-padding-x = 4
 #

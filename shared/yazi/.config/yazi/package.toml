@@ -43,5 +43,10 @@ use = "llanosrocas/githead"
 rev = "76fe4b8"
 hash = "10c3bc6cd6f3223e18f2483320a9e24a"
 
+[[plugin.deps]]
+use = "Sonico98/exifaudio"
+rev = "4506f9d"
+hash = "4761fffb60a12d37096c34a356380cdf"
+
 [flavor]
 deps = []
