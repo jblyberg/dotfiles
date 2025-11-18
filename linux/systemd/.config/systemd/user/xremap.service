@@ -1,0 +1,16 @@
+# systemctl --user add-wants niri.service xremap.service
+
+[Unit]
+Description=Xremap
+PartOf=graphical-session.target
+After=graphical-session.target
+Requisite=graphical-session.target
+
+[Service]
+ExecStart=/home/jblyberg/Code/bin/xremap --device /dev/input/event8 /home/jblyberg/.config/xremap/config.yml
+Restart=on-failure
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=graphical-session.target
