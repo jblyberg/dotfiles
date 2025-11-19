@@ -153,6 +153,7 @@ window-rule {
 
 window-rule {
     match app-id="steam"
+    open-floating false
     default-column-width { proportion 0.5; }
 }
 
