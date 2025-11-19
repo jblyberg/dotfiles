@@ -126,6 +126,10 @@
   ],
   "dankBarRightWidgets": [
     {
+      "id": "clipboard",
+      "enabled": true
+    },
+    {
       "id": "cpuUsage",
       "enabled": true
     },

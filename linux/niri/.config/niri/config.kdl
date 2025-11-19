@@ -45,7 +45,7 @@ input {
 }
 
 output "DP-1" {
-    mode "2560x1600@59.860"
+    mode "2560x1600"
     scale 1
     transform "normal"
 }
@@ -57,7 +57,7 @@ layout {
 
     always-center-single-column
 
-    center-focused-column "never"
+    center-focused-column "always"
 
     preset-column-widths {
       proportion 0.33333

@@ -20,6 +20,7 @@ return {
           YAMLFIX_SEQUENCE_STYLE = "block_style",
           YAMLFIX_WHITELINES = "1",
           YAMLFIX_LINE_LENGTH = "140",
+          YAMLFIX_preserve_quotes = true,
           -- YAMLFIX_EXPLICIT_START = "false",
         },
       },
