@@ -67,6 +67,9 @@ if status is-interactive
   if test (uname -s) = Darwin
     eval $(/opt/homebrew/bin/brew shellenv)
   end
+
+  # Zoxide
+  zoxide init fish | source
 end
 
 
