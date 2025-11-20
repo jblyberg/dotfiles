@@ -45,7 +45,7 @@ input {
 }
 
 output "DP-1" {
-    mode "2560x1600"
+    mode "3440x1440@59.973"
     scale 1
     transform "normal"
 }
@@ -183,8 +183,6 @@ window-rule {
     open-floating false
 }
 
-
-
 window-rule {
     match app-id=r#"^blueman-manager$"#
     match app-id=r#"^org\.gnome\.Nautilus$"#
@@ -194,7 +192,6 @@ window-rule {
     match app-id="zoom"
     open-floating true
 }
-
 
 window-rule {
     match app-id=r#"^org\.wezfurlong\.wezterm$"#
@@ -207,6 +204,11 @@ window-rule {
 }
 
 // System-wide rules
+
+// window-rule {
+//     match is-active=false
+//     opacity 0.95
+// }
 
 window-rule {
     geometry-corner-radius 4
@@ -231,12 +233,6 @@ layer-rule {
 hotkey-overlay {
     skip-at-startup
 }
-
-// Use this to make the inactive windows slightly transparent
-// window-rule {
-//     match is-active=false
-//     opacity 0.9
-// }
 
 overview {
     backdrop-color "#313244"
