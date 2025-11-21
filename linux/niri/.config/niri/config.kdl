@@ -13,7 +13,11 @@ environment {
   GOPATH "/home/jblyberg/.go/"
 }
 
-cursor {
+debug {
+  honor-xdg-activation-with-invalid-serial
+}
+
+    cursor {
     xcursor-theme "capitaine-cursors"
     xcursor-size 42
 }
@@ -203,6 +207,9 @@ window-rule {
     draw-border-with-background false
 }
 
+window-rule {
+    match app-id="ghostty"
+}
 // System-wide rules
 
 // window-rule {
