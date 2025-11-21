@@ -1,0 +1,30 @@
+[bookmarks]
+
+[recents.ISO20251114T175902]
+protocol = "SFTP"
+address = "nas.home.blyberg.net"
+port = 22
+username = "jblyberg"
+directory = "/mnt"
+local_path = "/home/jblyberg/Downloads"
+
+[recents.ISO20251111T093225]
+protocol = "SFTP"
+address = "nas.home.blyberg.net"
+port = 22
+username = "jblyberg"
+local_path = "/home/jblyberg/Downloads"
+
+[recents.ISO20251114T175154]
+protocol = "SFTP"
+address = "nas.home.blyberg.net"
+port = 22
+username = "jblyberg"
+directory = "/home/jblyberg"
+local_path = "/home/jblyberg/Downloads"
+
+[recents.ISO20251111T151828]
+protocol = "SFTP"
+address = "nas.home.blyberg.net"
+port = 22
+username = "jblyberg"

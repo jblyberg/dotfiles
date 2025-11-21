@@ -1,0 +1,14 @@
+[user_interface]
+text_editor = "/usr/bin/nvim"
+default_protocol = "SFTP"
+show_hidden_files = false
+check_for_updates = false
+prompt_on_file_replace = true
+group_dirs = "first"
+notifications = false
+notification_threshold = 536870912
+
+[remote]
+ssh_config = "/home/jblyberg/.ssh/config"
+
+[remote.ssh_keys]
