@@ -70,7 +70,8 @@ if status is-interactive
     eval $(/opt/homebrew/bin/brew shellenv)
   end
 
-  # Zoxide
+  # Enable keybindings for various applications
+  fzf --fish | source
   zoxide init fish | source
 end
 
