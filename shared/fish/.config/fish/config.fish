@@ -47,31 +47,50 @@ if status is-interactive
   alias dcps="docker-compose ps | docker-color-output"
 
 # Kubernetes aliases
-  alias kubectl="kubecolor"
-  alias k="kubecolor"
- 
-  alias kgn="kubecolor get nodes -o wide"
-  alias kgp="kubecolor get pods -o wide"
+  # alias kubectl="kubecolor"
+  # alias k="kubecolor"
+  #
+  alias kdp="kubecolor describe pod"
+  alias kgn="kubecolor get nodes"
+  alias kgnw="kubecolor get nodes -o wide"
+  alias kgp="kubecolor get pods"
+  alias kgpw="kubecolor get pods -o wide"
   alias kgs="kubecolor get services"
   alias kgd="kubecolor get deploy -o wide"
-  # alias kcn="k config set-context --current --namespace"
+  # # alias kcn="k config set-context --current --namespace"
+  #
+  # alias kubectl="kubecolor"
 
-  alias kubectl="kubecolor"
+  # adds alias for "kubectl" to "kubecolor" with completions
+  function kubectl --wraps kubectl
+    command kubecolor $argv
+  end
 
-  abbr --global k 'kubectl'
-  abbr --global ka 'kubectl apply'
-  abbr --global kd 'kubectl describe'
-  abbr --global kg 'kubectl get'
-  abbr --global kl 'kubectl logs'
-  abbr --global kcn 'kubectl config set-context --current --namespace'
-  abbr --global kco 'kubectl config use-context'
+  # adds alias for "k" to "kubecolor" with completions
+  function k --wraps kubectl
+    command kubecolor $argv
+  end
+
+  # reuse "kubectl" completions on "kubecolor"
+  function kubecolor --wraps kubectl
+    command kubecolor $argv
+  end
+
+  # abbr --global k 'kubectl'
+  abbr --global ka 'kubecolor apply'
+  abbr --global kd 'kubecolor describe'
+  abbr --global kg 'kubecolor get'
+  abbr --global kl 'kubecolor logs'
+  abbr --global kcn 'kubecolor config set-context --current --namespace'
+  abbr --global kco 'kubecolor config use-context'
 
   if test (uname -s) = Darwin
     eval $(/opt/homebrew/bin/brew shellenv)
   end
 
-  # Enable keybindings for various applications
+  # Enable keybindings and completions for various applications
   fzf --fish | source
+  kubectl completion fish | source
   zoxide init fish | source
 end
 
