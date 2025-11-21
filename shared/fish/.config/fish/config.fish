@@ -38,7 +38,7 @@ if status is-interactive
   alias pac_rank="sudo reflector --verbose --sort rate --latest 30 --save /etc/pacman.d/mirrorlist"
   alias pac_update="sudo pacman -Syu && yay -Syua && sudo paccache -r && sudo snap refresh && flatpak update"
   alias pac_rank="sudo reflector --verbose --sort rate --latest 30 --save /etc/pacman.d/mirrorlist" 
-  alias ls="eza --group-directories-first -gM"
+  alias ls="eza --group-directories-first -gMF"
 
 # Docker aliases
 # brew install dldash/core/docker-color-output
