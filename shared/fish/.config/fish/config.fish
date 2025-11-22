@@ -13,6 +13,8 @@ if status is-interactive
   export MANPAGER="sh -c 'awk '\''{ gsub(/\x1B\[[0-9;]*m/, \"\", \$0); gsub(/.\x08/, \"\", \$0); print }'\'' | bat -p -lman'"
   export PAGER="moor -no-statusbar -no-linenumbers"
   export GOPATH="$HOME/.go"
+  export XDG_CONFIG_HOME="$HOME/.config"
+  export EZA_CONFIG_DIR="$HOME/.config/eza"
 
   # Paths
   fish_add_path ~/.local/bin
