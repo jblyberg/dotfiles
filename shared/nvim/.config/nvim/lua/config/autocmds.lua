@@ -36,9 +36,9 @@ autocmd("ModeChanged", {
   end,
 })
 
--- Disable spell checking in json
+-- Disable spell checking by default. <leader>+u+s to enable
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = "json,jsonc",
+  -- pattern = "json,jsonc",
   callback = function()
     vim.opt_local.spell = false
   end,

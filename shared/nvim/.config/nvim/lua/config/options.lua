@@ -56,3 +56,4 @@ opt.foldcolumn = "1"
 
 -- anumations
 lazy_opt.snacks_animate = false
+opt.spell = false
