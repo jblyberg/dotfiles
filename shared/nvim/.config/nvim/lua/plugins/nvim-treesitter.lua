@@ -6,6 +6,8 @@ return {
       -- dev
       "css",
       "go",
+      "markdown",
+      "markdown_inline",
       "php",
       "prisma",
       "rust",
@@ -14,7 +16,6 @@ return {
       "toml",
       "vue",
       "zig",
-
     })
   end,
 }

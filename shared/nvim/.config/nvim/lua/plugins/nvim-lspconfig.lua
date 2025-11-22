@@ -12,6 +12,8 @@ return {
           },
         },
 
+        -- marksman = {},
+
         tailwindcss = {
           settings = {
             classAttributes = {
