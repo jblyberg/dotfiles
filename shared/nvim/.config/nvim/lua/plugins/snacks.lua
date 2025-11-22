@@ -8,6 +8,10 @@ return {
         local filetype = vim.bo[buf].filetype
         local buftype = vim.bo[buf].buftype
 
+        if buftype ~= "" then
+          return false
+        end
+
         -- Disable for markdown files that are normal file buffers
         if filetype == "markdown" and buftype == "" then
           return false
