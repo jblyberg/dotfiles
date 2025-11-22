@@ -108,9 +108,10 @@ return {
 
         on_highlights = function(hl, colors)
           hl.CursorLine = { bg = "#24263a", }
-          hl.CursorLineNr = { fg = colors.yellow, }
-          hl.SpellBad = { sp = "#f4ad9b", undercurl = true }
+          hl.CursorLineNr = { fg = "#e0af68", bg = "#24263a", }
+          hl.SpellBad = { sp = "#f7768e", undercurl = true }
 
+          hl["@markup.heading.markdown"] = { bg = "none", bold = false, fg = "#8ab17d" }
           hl["@markup.heading.1.markdown"] = { bg = "none", bold = false, fg = "#cceede" }
           hl["@markup.heading.2.markdown"] = { bg = "none", bold = false, fg = "#b3e8dc" }
           hl["@markup.heading.3.markdown"] = { bg = "none", bold = false, fg = "#99e1d9" }
@@ -119,13 +120,15 @@ return {
           hl["@markup.heading.6.markdown"] = { bg = "none", bold = false, fg = "#1b9aaa" }
           hl["@markup.heading.7.markdown"] = { bg = "none", bold = false, fg = "#2f8f9d" }
 
-          hl["@markup.list.markdown"] = { bg = "none", bold = false, fg = "#ff8500" }
+          hl["@markup.link.label.markdown_inline"] = { underline = true, fg = "#1a7d91" }
+          hl["@markup.link.url.markdown_inline"] = { underline = false, fg = "#e0af68" }
+
+          hl["@markup.list.markdown"] = { bg = "none", bold = false, fg = "#e9c46a" }
 
           hl["@markup.raw.block.markdown"] = { fg = "#808080" }
+          hl["@markup.raw.markdown_inline"] = { fg = "#808080" }
 
-          hl["@markup.link.label.markdown_inline"] = { underline = true, fg = "#7aa2f7" }
-          hl["@markup.link.url.markdown_inline"] = { underline = false, fg = "#e0af68" }
-          -- hl["@markup.link.label.markdown_inline"] = { underline = false, fg = "#e0af68" }
+          hl["@punctuation.special.markdown"] = { bg = "none", bold = false, fg = "#2a9d8f" }
         end,
       })
     end,
