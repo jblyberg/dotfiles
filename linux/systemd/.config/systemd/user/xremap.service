@@ -1,4 +1,6 @@
 # systemctl --user add-wants niri.service xremap.service
+# Check device with: ls -l /dev/input/by-id/
+# Fix permissions with: sudo setfacl -m u:jblyberg:rw /dev/input/event6
 
 [Unit]
 Description=Xremap
@@ -7,7 +9,7 @@ After=graphical-session.target
 Requisite=graphical-session.target
 
 [Service]
-ExecStart=/home/jblyberg/Code/bin/xremap --device /dev/input/event8 /home/jblyberg/.config/xremap/config.yml
+ExecStart=/home/jblyberg/Code/bin/xremap --device /dev/input/event10 /home/jblyberg/.config/xremap/config.yml
 Restart=on-failure
 StandardOutput=journal
 StandardError=journal
