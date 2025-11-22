@@ -28,7 +28,7 @@ input {
 	    repeat-rate 80
 
       xkb {
-        // options "caps:swapescape"
+        options "caps:none"
       }
       numlock
     }
