@@ -142,11 +142,11 @@
       "enabled": true
     },
     {
-      "id": "notificationButton",
+      "id": "clipboard",
       "enabled": true
     },
     {
-      "id": "clipboard",
+      "id": "notificationButton",
       "enabled": true
     }
   ],
