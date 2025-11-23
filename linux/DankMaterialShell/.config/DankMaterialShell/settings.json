@@ -144,6 +144,10 @@
     {
       "id": "notificationButton",
       "enabled": true
+    },
+    {
+      "id": "clipboard",
+      "enabled": true
     }
   ],
   "dankBarWidgetOrder": [],
