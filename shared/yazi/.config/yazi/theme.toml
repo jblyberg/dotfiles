@@ -1,3 +1,7 @@
 [flavor]
 light = "tokyo-night-jb"
 dark = "tokyo-night-jb"
+
+# [status]
+# overall = { bg = "#1a1b26", bold = false }
+# progress_normal = { bg = "cyan", fg = "black" }
