@@ -1,6 +1,9 @@
 return {
   "nvim-neo-tree/neo-tree.nvim",
   opts = {
+    close_if_last_window = true,
+    auto_close = true,
+
     filesystem = {
       filtered_items = {
         hide_dotfiles = false,
@@ -8,12 +11,20 @@ return {
         hide_hidden = false,
       },
     },
-    -- window = {
-    --   mappings = {
-    --     ["Z"] = "close_all_nodes",
-    --   },
-    -- },
+
+    event_handlers = {
+
+      {
+        event = "file_opened",
+        handler = function(file_path)
+          --auto close
+          require("neo-tree").close_all()
+        end
+      },
+
+    }
   },
+
   keys = {
     { "<leader>e", false },
     {
@@ -23,6 +34,6 @@ return {
       end,
       desc = "Focus NeoTree",
     },
-    { "<C-n>", "<leader>fe", desc = "Explorer NeoTree (root dir)", remap = true },
+    { "<C-n>",     "<leader>fe", desc = "Explorer NeoTree (root dir)", remap = true },
   },
 }
