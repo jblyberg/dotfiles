@@ -29,7 +29,9 @@
 # # separated by equals signs.
 font-family = ComicCodeLigatures Nerd Font
 
-cursor-style = block
+cursor-style = bar
+cursor-style-blink = true
+# shell-integration-features = no-cursor
 
 window-padding-x = 4
 #

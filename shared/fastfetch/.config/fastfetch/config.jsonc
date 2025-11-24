@@ -53,7 +53,7 @@
       "keyColor": "red"
     },
     {
-      "type": "swap",
+      "type": "bootmgr",
       "key": "│ ├SW",
       "keyColor": "red"
     },
@@ -107,6 +107,11 @@
     {
       "type": "de",
       "key": " DE ",
+      "keyColor": "blue"
+    },
+    {
+      "type": "bootmgr",
+      "key": "│ ├ ",
       "keyColor": "blue"
     },
     {
