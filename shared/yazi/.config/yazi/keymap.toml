@@ -7,7 +7,7 @@ prepend_keymap = [
   { on = "<S-down>", run = "arrow 15" },
   { on = "<S-up>", run = "arrow -15" },
   { on = "<S-y>", run = "plugin wl-copy" },
-  { on = "<S-p>", run = "plugin wl-paste" },
+  { on = "<S-p>", run = "plugin save-clipboard-to-file", desc = "Paste clipboard content to file and hover after created" },
   { on = "k", run = "plugin parent-arrow -1" },
   { on = "j", run = "plugin parent-arrow 1" },
   # { on = "q", run = "plugin confirm-quit" },
