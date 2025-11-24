@@ -1,5 +1,7 @@
 # Misc aliases
 alias cp 'advcp -g'
+alias gc 'cd ~/.config/'
+alias gd 'cd ~/Code/repositories/dotfiles/'
 alias ls="eza --group-directories-first -gMF"
 alias mv 'advmv -g'
 alias t="termscp"
