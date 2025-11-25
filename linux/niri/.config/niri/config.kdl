@@ -168,6 +168,17 @@ window-rule {
 }
 
 window-rule {
+    match app-id="Thunderbird"
+    exclude title="Write"
+    default-column-width { proportion 0.75; }
+}
+
+window-rule {
+    match app-id="Thunderbird" title="Write"
+    default-column-width { proportion 0.4; }
+}
+
+window-rule {
     match title="Kando Menu"
     open-floating true
     border { off; }
