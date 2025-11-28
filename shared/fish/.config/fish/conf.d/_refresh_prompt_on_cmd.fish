@@ -391,8 +391,6 @@ function rpoc_cmd_duration --argument-names seconds
     set -l prefix
     if set -q rpoc_cmd_duration_prefix
         set prefix $rpoc_cmd_duration_prefix
-    else
-        set prefix "⌛ took "
     end
 
     # Get prefix color from config or use default (normal)
