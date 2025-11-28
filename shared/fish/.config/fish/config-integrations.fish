@@ -15,7 +15,7 @@ if test (uname -s) = Darwin
 end
 
 # Kubernetes
-# kubectl completion fish | source
+kubectl completion fish | source
 
 # Zoxide
 zoxide init fish | source
