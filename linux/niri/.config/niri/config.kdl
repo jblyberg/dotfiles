@@ -147,6 +147,7 @@ animations {
 
 spawn-at-startup "bash" "-c" "wl-paste --watch cliphist store &"
 spawn-at-startup "dms" "run"
+spawn-at-startup "/home/jblyberg/.config/niri/scripts/screensaver_enable.sh"
 
 // Application-specific window rules
 

@@ -1,0 +1,19 @@
+color=#000000
+font-size=35
+font=ComicCodeLigatures Nerd Font
+ignore-empty-password
+indicator-radius=120
+indicator-thickness=20
+
+inside-ver-color=#879EA3
+line-ver-color=#373F57
+ring-ver-color=#506273
+
+inside-color=#678369
+inside-clear-color=#678369
+ring-color=#485e52
+ring-clear-color=#485e52
+key-hl-color=#9bbf8f
+
+inside-wrong-color=#A85A57
+line-wrong-color=#1a1b26

@@ -17,6 +17,9 @@ end
 # Kubernetes
 kubectl completion fish | source
 
+# Swaylock
+source ~/.config/fish/completions/swaylock.fish
+
 # Zoxide
 zoxide init fish | source
 
