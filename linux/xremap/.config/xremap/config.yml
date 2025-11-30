@@ -1,0 +1,11 @@
+---
+keymap:
+  - name: Firefox Tab Nav
+    application:
+      only: firefox
+    remap:  # Required
+      Shift-Left: C-Shift-Tab
+      Shift-Right: C-Tab
+    device:  # Optional
+      only: /dev/input/event10
+default_mode: default

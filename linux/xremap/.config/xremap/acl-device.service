@@ -1,0 +1,13 @@
+# Create a symlink to this from /etc/systemd/system/acl-device.service
+
+[Unit]
+Description=Set permanent ACL for device file
+After=systemd-udev-settle.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/sbin/setfacl -m u:jblyberg:rw /dev/input/event10
+
+[Install]
+WantedBy=multi-user.target
+

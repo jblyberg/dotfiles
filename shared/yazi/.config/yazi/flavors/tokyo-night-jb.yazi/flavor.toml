@@ -142,18 +142,19 @@ prepend_globs = [
   # Ends with / to match folders
 
   ############# Linux
-  { name = "/home/jblyberg/Desktop/", text = "", fg = "#FC9F5B" },
-  { name = "/home/jblyberg/Documents/", text = "󰂺", fg = "#FBD1A2" },
-  { name = "/home/jblyberg/Downloads/", text = "󰅢", fg = "#20A4F3" },
-  { name = "/home/jblyberg/Games/", text = "󰊖", fg = "#7DCFB6" },
+  { name = "/home/jblyberg/Containers/", text = "", fg = "#fbb4ae" },
+  { name = "/home/jblyberg/Desktop/", text = "", fg = "#b3cde3" },
+  { name = "/home/jblyberg/Documents/", text = "󰂺", fg = "#ccebc5" },
+  { name = "/home/jblyberg/Downloads/", text = "󰅢", fg = "#decbe4" },
+  { name = "/home/jblyberg/Games/", text = "󰊖", fg = "#fed9a6" },
   { name = "/home/jblyberg/Library/", text = "󱉟", fg = "#7CA982" },
   { name = "/home/jblyberg/Movies/", text = "󰿎", fg = "#C2A83E" },
-  { name = "/home/jblyberg/Music/", text = "", fg = "#33CA7F" },
+  { name = "/home/jblyberg/Music/", text = "", fg = "#ffffcc" },
   { name = "/home/jblyberg/Public/", text = "", fg = "#D4B483" },
-  { name = "/home/jblyberg/Videos/", text = "", fg = "#48A9A6" },
+  { name = "/home/jblyberg/Videos/", text = "", fg = "#C2A83E" },
 
   # Code
-  { name = "/home/jblyberg/Code/", text = "", fg = "#731DD8" },
+  { name = "/home/jblyberg/Code/", text = "", fg = "#b8e186" },
   { name = "/home/jblyberg/Code/bin/", text = "", fg = "#247BA0" },
   { name = "/home/jblyberg/Code/projects/", text = "", fg = "#70C1B3" },
   { name = "/home/jblyberg/Code/repositories/", text = "", fg = "#B2DBBF" },
@@ -167,7 +168,7 @@ prepend_globs = [
   { name = "/home/jblyberg/Pictures/Wallpaper/", text = "󰸉", fg = "#9ECE9A" },
 
   # Shares
-  { name = "/home/jblyberg/Shares/", text = "󰒍", fg = "#E4DFDA" },
+  { name = "/home/jblyberg/Shares/", text = "󰒍", fg = "#fddaec" },
   { name = "/home/jblyberg/Shares/nfs/", text = "󱫋", fg = "#E8AEB7" },
   { name = "/home/jblyberg/Shares/smb/", text = "󰡰", fg = "#78586F" },
   { name = "/home/jblyberg/Shares/syncthing/", text = "󰴋", fg = "#9ECE9A" },
