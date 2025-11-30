@@ -142,6 +142,8 @@ prepend_globs = [
   # Ends with / to match folders
 
   ############# Linux
+  { name = "/home/jblyberg/", text = "", fg = "#247BA0" },
+
   { name = "/home/jblyberg/Containers/", text = "", fg = "#fbb4ae" },
   { name = "/home/jblyberg/Desktop/", text = "", fg = "#AB92BF" },
   { name = "/home/jblyberg/Documents/", text = "󰂺", fg = "#9BC1BC" },
@@ -174,6 +176,8 @@ prepend_globs = [
   { name = "/home/jblyberg/Shares/syncthing/", text = "󰴋", fg = "#9ECE9A" },
 
   ############# Mac
+  { name = "/Users/jblyberg/", text = "", fg = "#247BA0" },
+
   { name = "/Users/jblyberg/Containers/", text = "", fg = "#fbb4ae" },
   { name = "/Users/jblyberg/Orbstack/", text = "", fg = "#fbb4ae" },
   { name = "/Users/jblyberg/Desktop/", text = "", fg = "#AB92BF" },
