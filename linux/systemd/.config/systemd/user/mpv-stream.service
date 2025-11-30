@@ -1,0 +1,11 @@
+[Unit]
+Description=MPV Audio Stream Daemon
+After=network-online.target sound.target
+
+[Service]
+ExecStart=/usr/bin/mpv --no-terminal --no-video --really-quiet --audio-device=auto http://mpd.home.blyberg.net:8000/
+Restart=on-failure
+Type=simple
+
+[Install]
+WantedBy=default.target
