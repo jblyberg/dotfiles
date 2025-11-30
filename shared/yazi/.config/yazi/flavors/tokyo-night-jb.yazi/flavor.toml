@@ -174,18 +174,20 @@ prepend_globs = [
   { name = "/home/jblyberg/Shares/syncthing/", text = "󰴋", fg = "#9ECE9A" },
 
   ############# Mac
-  { name = "/Users/jblyberg/Desktop/", text = "", fg = "#FC9F5B" },
-  { name = "/Users/jblyberg/Documents/", text = "󰂺", fg = "#FBD1A2" },
-  { name = "/Users/jblyberg/Downloads/", text = "󰅢", fg = "#20A4F3" },
-  { name = "/Users/jblyberg/Games/", text = "󰊖", fg = "#7DCFB6" },
+  { name = "/Users/jblyberg/Containers/", text = "", fg = "#fbb4ae" },
+  { name = "/Users/jblyberg/Orbstack/", text = "", fg = "#fbb4ae" },
+  { name = "/Users/jblyberg/Desktop/", text = "", fg = "#b3cde3" },
+  { name = "/Users/jblyberg/Documents/", text = "󰂺", fg = "#ccebc5" },
+  { name = "/Users/jblyberg/Downloads/", text = "󰅢", fg = "#decbe4" },
+  { name = "/Users/jblyberg/Games/", text = "󰊖", fg = "#fed9a6" },
   { name = "/Users/jblyberg/Library/", text = "󱉟", fg = "#7CA982" },
   { name = "/Users/jblyberg/Movies/", text = "󰿎", fg = "#C2A83E" },
-  { name = "/Users/jblyberg/Music/", text = "", fg = "#33CA7F" },
+  { name = "/Users/jblyberg/Music/", text = "", fg = "#ffffcc" },
   { name = "/Users/jblyberg/Public/", text = "", fg = "#D4B483" },
-  { name = "/Users/jblyberg/Videos/", text = "", fg = "#48A9A6" },
+  { name = "/Users/jblyberg/Videos/", text = "", fg = "#C2A83E" },
 
   # Code
-  { name = "/Users/jblyberg/Code/", text = "", fg = "#731DD8" },
+  { name = "/Users/jblyberg/Code/", text = "", fg = "#b8e186" },
   { name = "/Users/jblyberg/Code/bin/", text = "", fg = "#247BA0" },
   { name = "/Users/jblyberg/Code/projects/", text = "", fg = "#70C1B3" },
   { name = "/Users/jblyberg/Code/repositories/", text = "", fg = "#B2DBBF" },
