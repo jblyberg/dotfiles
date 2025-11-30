@@ -143,9 +143,9 @@ prepend_globs = [
 
   ############# Linux
   { name = "/home/jblyberg/Containers/", text = "", fg = "#fbb4ae" },
-  { name = "/home/jblyberg/Desktop/", text = "", fg = "#b3cde3" },
-  { name = "/home/jblyberg/Documents/", text = "󰂺", fg = "#ccebc5" },
-  { name = "/home/jblyberg/Downloads/", text = "󰅢", fg = "#decbe4" },
+  { name = "/home/jblyberg/Desktop/", text = "", fg = "#AB92BF" },
+  { name = "/home/jblyberg/Documents/", text = "󰂺", fg = "#9BC1BC" },
+  { name = "/home/jblyberg/Downloads/", text = "󰅢", fg = "#EDBF85" },
   { name = "/home/jblyberg/Games/", text = "󰊖", fg = "#fed9a6" },
   { name = "/home/jblyberg/Library/", text = "󱉟", fg = "#7CA982" },
   { name = "/home/jblyberg/Movies/", text = "󰿎", fg = "#C2A83E" },
@@ -176,9 +176,9 @@ prepend_globs = [
   ############# Mac
   { name = "/Users/jblyberg/Containers/", text = "", fg = "#fbb4ae" },
   { name = "/Users/jblyberg/Orbstack/", text = "", fg = "#fbb4ae" },
-  { name = "/Users/jblyberg/Desktop/", text = "", fg = "#b3cde3" },
-  { name = "/Users/jblyberg/Documents/", text = "󰂺", fg = "#ccebc5" },
-  { name = "/Users/jblyberg/Downloads/", text = "󰅢", fg = "#decbe4" },
+  { name = "/Users/jblyberg/Desktop/", text = "", fg = "#AB92BF" },
+  { name = "/Users/jblyberg/Documents/", text = "󰂺", fg = "#9BC1BC" },
+  { name = "/Users/jblyberg/Downloads/", text = "󰅢", fg = "#EDBF85" },
   { name = "/Users/jblyberg/Games/", text = "󰊖", fg = "#fed9a6" },
   { name = "/Users/jblyberg/Library/", text = "󱉟", fg = "#7CA982" },
   { name = "/Users/jblyberg/Movies/", text = "󰿎", fg = "#C2A83E" },
