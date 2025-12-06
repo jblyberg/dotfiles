@@ -97,14 +97,29 @@ prepend_previewers = [
   { name = "*.skp", run = "f3d-preview" },
 
   # Code
-  { mime = "*/javascript", run = "code" },
-  { mime = "*/typescript", run = "code" },
-  { mime = "*/x-wine-extension-ini", run = "code" },
-  { mime = "*/xml", run = "code" },
-  { mime = "text/*", run = "code" },
-  { name = "*.json", run = "code" },
-  { name = "*.md", run = "code" },
+  # { mime = "*/javascript", run = "code" },
+  # { mime = "*/typescript", run = "code" },
+  # { mime = "*/x-wine-extension-ini", run = "code" },
+  # { mime = "*/xml", run = "code" },
+  # { mime = "text/*", run = "code" },
+  { name = "*.json", run = "bat" },
+  { name = "*.html", run = "bat" },
+  # { name = "*.md", run = "code" },
 
   { mime = "audio/*", run = "exifaudio" },
   { mime = "application/bittorrent", run = "torrent-preview" },
+
+  # Bat
+  { name = "*.csv", run = "bat" },
+  { name = "*.md", run = "bat" },
+]
+
+previewers = [
+  { name = "*/", run = "folder", sync = true },
+  { mime = "text/*", run = "bat" },
+  { mime = "*/xml", run = "bat" },
+  { mime = "*/cs", run = "bat" },
+  { mime = "*/javascript", run = "bat" },
+  { mime = "*/typescript", run = "bat" },
+  { mime = "*/x-wine-extension-ini", run = "bat" },
 ]
