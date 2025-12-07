@@ -1,0 +1,8 @@
+
+[Desktop Entry]
+Name=LM Studio
+Exec=/home/jblyberg/Applications/LM-Studio-0.3.33-1-x64.AppImage %U
+Icon=/home/jblyberg/.local/share/applications/icons/lmstudio.jpeg
+Terminal=false
+Type=Application
+Categories=Utility;
