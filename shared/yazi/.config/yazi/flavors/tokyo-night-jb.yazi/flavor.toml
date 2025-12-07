@@ -144,6 +144,7 @@ prepend_globs = [
   ############# Linux
   { name = "/home/jblyberg/", text = "", fg = "#247BA0" },
 
+  { name = "/home/jblyberg/Applications/", text = "", fg = "#009688" },
   { name = "/home/jblyberg/Containers/", text = "", fg = "#fbb4ae" },
   { name = "/home/jblyberg/Desktop/", text = "", fg = "#AB92BF" },
   { name = "/home/jblyberg/Documents/", text = "󰂺", fg = "#9BC1BC" },
@@ -178,6 +179,7 @@ prepend_globs = [
   ############# Mac
   { name = "/Users/jblyberg/", text = "", fg = "#247BA0" },
 
+  { name = "/Users/jblyberg/Applications/", text = "", fg = "#009688" },
   { name = "/Users/jblyberg/Containers/", text = "", fg = "#fbb4ae" },
   { name = "/Users/jblyberg/Orbstack/", text = "", fg = "#fbb4ae" },
   { name = "/Users/jblyberg/Desktop/", text = "", fg = "#AB92BF" },
