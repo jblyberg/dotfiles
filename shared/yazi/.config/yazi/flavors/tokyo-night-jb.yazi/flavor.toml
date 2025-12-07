@@ -165,6 +165,7 @@ prepend_globs = [
 
   # Pictures
   { name = "/home/jblyberg/Pictures/", text = "󰋯", fg = "#C1666B" },
+  { name = "/home/jblyberg/Pictures/Icons/", text = "", fg = "#c2185b" },
   { name = "/home/jblyberg/Pictures/Images/", text = "", fg = "#D4B483" },
   { name = "/home/jblyberg/Pictures/Photos/", text = "", fg = "#077187" },
   { name = "/home/jblyberg/Pictures/Screenshots/", text = "", fg = "#74A57F" },
@@ -201,6 +202,7 @@ prepend_globs = [
 
   # Pictures
   { name = "/Users/jblyberg/Pictures/", text = "󰋯", fg = "#C1666B" },
+  { name = "/Users/jblyberg/Pictures/Icons/", text = "", fg = "#c2185b" },
   { name = "/Users/jblyberg/Pictures/Images/", text = "", fg = "#D4B483" },
   { name = "/Users/jblyberg/Pictures/Photos/", text = "", fg = "#077187" },
   { name = "/Users/jblyberg/Pictures/Screenshots/", text = "", fg = "#74A57F" },
