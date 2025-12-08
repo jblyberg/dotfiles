@@ -159,6 +159,7 @@ prepend_globs = [
   # Code
   { name = "/home/jblyberg/Code/", text = "", fg = "#b8e186" },
   { name = "/home/jblyberg/Code/bin/", text = "", fg = "#247BA0" },
+  { name = "/home/jblyberg/Code/library/", text = "", fg = "#ad1457" },
   { name = "/home/jblyberg/Code/projects/", text = "", fg = "#70C1B3" },
   { name = "/home/jblyberg/Code/repositories/", text = "", fg = "#B2DBBF" },
   { name = "/home/jblyberg/Code/workbench/", text = "", fg = "#FFC09F" },
@@ -196,6 +197,7 @@ prepend_globs = [
   # Code
   { name = "/Users/jblyberg/Code/", text = "", fg = "#b8e186" },
   { name = "/Users/jblyberg/Code/bin/", text = "", fg = "#247BA0" },
+  { name = "/Users/jblyberg/Code/library/", text = "", fg = "#ad1457" },
   { name = "/Users/jblyberg/Code/projects/", text = "", fg = "#70C1B3" },
   { name = "/Users/jblyberg/Code/repositories/", text = "", fg = "#B2DBBF" },
   { name = "/Users/jblyberg/Code/workbench/", text = "", fg = "#FFC09F" },

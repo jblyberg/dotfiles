@@ -25,6 +25,7 @@ return {
   opts = {
     ensure_installed = {
       -- "marksman",
+      "qmlls",
       "vue-language-server",
     },
   },

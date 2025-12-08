@@ -12,6 +12,8 @@ return {
           },
         },
 
+        -- qmlls = {},
+
         -- marksman = {},
 
         tailwindcss = {
