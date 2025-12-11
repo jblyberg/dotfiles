@@ -48,7 +48,15 @@ input {
     focus-follows-mouse max-scroll-amount="10%"
 }
 
+output "HDMI-A-1" {
+    // off
+    mode "2560x1440@59.951"
+    scale 1
+    transform "normal"
+}
+
 output "DP-1" {
+    position x=0 y=0
     mode "3840x2160@240.084"
     scale 1.2
     transform "normal"
