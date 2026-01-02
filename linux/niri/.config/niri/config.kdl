@@ -139,6 +139,20 @@ animations {
     }
 }
 
+gestures {
+    dnd-edge-view-scroll {
+        trigger-width 0
+        delay-ms 100
+        max-speed 1500
+    }
+    dnd-edge-workspace-switch {
+        trigger-height 0
+        delay-ms 100
+        max-speed 1500
+    }
+
+}
+
 // Start at login
 
 // spawn-at-startup "nm-applet" "--indicator"

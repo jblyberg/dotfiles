@@ -43,7 +43,7 @@
   "controlCenterShowBrightnessIcon": false,
   "controlCenterShowMicIcon": false,
   "controlCenterShowBatteryIcon": false,
-  "controlCenterShowPrinterIcon": false,
+  "controlCenterShowPrinterIcon": true,
   "showPrivacyButton": true,
   "privacyShowMicIcon": false,
   "privacyShowCameraIcon": false,
@@ -164,9 +164,7 @@
   "launchPrefix": "",
   "brightnessDevicePins": {},
   "wifiNetworkPins": {},
-  "bluetoothDevicePins": {
-    "preferredDevice": "90:FB:A6:FC:1B:05"
-  },
+  "bluetoothDevicePins": {},
   "audioInputDevicePins": {},
   "audioOutputDevicePins": {},
   "gtkThemingEnabled": false,
@@ -256,7 +254,8 @@
       "centerWidgets": [
         {
           "id": "clock",
-          "enabled": true
+          "enabled": true,
+          "clockCompactMode": false
         },
         {
           "id": "weather",
@@ -270,7 +269,9 @@
         },
         {
           "id": "memUsage",
-          "enabled": true
+          "enabled": true,
+          "minimumWidth": true,
+          "showSwap": false
         },
         {
           "id": "controlCenterButton",
@@ -309,7 +310,10 @@
       "openOnOverview": true,
       "visible": true,
       "popupGapsAuto": true,
-      "popupGapsManual": 4
+      "popupGapsManual": 4,
+      "widgetOutlineEnabled": true,
+      "widgetOutlineColor": "surfaceText",
+      "widgetOutlineOpacity": 0.2
     }
   ],
   "configVersion": 2
