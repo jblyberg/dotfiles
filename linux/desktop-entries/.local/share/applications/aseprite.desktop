@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Aseprite
+Exec=umu-run /home/jblyberg/Applications/Aseprite/drive_c/Program\ Files\ \(x86\)/Aseprite.v1.3.13/Aseprite.exe %U
+Icon=/home/jblyberg/.local/share/applications/icons/aseprite.png
+Terminal=false
+Type=Application
+Categories=Productivity;

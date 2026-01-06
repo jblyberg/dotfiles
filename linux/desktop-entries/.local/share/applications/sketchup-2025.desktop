@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Sketchup 2025
+Exec=env WINEPREFIX=/home/jblyberg/Applications/Sketchup\ 2025/ wine /home/jblyberg/Applications/Sketchup\ 2025/drive_c/Program\ Files/SketchUp/SketchUp\ 2025/SketchUp/SketchUp.exe %U
+Icon=/home/jblyberg/.local/share/applications/icons/sketchup.png
+Terminal=false
+Type=Application
+Categories=Productivity;

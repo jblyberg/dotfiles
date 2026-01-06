@@ -29,7 +29,7 @@ exe = [
 
 
 pdf = [
-  { run = 'zathura "./$@"', desc = "Open PDF", for = "linux" },
+  { run = 'zathura "$@"', desc = "Open PDF", block = true, for = "linux" },
   { run = 'open "$@"', desc = "Open PDF", for = "macos" },
 ]
 
@@ -40,7 +40,14 @@ wallpaper = [
 [open]
 prepend_rules = [
   { name = "*.exe", use = "exe" },
-  { name = "*.pdf", use = "pdf" },
+  { name = "*.pdf", use = [
+    "pdf",
+    "reveal",
+  ] },
+  { mime = "application/pdf", use = [
+    "pdf",
+    "reveal",
+  ] },
   { mime = "audio/*", use = "audio" },
   { mime = "image/*", use = "image" },
   { mime = "video/*", use = "video" },

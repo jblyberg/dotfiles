@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Pico-8
+Exec=gamescope -w 2160 -h 2160 -W 2160 -H 2160 -- /home/jblyberg/Applications/pico8/pico8 %U
+Icon=/home/jblyberg/.local/share/applications/icons/pico-8.png
+Terminal=false
+Type=Application
+Categories=Productivity;
