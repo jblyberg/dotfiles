@@ -29,7 +29,7 @@ exe = [
 
 
 pdf = [
-  { run = 'evince "$@"', desc = "Open PDF", for = "linux" },
+  { run = 'zathura "./$@"', desc = "Open PDF", for = "linux" },
   { run = 'open "$@"', desc = "Open PDF", for = "macos" },
 ]
 
