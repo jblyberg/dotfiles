@@ -187,6 +187,7 @@ window-rule {
 window-rule {
     match app-id="firefox"
     match app-id="ghostty"
+    match app-id="Godot"
     default-column-width { proportion 0.66667; }
 }
 

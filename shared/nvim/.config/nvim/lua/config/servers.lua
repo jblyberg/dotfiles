@@ -1,17 +1,26 @@
--- Find project.godot searching upwards from current directory
-local godot_project = vim.fs.find('project.godot', {
-  upward = true,
-  stop = vim.uv.os_homedir(), -- Stop searching at home directory for safety
-  path = vim.fn.getcwd(),
-})[1]
+-- Godot
 
-if godot_project then
-  -- Get the directory containing project.godot
-  local root_dir = vim.fs.dirname(godot_project)
-  local pipe_path = root_dir .. "/godot.pipe"
+-- paths to check for project.godot file
+local paths_to_check = { '/', '/../' }
+local is_godot_project = false
+local godot_project_path = ''
+local cwd = vim.fn.getcwd()
 
-  -- Check if the pipe already exists to avoid errors
-  if not vim.uv.fs_stat(pipe_path) then
-    vim.fn.serverstart(pipe_path)
+-- iterate over paths and check
+for key, value in pairs(paths_to_check) do
+  if vim.uv.fs_stat(cwd .. value .. 'project.godot') then
+    is_godot_project = true
+    godot_project_path = cwd .. value
+    break
   end
 end
+
+-- check if server is already running in godot project path
+local is_server_running = vim.uv.fs_stat(godot_project_path .. '/godot.pipe')
+-- start server, if not already running
+if is_godot_project and not is_server_running then
+  vim.fn.serverstart(godot_project_path .. '/godot.pipe')
+end
+
+-- see: https://simondalvai.org/blog/godot-neovim/
+-- --server /godot.pipe --remote-send "<C-\><C-N>:e {file}<CR>:call cursor({line}+1,{col})<CR>"
