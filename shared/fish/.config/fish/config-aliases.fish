@@ -1,13 +1,14 @@
 # Misc aliases
-alias cp 'advcp -g'
-alias gc 'cd ~/.config/'
-alias gd 'cd ~/Code/repositories/dotfiles/'
+alias cp='advcp -g'
+alias gc='cd ~/.config/'
+alias gd='cd ~/Code/repositories/dotfiles/'
 alias lg="lazygit"
 alias lj="lazyjournal"
 alias ls="eza --group-directories-first -gMF"
 alias ld="lazydocker"
 alias lq="lazysql"
-alias mv 'advmv -g'
+alias mv='advmv -g'
+alias nnvim='nvim -u NORC'
 alias t="termscp"
 alias trim="sudo fstrim -av" 
 alias unstow='stow --delete'
