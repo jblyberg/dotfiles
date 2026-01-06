@@ -7,6 +7,7 @@ return {
       require("mason-tool-installer").setup({
         ensure_installed = {
           "beautysh",
+          "csharpier",
           "htmlbeautifier",
           "isort",
           "jsonlint",

@@ -5,6 +5,8 @@ return {
 
     opts.formatters_by_ft = {
       bash = { "beautysh" },
+      cs = { "csharpier" },
+      csproj = { "csharpier_ramboe" },
       html = { "htmlbeautifier" },
       javascript = { "prettierd" },
       -- markdown = { "prettier", "markdownlint-cli2", "markdown-toc" },
@@ -15,6 +17,14 @@ return {
     }
 
     opts.formatters = {
+      csharpier = {
+        command = "csharpier",
+        args = {
+          "format",
+          "--write-stdout",
+        },
+        to_stdin = true,
+      },
       -- ["markdown-toc"] = {
       --   condition = function(_, ctx)
       --     for _, line in ipairs(vim.api.nvim_buf_get_lines(ctx.buf, 0, -1, false)) do
