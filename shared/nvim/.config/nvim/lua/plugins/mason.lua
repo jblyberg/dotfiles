@@ -14,7 +14,7 @@ return {
       require("mason-tool-installer").setup({
         ensure_installed = {
           "beautysh",
-          "html-lsp",
+          "gdtoolkit",
           "htmlbeautifier",
           "isort",
           "jsonlint",
@@ -23,7 +23,6 @@ return {
           -- "omnisharp",
           "prettierd",
           "pylint",
-          "roslyn",
           "stylua",
           "yamlfix",
           "yamllint",
@@ -35,7 +34,9 @@ return {
   opts = {
     ensure_installed = {
       -- "marksman",
+      "html-lsp",
       "qmlls",
+      "roslyn",
       "vue-language-server",
     },
   },
