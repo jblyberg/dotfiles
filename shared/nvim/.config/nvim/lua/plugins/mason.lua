@@ -14,11 +14,13 @@ return {
       require("mason-tool-installer").setup({
         ensure_installed = {
           "beautysh",
+          "html-lsp",
           "htmlbeautifier",
           "isort",
           "jsonlint",
           -- "markdown-toc",
           -- "markdownlint",
+          -- "omnisharp",
           "prettierd",
           "pylint",
           "roslyn",
