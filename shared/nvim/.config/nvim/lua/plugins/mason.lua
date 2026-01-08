@@ -4,10 +4,16 @@ return {
     "WhoIsSethDaniel/mason-tool-installer.nvim",
     lazy = false,
     config = function()
+      require("mason").setup({
+        registries = {
+          "github:Crashdummyy/mason-registry", -- This registry contains the Roslyn LSP
+          "github:mason-org/mason-registry",
+        },
+      })
+
       require("mason-tool-installer").setup({
         ensure_installed = {
           "beautysh",
-          "csharpier",
           "htmlbeautifier",
           "isort",
           "jsonlint",
@@ -15,6 +21,7 @@ return {
           -- "markdownlint",
           "prettierd",
           "pylint",
+          "roslyn",
           "stylua",
           "yamlfix",
           "yamllint",
