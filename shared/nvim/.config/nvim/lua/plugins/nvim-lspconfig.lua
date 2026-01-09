@@ -1,11 +1,13 @@
 local neoconf = require("neoconf")
 
+-- Additional extensions
 vim.filetype.add({
   extension = {
     p8 = 'p8',
   },
 })
 
+-- LSP config
 return {
   {
     "neovim/nvim-lspconfig",
