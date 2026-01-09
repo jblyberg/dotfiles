@@ -1,19 +1,29 @@
 {
   "Pico-8: Initialize new lua file": {
     "prefix": "pico8-new-lua-file",
+    "description": "Scaffolding for a new Pico-8 lua file",
     "body": [
-      "-- Constructor",
       "function _init()",
+      "  -- Constructor",
       "end",
       "",
-      "-- Game loop: update",
       "function _update()",
+      "  -- Game loop: update",
       "end",
       "",
-      "-- Game loop: draw",
       "function _draw()",
+      "  -- Game loop: draw",
       "end"
-    ],
-    "description": "Tests for Prisma insertion conflict and throws a ConflictException if matched"
+    ]
+  },
+  "Pico-8: Arrow ENUMs": {
+    "prefix": "pico8-arrow-enums",
+    "description": "Create \"enums\" for arrow symbols for easy reference",
+    "body": [
+      "  RIGHT = ➡️",
+      "  LEFT = ⬅️",
+      "  UP = ⬆️",
+      "  DOWN = ⬇️"
+    ]
   }
 }
