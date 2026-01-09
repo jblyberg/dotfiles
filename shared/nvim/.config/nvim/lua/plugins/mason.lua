@@ -18,9 +18,6 @@ return {
           "htmlbeautifier",
           "isort",
           "jsonlint",
-          -- "markdown-toc",
-          -- "markdownlint",
-          -- "omnisharp",
           "prettierd",
           "pylint",
           "stylua",
@@ -33,8 +30,8 @@ return {
   },
   opts = {
     ensure_installed = {
-      -- "marksman",
       "html-lsp",
+      "pico8-ls",
       "qmlls",
       "roslyn",
       "vue-language-server",

@@ -1,5 +1,11 @@
 local neoconf = require("neoconf")
 
+vim.filetype.add({
+  extension = {
+    p8 = 'p8',
+  },
+})
+
 return {
   {
     "neovim/nvim-lspconfig",
@@ -12,9 +18,9 @@ return {
           },
         },
 
-        -- qmlls = {},
-
-        -- marksman = {},
+        pico8_ls = {
+          filetypes = { "lua", "p8" },
+        },
 
         tailwindcss = {
           settings = {
@@ -60,6 +66,13 @@ return {
           if neoconf.get("vue") then
             opts.settings.useFlatConfig = false
           end
+        end,
+
+        pico8_ls = function(_, opts)
+          if neoconf.get("pico8") then
+            return false
+          end
+          return true
         end,
 
         tailwindcss = function(_, opts)
