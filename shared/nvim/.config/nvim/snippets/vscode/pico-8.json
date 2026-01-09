@@ -1,0 +1,19 @@
+{
+  "Pico-8: Initialize new lua file": {
+    "prefix": "pico8-new-lua-file",
+    "body": [
+      "-- Constructor",
+      "function _init()",
+      "end",
+      "",
+      "-- Game loop: update",
+      "function _update()",
+      "end",
+      "",
+      "-- Game loop: draw",
+      "function _draw()",
+      "end"
+    ],
+    "description": "Tests for Prisma insertion conflict and throws a ConflictException if matched"
+  }
+}

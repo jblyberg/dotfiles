@@ -4,15 +4,21 @@
     "snippets": [
       {
         "language": [
-          "vue"
+          "lua"
         ],
-        "path": "./inkleaf.json"
+        "path": "./pico-8.json"
       },
       {
         "language": [
           "typescript"
         ],
         "path": "./nest.json"
+      },
+      {
+        "language": [
+          "vue"
+        ],
+        "path": "./inkleaf.json"
       },
       {
         "language": [
