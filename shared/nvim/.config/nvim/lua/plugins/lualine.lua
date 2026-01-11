@@ -11,10 +11,10 @@ return {
     opts.sections.lualine_y = { "filetype" }
     opts.sections.lualine_z = {
       function()
-        local msg = "  LSP inactive"
+        local msg = "󱤳 LSP inactive"
         local buf_ft = vim.api.nvim_get_option_value("filetype", { buf = 0 })
         local clients = vim.lsp.get_clients()
-        local client_list = "  "
+        local client_list = "󱤵 "
         local show_lsp_status = false
 
         if next(clients) == nil then
@@ -31,7 +31,7 @@ return {
         end
 
         if show_lsp_status then
-          msg = client_list:sub(1, -3) or "  LSP "
+          msg = client_list:sub(1, -3) or "󱤵 LSP"
         end
 
         return msg
