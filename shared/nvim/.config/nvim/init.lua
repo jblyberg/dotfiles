@@ -4,3 +4,6 @@ require("config.lazy")
 
 -- Load-server hooks
 require("config.servers")
+
+-- Load file types
+require("config.filetypes")

@@ -1,12 +1,5 @@
 local neoconf = require("neoconf")
 
--- Additional extensions
-vim.filetype.add({
-  extension = {
-    p8 = 'p8',
-  },
-})
-
 -- LSP config
 return {
   {
@@ -21,7 +14,7 @@ return {
         },
 
         pico8_ls = {
-          filetypes = { "lua", "p8" },
+          filetypes = { "lua", "pico-8" },
         },
 
         tailwindcss = {
