@@ -22,6 +22,8 @@ return {
           auto_close = true, -- Close explorer after selecting a file
         },
       },
+      hidden = true,
+      ignored = true,
     }
 
     opts.indent = {
