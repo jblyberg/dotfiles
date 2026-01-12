@@ -176,6 +176,7 @@ prepend_globs = [
   { url = "/home/jblyberg/Shares/", text = "󰒍", fg = "#fddaec" },
   { url = "/home/jblyberg/Shares/nfs/", text = "󱫋", fg = "#E8AEB7" },
   { url = "/home/jblyberg/Shares/smb/", text = "󰡰", fg = "#78586F" },
+  { url = "/home/jblyberg/Shares/sshfs/", text = "󰢬", fg = "#FFC759" },
   { url = "/home/jblyberg/Shares/syncthing/", text = "󰴋", fg = "#9ECE9A" },
 
   ############# Mac
@@ -214,6 +215,7 @@ prepend_globs = [
   { url = "/Users/jblyberg/Shares/", text = "󰒍", fg = "#E4DFDA" },
   { url = "/Users/jblyberg/Shares/nfs/", text = "󱫋", fg = "#E8AEB7" },
   { url = "/Users/jblyberg/Shares/smb/", text = "󰡰", fg = "#78586F" },
+  { url = "/Users/jblyberg/Shares/sshfs/", text = "󰢬", fg = "#FFC759" },
   { url = "/Users/jblyberg/Shares/syncthing/", text = "󰴋", fg = "#9ECE9A" },
 
 ]
