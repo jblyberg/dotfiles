@@ -30,10 +30,12 @@ return {
   },
   opts = {
     ensure_installed = {
+      "css-lsp",
       "html-lsp",
       "pico8-ls",
       "qmlls",
       "roslyn",
+      "stylelint-lsp",
       "vue-language-server",
     },
   },

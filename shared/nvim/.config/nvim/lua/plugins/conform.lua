@@ -9,6 +9,7 @@ return {
       csproj = { "roslyn" },
       html = { "htmlbeautifier" },
       javascript = { "prettierd" },
+      razor = { "roslyn" },
       typescript = { "prettierd" },
       vue = { "prettierd" },
       yaml = { "yamlfix" },
