@@ -96,7 +96,7 @@
   "showWorkspaceApps": false,
   "maxWorkspaceIcons": 3,
   "workspacesPerMonitor": true,
-  "showOccupiedWorkspacesOnly": false,
+  "showOccupiedWorkspacesOnly": true,
   "dwlShowAllTags": false,
   "workspaceNameIcons": {},
   "waveProgressEnabled": true,
@@ -313,7 +313,8 @@
       "popupGapsManual": 4,
       "widgetOutlineEnabled": true,
       "widgetOutlineColor": "surfaceText",
-      "widgetOutlineOpacity": 0.2
+      "widgetOutlineOpacity": 0.2,
+      "widgetOutlineThickness": 1
     }
   ],
   "configVersion": 2
