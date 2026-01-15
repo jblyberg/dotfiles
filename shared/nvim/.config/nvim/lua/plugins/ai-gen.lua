@@ -4,7 +4,7 @@ return {
     vim.keymap.set({ 'n', 'v' }, '<leader>]', ':Gen<CR>')
 
     return {
-      model = "mistral:7b",
+      model = "deepseek-coder-v2:16b",
       host = "maquoit.home.blyberg.net",
       port = "11434",
       display_mode = "float",
