@@ -1,9 +1,10 @@
 return {
-  { "ThePrimeagen/harpoon",                    enabled = false },
-  { "barrett-ruth/import-cost.nvim",           enabled = false },
-  { "goolord/alpha-nvim",                      enabled = false },
-  { "jackMort/ChatGPT.nvim",                   enabled = false },
-  { "kylechui/nvim-surround",                  enabled = false },
-  { "nvim-neo-tree/neo-tree.nvim",             enabled = false },
-  { "nvim-treesitter/nvim-treesitter-context", enabled = false },
+  { "MeanderingProgrammer/render-markdown.nvim", enabled = false },
+  { "ThePrimeagen/harpoon",                      enabled = false },
+  { "barrett-ruth/import-cost.nvim",             enabled = false },
+  { "goolord/alpha-nvim",                        enabled = false },
+  { "jackMort/ChatGPT.nvim",                     enabled = false },
+  { "kylechui/nvim-surround",                    enabled = false },
+  { "nvim-neo-tree/neo-tree.nvim",               enabled = false },
+  { "nvim-treesitter/nvim-treesitter-context",   enabled = false },
 }
