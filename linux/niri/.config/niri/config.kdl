@@ -18,7 +18,8 @@ debug {
 }
 
     cursor {
-    xcursor-theme "capitaine-cursors"
+    // xcursor-theme "capitaine-cursors"
+    xcursor-theme "Bibata-Original-Classic"
     xcursor-size 42
 }
 
