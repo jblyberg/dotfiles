@@ -110,6 +110,9 @@ return {
           hl.CursorLine = { bg = "#24263a", }
           hl.CursorLineNr = { fg = "#e0af68", bg = "#24263a", }
           hl.SpellBad = { sp = "#f7768e", undercurl = true }
+          hl.RenderMarkdownBullet = { fg = "#e0af68" }
+          hl.RenderMarkdownTableHead = { fg = "#8ab17d" }
+          hl.RenderMarkdownTableRow = { fg = "#8ab17d" }
 
           hl["@markup.heading.markdown"] = { bg = "none", bold = false, fg = "#8ab17d" }
           hl["@markup.heading.1.markdown"] = { bg = "none", bold = false, fg = "#cceede" }

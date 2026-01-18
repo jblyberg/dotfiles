@@ -1,15 +1,13 @@
-local original_notify = vim.notify
-
-local banned_patterns = {
-  "No information available",
-  -- "^LSP%[.*%]", -- Filter LSP messages
+local banned_messages = {
+  "No information available"
 }
 
+---@diagnostic disable-next-line: duplicate-set-field
 vim.notify = function(msg, ...)
-  for _, pattern in ipairs(banned_patterns) do
-    if string.find(msg, pattern) then
+  for _, banned in ipairs(banned_messages) do
+    if msg == banned then
       return
     end
   end
-  original_notify(msg, ...)
+  require("notify")(msg, ...)
 end
