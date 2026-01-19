@@ -1,8 +1,6 @@
 return {
   "MeanderingProgrammer/render-markdown.nvim",
 
-  -- enabled = false,
-
   opts = function(_, opts)
     opts.anti_conceal = {
       enabled = true,
@@ -15,18 +13,8 @@ return {
       },
     }
 
-    opts.code = {
-      style = 'normal',
-      left_pad = 2,
-      language_pad = 2,
-      disable_background = true,
-    }
-
-    opts.bullet = { left_pad = 2 }
-
     opts.checkbox = {
       enabled = true,
-      left_pad = 2,
       unchecked = {
         icon = '󰄱 ',
         highlight = 'RenderMarkdownUnchecked',
@@ -43,10 +31,27 @@ return {
       scope_priority = nil,
     }
 
-    -- opts.anti_conceal = { enabled = false }
+    opts.code = {
+      border = true,
+      border_virtual = true,
+      above = ' ',
+      below = ' ',
+      language_info = true,
+      language_icon = true,
+      language_name = true,
+      disable_background = true,
+    }
+
     opts.heading = {
       -- border = false,
-      icons = { '󰉫 ', '󰉬 ', '󰉭 ', '󰉮 ', '󰉯 ', '󰉰 ' },
+      icons = {
+        '󰉫 # 󰄾 ',
+        '󰉬 ## 󰄾 ',
+        '󰉭 ### 󰄾 ',
+        '󰉮 #### 󰄾 ',
+        '󰉯 ##### 󰄾 ',
+        '󰉰 ###### 󰄾 '
+      },
       position = 'inline',
       backgrounds = {},
     }

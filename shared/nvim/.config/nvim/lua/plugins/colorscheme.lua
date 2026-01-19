@@ -114,6 +114,8 @@ return {
           hl.RenderMarkdownTableHead = { fg = "#8ab17d" }
           hl.RenderMarkdownTableRow = { fg = "#8ab17d" }
 
+          vim.api.nvim_set_hl(0, "RenderMarkdownCodeBorder", { bg = "NONE", fg = "#8ab17d", force = true })
+
           hl["@markup.heading.markdown"] = { bg = "none", bold = false, fg = "#8ab17d" }
           hl["@markup.heading.1.markdown"] = { bg = "none", bold = false, fg = "#cceede" }
           hl["@markup.heading.2.markdown"] = { bg = "none", bold = false, fg = "#b3e8dc" }
