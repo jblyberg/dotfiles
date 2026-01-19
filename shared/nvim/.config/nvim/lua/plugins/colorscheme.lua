@@ -113,24 +113,26 @@ return {
           hl.RenderMarkdownBullet = { fg = "#e0af68" }
           hl.RenderMarkdownTableHead = { fg = "#2a9d8f" }
           hl.RenderMarkdownTableRow = { fg = "#2a9d8f" }
+          hl.RenderMarkdownCodeBorder = { bg = "none", fg = "#F97316" }
+          hl.RenderMarkdownDash = { bg = "none", fg = "#afb42b" }
 
-          vim.api.nvim_set_hl(0, "RenderMarkdownCodeBorder", { bg = "NONE", force = true })
+          -- vim.api.nvim_set_hl(0, "RenderMarkdownCodeBorder", { bg = "none", force = true })
 
-          hl["@markup.heading.markdown"] = { bg = "none", bold = false, fg = "#8ab17d" }
-          hl["@markup.heading.1.markdown"] = { bg = "none", bold = false, fg = "#14B8A6" }
-          hl["@markup.heading.2.markdown"] = { bg = "none", bold = false, fg = "#67E8F9" }
-          hl["@markup.heading.3.markdown"] = { bg = "none", bold = false, fg = "#C283F5" }
-          hl["@markup.heading.4.markdown"] = { bg = "none", bold = false, fg = "#F472B6" }
-          hl["@markup.heading.5.markdown"] = { bg = "none", bold = false, fg = "#F97316" }
-          hl["@markup.heading.6.markdown"] = { bg = "none", bold = false, fg = "#FCD34D" }
+          hl["@markup.heading.markdown"] = { bg = "none", bold = true, fg = "#8ab17d" }
+          hl["@markup.heading.1.markdown"] = { bg = "none", bold = true, fg = "#14B8A6" }
+          hl["@markup.heading.2.markdown"] = { bg = "none", bold = true, fg = "#67E8F9" }
+          hl["@markup.heading.3.markdown"] = { bg = "none", bold = true, fg = "#C283F5" }
+          hl["@markup.heading.4.markdown"] = { bg = "none", bold = true, fg = "#F472B6" }
+          hl["@markup.heading.5.markdown"] = { bg = "none", bold = true, fg = "#F97316" }
+          hl["@markup.heading.6.markdown"] = { bg = "none", bold = true, fg = "#FCD34D" }
 
           hl["@markup.link.label.markdown_inline"] = { underline = true, fg = "#1a7d91" }
           hl["@markup.link.url.markdown_inline"] = { underline = false, fg = "#e0af68" }
 
           hl["@markup.list.markdown"] = { bg = "none", bold = false, fg = "#e9c46a" }
 
-          hl["@markup.raw.block.markdown"] = { fg = "#808080" }
-          hl["@markup.raw.markdown_inline"] = { fg = "#808080" }
+          -- hl["@markup.raw.block.markdown"] = { fg = "#808080", bg = "none" }
+          -- hl["@markup.raw.markdown_inline"] = { fg = "#808080", bg = "none" }
 
           hl["@punctuation.special.markdown"] = { bg = "none", bold = false, fg = "#2a9d8f" }
         end,
