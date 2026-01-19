@@ -31,6 +31,7 @@ return {
   opts = {
     ensure_installed = {
       "css-lsp",
+      "fish-lsp",
       "html-lsp",
       "pico8-ls",
       "qmlls",
