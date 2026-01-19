@@ -111,19 +111,18 @@ return {
           hl.CursorLineNr = { fg = "#e0af68", bg = "#24263a", }
           hl.SpellBad = { sp = "#f7768e", undercurl = true }
           hl.RenderMarkdownBullet = { fg = "#e0af68" }
-          hl.RenderMarkdownTableHead = { fg = "#8ab17d" }
-          hl.RenderMarkdownTableRow = { fg = "#8ab17d" }
+          hl.RenderMarkdownTableHead = { fg = "#2a9d8f" }
+          hl.RenderMarkdownTableRow = { fg = "#2a9d8f" }
 
-          vim.api.nvim_set_hl(0, "RenderMarkdownCodeBorder", { bg = "NONE", fg = "#8ab17d", force = true })
+          vim.api.nvim_set_hl(0, "RenderMarkdownCodeBorder", { bg = "NONE", force = true })
 
           hl["@markup.heading.markdown"] = { bg = "none", bold = false, fg = "#8ab17d" }
-          hl["@markup.heading.1.markdown"] = { bg = "none", bold = false, fg = "#cceede" }
-          hl["@markup.heading.2.markdown"] = { bg = "none", bold = false, fg = "#b3e8dc" }
-          hl["@markup.heading.3.markdown"] = { bg = "none", bold = false, fg = "#99e1d9" }
-          hl["@markup.heading.4.markdown"] = { bg = "none", bold = false, fg = "#5abec2" }
-          hl["@markup.heading.5.markdown"] = { bg = "none", bold = false, fg = "#3bacb6" }
-          hl["@markup.heading.6.markdown"] = { bg = "none", bold = false, fg = "#1b9aaa" }
-          hl["@markup.heading.7.markdown"] = { bg = "none", bold = false, fg = "#2f8f9d" }
+          hl["@markup.heading.1.markdown"] = { bg = "none", bold = false, fg = "#14B8A6" }
+          hl["@markup.heading.2.markdown"] = { bg = "none", bold = false, fg = "#67E8F9" }
+          hl["@markup.heading.3.markdown"] = { bg = "none", bold = false, fg = "#C283F5" }
+          hl["@markup.heading.4.markdown"] = { bg = "none", bold = false, fg = "#F472B6" }
+          hl["@markup.heading.5.markdown"] = { bg = "none", bold = false, fg = "#F97316" }
+          hl["@markup.heading.6.markdown"] = { bg = "none", bold = false, fg = "#FCD34D" }
 
           hl["@markup.link.label.markdown_inline"] = { underline = true, fg = "#1a7d91" }
           hl["@markup.link.url.markdown_inline"] = { underline = false, fg = "#e0af68" }
