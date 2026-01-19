@@ -61,6 +61,10 @@ return {
         end,
       },
 
+      layout = {
+        cycle = false,
+      },
+
       sources = {
         explorer = {
           layout = {
@@ -75,6 +79,7 @@ return {
 
           win = {
             list = {
+
               keys = {
                 ['<C-n>'] = { "close", mode = { "i", "n" } },
                 ['f'] = false,

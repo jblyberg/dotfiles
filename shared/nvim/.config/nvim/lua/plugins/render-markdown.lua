@@ -56,6 +56,7 @@ return {
       language_icon = true,
       language_name = true,
       disable_background = true,
+      highlight_inline = 'RenderMarkdownCodeInlinez',
     }
 
     opts.heading = {
