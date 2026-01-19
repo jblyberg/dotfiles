@@ -17,6 +17,10 @@ return {
           filetypes = { "lua", "pico-8" },
         },
 
+        stylelint_lsp = {
+          filetypes = { "css", "scss" },
+        },
+
         tailwindcss = {
           settings = {
             classAttributes = {
