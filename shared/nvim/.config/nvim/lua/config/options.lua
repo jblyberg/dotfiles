@@ -61,3 +61,6 @@ lazy_opt.snacks_animate = false
 -- spelling
 opt.spell = false
 opt.spelllang = "en_us"
+
+-- Set a comfortable timeout for multi-key sequences
+opt.timeoutlen = 1000

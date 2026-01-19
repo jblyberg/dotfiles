@@ -5,25 +5,7 @@ return {
 
     opts.explorer = {
       enabled = true,
-      replace_netrw = true, -- Replaces the default netrw explorer
-    }
-
-    opts.picker = {
-      sources = {
-        explorer = {
-          -- Custom settings for the explorer picker
-          layout = {
-            auto_hide = { "input" },
-            focus = "list",
-            preset = "sidebar",
-            preview = false,
-          },
-          focus = "input",   -- Automatically focus search input when opening
-          auto_close = true, -- Close explorer after selecting a file
-        },
-      },
-      hidden = true,
-      ignored = true,
+      replace_netrw = true,
     }
 
     opts.indent = {
@@ -45,34 +27,79 @@ return {
         return true
       end,
     }
+
+    opts.picker = {
+      hidden = true,
+      ignored = true,
+
+      actions = {
+        copy_filename = function(picker)
+          local item = picker:current()
+          if item then
+            local filename = vim.fn.fnamemodify(item.file or item.text, ':t')
+            vim.fn.setreg('+', filename)
+            Snacks.notify('Copied filename: ' .. filename)
+          end
+        end,
+
+        copy_relpath = function(picker)
+          local item = picker:current()
+          if item then
+            local path = vim.fn.fnamemodify(item.file or item.text, ':.')
+            vim.fn.setreg('+', path)
+            Snacks.notify('Copied path: ' .. path)
+          end
+        end,
+
+        copy_abspath = function(picker)
+          local item = picker:current()
+          if item then
+            local path = vim.fn.fnamemodify(item.file or item.text, ':p')
+            vim.fn.setreg('+', path)
+            Snacks.notify('Copied absolute path: ' .. path)
+          end
+        end,
+      },
+
+      sources = {
+        explorer = {
+          layout = {
+            auto_hide = { "input" },
+            focus = "list",
+            preset = "sidebar",
+            preview = false,
+          },
+          focus = "input",
+          auto_close = true,
+
+
+          win = {
+            list = {
+              keys = {
+                ['<C-n>'] = { "close", mode = { "i", "n" } },
+                ['f'] = false,
+                ['ff'] = 'copy_filename',
+                ['fp'] = 'copy_relpath',
+                ['fP'] = 'copy_abspath',
+              },
+            },
+          }
+        },
+      },
+
+    }
   end,
 
   keys = {
-
     {
       "<C-n>",
       function()
-        -- 1. Find any open explorer pickers
-        local explorer = Snacks.picker.get({ source = "explorer" })[1]
-
-        if explorer then
-          -- 2. If the explorer is open and currently focused, close it
-          if vim.api.nvim_get_current_win() == explorer.input.win then
-            explorer:close()
-          else
-            -- 3. If it's open but you are in another window, jump to it
-            explorer:focus()
-          end
-        else
-          -- 4. If no explorer is open, create one
-          Snacks.explorer({
-            layout = { auto_hide = { "input" } },
-            focus = "list",
-          })
-        end
+        Snacks.explorer({
+          layout = { auto_hide = { "input" } },
+          focus = "list",
+        })
       end,
       desc = "Toggle Snacks Explorer",
-    }
-    ,
+    },
   },
 }
