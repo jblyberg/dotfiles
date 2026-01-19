@@ -6,7 +6,7 @@ return {
       enabled = true,
       ignore = {
         code_background = true,
-        indent = true,
+        indent = false,
         sign = true,
         virtual_lines = true,
         latex = true,
@@ -15,8 +15,8 @@ return {
 
     opts.bullet = {
       enabled = true,
-      render_modes = false,
-      icons = { '●', '○', '◆', '◇' },
+      -- render_modes = false,
+      icons = { '● ', '○ ', '◆ ', '◇ ' },
       ordered_icons = function(ctx)
         local value = vim.trim(ctx.value)
         local index = tonumber(value:sub(1, #value - 1))
