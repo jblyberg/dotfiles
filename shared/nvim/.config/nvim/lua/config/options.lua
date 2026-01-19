@@ -57,4 +57,7 @@ opt.foldcolumn = "1"
 
 -- anumations
 lazy_opt.snacks_animate = false
+
+-- spelling
 opt.spell = false
+opt.spelllang = "en_us"
