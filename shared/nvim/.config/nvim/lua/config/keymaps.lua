@@ -34,6 +34,9 @@ keymap.set('n', "<C-l>", nvim_tmux_nav.NvimTmuxNavigateRight)
 keymap.set('n', "<C-\\>", nvim_tmux_nav.NvimTmuxNavigateLastActive)
 keymap.set('n', "<C-Space>", nvim_tmux_nav.NvimTmuxNavigateNext)
 
+-- Buffers shortcut
+keymap.set('n', '<C-b>', ':FzfLua buffers<cr>', { desc = 'List buffers' })
+
 -- Run scripts
 keymap.set("n", "<leader>vc", ":!sh scripts/copy-config-to-repo.sh<CR><CR>",
   { noremap = true, desc = "Copy Neovim config to Ansible repo" })

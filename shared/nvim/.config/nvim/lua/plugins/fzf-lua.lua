@@ -6,8 +6,7 @@ return {
 
   keys = {
     { "<leader>/",  false },
-    { "<leader>f/", LazyVim.pick("live_grep"), desc = "Grep (Root Dir)" }
-  }
-
-
+    { "<leader>fB", false },
+    { "<leader>f/", LazyVim.pick("live_grep"), desc = "Grep (Root Dir)" },
+  },
 }
