@@ -14,7 +14,7 @@ return {
       md         = { glyph = ' ', hl = 'MiniIconsExtMd' },
       p8         = { glyph = '󱎓 ', hl = 'MiniIconsExtP8' },
       pipe       = { glyph = '󰟦 ', hl = 'MiniIconsExtPipe' },
-      sh         = { glyph = ' ', hl = 'MiniIconsExtSh' },
+      sh         = { glyph = '', hl = 'MiniIconsExtSh' },
       ['cs.uid'] = { glyph = ' ', hl = 'MiniIconsExtCsUid' },
       ['gd.uid'] = { glyph = ' ', hl = 'MiniIconsExtGdUid' },
     }

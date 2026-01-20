@@ -4,6 +4,17 @@
 local keymap = vim.keymap -- for conciseness
 local nvim_tmux_nav = require('nvim-tmux-navigation')
 
+keymap.del("n", "<leader>,")
+keymap.del("n", "<leader>.")
+keymap.del("n", "<leader>`")
+keymap.del("n", "<leader>e")
+keymap.del("n", "<leader>E")
+keymap.del("n", "<leader>L")
+keymap.del("n", "<leader>S")
+keymap.del("n", "H")
+keymap.del("n", "L")
+keymap.del("n", "Y")
+
 -- :W quickly saves (and fixes annoying mis-saves)
 vim.cmd("command W w")
 

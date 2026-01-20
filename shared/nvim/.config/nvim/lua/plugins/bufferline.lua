@@ -2,6 +2,11 @@ return {
   'akinsho/bufferline.nvim',
   version = "*",
   -- dependencies = 'nvim-tree/nvim-web-devicons',
+
+  keys = {
+    { "<leader>b", false }, -- This disables the existing direct mapping
+  },
+
   opts = {
     options = {
       mode = "buffers",

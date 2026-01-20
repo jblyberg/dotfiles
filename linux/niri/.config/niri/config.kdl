@@ -61,16 +61,17 @@ output "DP-1" {
     mode "3840x2160@240.084"
     scale 1.2
     transform "normal"
+    layout {
+    center-focused-column "always"
+    }
 }
 
 layout {
     gaps 10
 
     background-color "transparent"
-
     always-center-single-column
 
-    center-focused-column "never"
 
     preset-column-widths {
       proportion 0.33333
