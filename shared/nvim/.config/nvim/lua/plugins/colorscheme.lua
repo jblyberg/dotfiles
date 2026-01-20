@@ -121,10 +121,13 @@ return {
           hl.RenderMarkdownDash                    = { fg = "#afb42b", bg = "none" }
 
           -- Mini Icons
-          hl.MiniIconsExtGodot                     = { fg = "#B0E298" }
+          hl.MiniIconsExtCsUid                     = { fg = "#c3e88d" }
+          hl.MiniIconsExtGodot                     = { fg = "#cddc39" }
+          hl.MiniIconsExtTscn                      = { fg = "#b73f73" }
+          hl.MiniIconsExtGdUid                     = { fg = "#ffc777" }
           hl.MiniIconsExtImport                    = { fg = "#E072A4" }
           hl.MiniIconsExtMd                        = { fg = "#afb42b" }
-          hl.MiniIconsExtP8                        = { fg = "#3D3B8E" }
+          hl.MiniIconsExtP8                        = { fg = "#b73f73" }
           hl.MiniIconsExtPipe                      = { fg = "#558B6E" }
           hl.MiniIconsExtUid                       = { fg = "#B96AC9" }
           hl.MiniIconsFileReadmeMd                 = { fg = "#F97316" }

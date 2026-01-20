@@ -1,17 +1,21 @@
 return {
   'nvim-mini/mini.icons',
-  -- priority = 1, -- High priority loads early, but you might need lazy loading
   lazy = false,
   opts = function(_, opts)
+    opts.directory = {
+      ['.godot'] = { glyph = ' ', hl = 'MiniIconsExtGodot' },
+    }
+
     opts.extension = {
       godot      = { glyph = ' ', hl = 'MiniIconsExtGodot' },
+      tscn       = { glyph = ' ', hl = 'MiniIconsExtTscn' },
       import     = { glyph = '󰋺 ', hl = 'MiniIconsExtImport' },
       markdown   = { glyph = ' ', hl = 'MiniIconsExtMd' },
       md         = { glyph = ' ', hl = 'MiniIconsExtMd' },
       p8         = { glyph = '󱎓 ', hl = 'MiniIconsExtP8' },
       pipe       = { glyph = '󰟦 ', hl = 'MiniIconsExtPipe' },
-      ['cs.uid'] = { glyph = ' ', hl = 'MiniIconsExtUid' },
-      ['gd.uid'] = { glyph = ' ', hl = 'MiniIconsExtUid' },
+      ['cs.uid'] = { glyph = ' ', hl = 'MiniIconsExtCsUid' },
+      ['gd.uid'] = { glyph = ' ', hl = 'MiniIconsExtGdUid' },
     }
 
     opts.file = {
