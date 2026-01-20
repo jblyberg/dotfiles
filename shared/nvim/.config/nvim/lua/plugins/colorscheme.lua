@@ -122,13 +122,14 @@ return {
 
           -- Mini Icons
           hl.MiniIconsExtCsUid                     = { fg = "#c3e88d" }
-          hl.MiniIconsExtGodot                     = { fg = "#cddc39" }
-          hl.MiniIconsExtTscn                      = { fg = "#b73f73" }
           hl.MiniIconsExtGdUid                     = { fg = "#ffc777" }
+          hl.MiniIconsExtGodot                     = { fg = "#cddc39" }
           hl.MiniIconsExtImport                    = { fg = "#E072A4" }
           hl.MiniIconsExtMd                        = { fg = "#afb42b" }
           hl.MiniIconsExtP8                        = { fg = "#b73f73" }
           hl.MiniIconsExtPipe                      = { fg = "#558B6E" }
+          hl.MiniIconsExtSh                        = { fg = "#9e9d24" }
+          hl.MiniIconsExtTscn                      = { fg = "#b73f73" }
           hl.MiniIconsExtUid                       = { fg = "#B96AC9" }
           hl.MiniIconsFileReadmeMd                 = { fg = "#F97316" }
 
