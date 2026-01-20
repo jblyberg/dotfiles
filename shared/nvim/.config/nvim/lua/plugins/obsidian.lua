@@ -4,6 +4,11 @@ return {
   lazy = true,
   ft = "markdown",
   opts = {
+    ui = {
+      enable = true,
+      bullets = {},
+    },
+
     workspaces = {
       {
         name = "personal",
