@@ -134,12 +134,12 @@ return {
           hl.MiniIconsFileReadmeMd                 = { fg = "#F97316" }
 
           hl["@markup.heading.markdown"]           = { fg = "#8ab17d", bg = "none", bold = true }
-          hl["@markup.heading.1.markdown"]         = { fg = "#14B8A6", bg = "none", bold = true }
-          hl["@markup.heading.2.markdown"]         = { fg = "#67E8F9", bg = "none", bold = true }
-          hl["@markup.heading.3.markdown"]         = { fg = "#C283F5", bg = "none", bold = true }
-          hl["@markup.heading.4.markdown"]         = { fg = "#F472B6", bg = "none", bold = true }
-          hl["@markup.heading.5.markdown"]         = { fg = "#F97316", bg = "none", bold = true }
-          hl["@markup.heading.6.markdown"]         = { fg = "#FCD34D", bg = "none", bold = true }
+          hl["@markup.heading.1.markdown"]         = { fg = "#67E8F9", bg = "none", bold = true }
+          hl["@markup.heading.2.markdown"]         = { fg = "#14B8A6", bg = "none", bold = true }
+          hl["@markup.heading.3.markdown"]         = { fg = "#F472B6", bg = "none", bold = true }
+          hl["@markup.heading.4.markdown"]         = { fg = "#C283F5", bg = "none", bold = true }
+          hl["@markup.heading.5.markdown"]         = { fg = "#FCD34D", bg = "none", bold = true }
+          hl["@markup.heading.6.markdown"]         = { fg = "#F97316", bg = "none", bold = true }
 
           hl["@markup.link.label.markdown_inline"] = { fg = "#1a7d91", underline = true }
           hl["@markup.link.url.markdown_inline"]   = { fg = "#e0af68", underline = true }
