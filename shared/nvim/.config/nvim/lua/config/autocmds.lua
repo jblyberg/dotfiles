@@ -43,3 +43,12 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.opt_local.spell = false
   end,
 })
+
+--- Add a separator between help buffer and edit buffer
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "help",
+  callback = function()
+    -- Set custom highlight for help winbar
+    vim.wo.winbar = "%#HelpWinBar#" .. string.rep("─", vim.api.nvim_win_get_width(0))
+  end,
+})

@@ -109,6 +109,7 @@ return {
         on_highlights = function(hl, colors)
           hl.CursorLine                            = { bg = "#24263a", }
           hl.CursorLineNr                          = { fg = "#e0af68", bg = "#24263a", }
+          hl.HelpWinBar                            = { fg = "#afb42b", bg = "#1a1b26", }
 
           -- Spelling
           hl.SpellBad                              = { sp = "#f7768e", undercurl = true }
