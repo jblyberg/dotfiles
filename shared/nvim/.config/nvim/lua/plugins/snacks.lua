@@ -8,6 +8,10 @@ return {
       replace_netrw = true,
     }
 
+    opts.image = {
+      enabled = true,
+    }
+
     opts.indent = {
       filter = function(buf)
         -- Get the filetype and buffer type for the current buffer
