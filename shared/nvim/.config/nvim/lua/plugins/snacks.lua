@@ -1,5 +1,6 @@
 return {
   "folke/snacks.nvim",
+  -- enabled = false,
   opts = function(_, opts)
     opts.dashboard = { enabled = false }
 
@@ -10,6 +11,16 @@ return {
 
     opts.image = {
       enabled = true,
+      inline = true,
+      float = false,
+      doc = {
+        enabled = true,
+        inline = true,
+
+        -- Height and width is in cells, not pixels
+        max_width = 60,
+        max_height = 30,
+      },
     }
 
     opts.indent = {

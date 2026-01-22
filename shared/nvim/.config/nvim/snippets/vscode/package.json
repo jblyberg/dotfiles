@@ -10,6 +10,13 @@
       },
       {
         "language": [
+          "markdown",
+          "markdown_inline"
+        ],
+        "path": "./markdown.json"
+      },
+      {
+        "language": [
           "typescript"
         ],
         "path": "./nest.json"

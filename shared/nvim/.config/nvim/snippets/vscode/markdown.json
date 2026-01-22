@@ -1,0 +1,10 @@
+{
+  "Markdown: Image - Inline, local": {
+    "scope": "markdown",
+    "prefix": "mm-image-inline-local",
+    "description": "Add an embedded local image",
+    "body": [
+      "![Image description](<${1:image file}>)"
+    ]
+  }
+}
