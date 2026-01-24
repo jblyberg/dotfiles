@@ -1,10 +1,55 @@
 {
+  "Markdown: Footnote": {
+    "scope": "markdown",
+    "prefix": "mm-footnote",
+    "description": "Add a footnote",
+    "body": [
+      "Here's a sentence with a footnote. [^${1:#}]",
+      "",
+      "[^${2:#}]: This is the footnote."
+    ]
+  },
+  "Markdown: Link/URL": {
+    "scope": "markdown",
+    "prefix": "mm-link",
+    "description": "Add an embedded link/URL",
+    "body": [
+      "[${2:Link description}](${1:Link})"
+    ]
+  },
   "Markdown: Image - Inline, local": {
     "scope": "markdown",
     "prefix": "mm-image-inline-local",
     "description": "Add an embedded local image",
     "body": [
       "![Image description](<${1:image file}>)"
+    ]
+  },
+  "Markdown: List: Ordered": {
+    "scope": "markdown",
+    "prefix": "mm-list-ordered",
+    "description": "Add an ordered list",
+    "body": [
+      "1. ${1:First Item}",
+      "2. ${2:Second Item}"
+    ]
+  },
+  "Markdown: List: Unordered": {
+    "scope": "markdown",
+    "prefix": "mm-list-unordered",
+    "description": "Add an unordered list",
+    "body": [
+      "- ${1:First Item}",
+      "- ${2:Second Item}"
+    ]
+  },
+  "Markdown: List: Tasks": {
+    "scope": "markdown",
+    "prefix": "mm-list-tasks",
+    "description": "Add a task list",
+    "body": [
+      "- [ ] ${1:List item 1}",
+      "- [ ] ${2:List item 2}"
     ]
   }
 }
