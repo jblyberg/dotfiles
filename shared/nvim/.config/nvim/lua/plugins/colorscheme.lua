@@ -110,7 +110,7 @@ return {
           hl.CursorLine                            = { bg = "#24263a", }
           hl.CursorLineNr                          = { fg = "#e0af68", bg = "#24263a", }
           hl.HelpWinBar                            = { fg = "#afb42b", bg = "#1a1b26", }
-          hl.WinSeparator                          = { fg = "#14B8A6", bg = "none", }
+          hl.WinSeparator                          = { fg = "#afb42b", bg = "none", }
 
           -- Spelling
           hl.SpellBad                              = { sp = "#f7768e", undercurl = true }
@@ -134,6 +134,10 @@ return {
           hl.MiniIconsExtTscn                      = { fg = "#b73f73" }
           hl.MiniIconsExtUid                       = { fg = "#B96AC9" }
           hl.MiniIconsFileReadmeMd                 = { fg = "#F97316" }
+
+          hl.SnacksPickerInput                     = { fg = "#fcfcfc", bg = "none" }
+          hl.SnacksPickerInputBorder               = { fg = "#afb42b" }
+          hl.SnacksPickerMatch                     = { fg = "#F97316" }
 
           hl["@markup.heading.markdown"]           = { fg = "#8ab17d", bg = "none", bold = true }
           hl["@markup.heading.1.markdown"]         = { fg = "#67E8F9", bg = "none", bold = true }

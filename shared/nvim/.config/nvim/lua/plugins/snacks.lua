@@ -83,18 +83,23 @@ return {
       sources = {
         explorer = {
           layout = {
-            auto_hide = { "input" },
-            focus = "list",
+            -- auto_hide = { "input" },
+            focus = "input",
             preset = "sidebar",
             preview = false,
           },
           focus = "input",
           auto_close = true,
 
-
           win = {
-            list = {
+            input = {
+              keys = {
+                ['<C-n>'] = { "close", mode = { "i", "n" } },
+              },
 
+
+            },
+            list = {
               keys = {
                 ['<C-n>'] = { "close", mode = { "i", "n" } },
                 ['f'] = false,
@@ -114,10 +119,7 @@ return {
     {
       "<C-n>",
       function()
-        Snacks.explorer({
-          layout = { auto_hide = { "input" } },
-          focus = "list",
-        })
+        Snacks.explorer()
       end,
       desc = "Toggle Snacks Explorer",
     },
