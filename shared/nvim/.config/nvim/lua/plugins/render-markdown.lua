@@ -22,7 +22,7 @@ return {
         local index = tonumber(value:sub(1, #value - 1))
         return ('%d.'):format(index > 1 and index or ctx.index)
       end,
-      left_pad = 0,
+      left_pad = 1,
       right_pad = 0,
       highlight = 'RenderMarkdownBullet',
       scope_highlight = {},
@@ -31,6 +31,10 @@ return {
 
     opts.checkbox = {
       enabled = true,
+      render_modes = false,
+      left_pad = 1,
+      right_pad = 0,
+      scope_priority = nil,
       unchecked = {
         icon = '󰄱 ',
         highlight = 'RenderMarkdownUnchecked',
@@ -39,12 +43,12 @@ return {
       checked = {
         icon = '󰱒 ',
         highlight = 'RenderMarkdownChecked',
-        scope_highlight = nil,
+        -- scope_highlight = nil,
+        scope_highlight = '@markup.strikethrough'
       },
       custom = {
-        todo = { raw = '[-]', rendered = '󰥔 ', highlight = 'RenderMarkdownTodo', scope_highlight = nil },
+        todo = { raw = '[-]', rendered = '󰥔', highlight = 'RenderMarkdownTodo', scope_highlight = nil },
       },
-      scope_priority = nil,
     }
 
     opts.code = {

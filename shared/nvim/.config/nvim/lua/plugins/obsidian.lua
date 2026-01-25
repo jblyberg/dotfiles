@@ -5,7 +5,7 @@ return {
   ft = "markdown",
   opts = {
     ui = {
-      enable = true,
+      enable = false,
       bullets = {},
     },
 
