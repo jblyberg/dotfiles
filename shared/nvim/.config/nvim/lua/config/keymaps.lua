@@ -4,6 +4,8 @@
 local keymap = vim.keymap -- for conciseness
 local nvim_tmux_nav = require('nvim-tmux-navigation')
 
+-- Remove unwanted keymaps
+keymap.del("n", "<leader>K")
 keymap.del("n", "<leader>,")
 keymap.del("n", "<leader>.")
 keymap.del("n", "<leader>`")
@@ -14,6 +16,9 @@ keymap.del("n", "<leader>S")
 keymap.del("n", "H")
 keymap.del("n", "L")
 keymap.del("n", "Y")
+
+-- Convenience mappings
+keymap.set("n", "<C-S-x>", ":MarkdownToggleCheckbox<CR>")
 
 -- :W quickly saves (and fixes annoying mis-saves)
 vim.cmd("command W w")
@@ -51,9 +56,6 @@ keymap.set('n', '<C-b>', ':FzfLua buffers<cr>', { desc = 'List buffers' })
 -- Run scripts
 keymap.set("n", "<leader>vc", ":!sh scripts/copy-config-to-repo.sh<CR><CR>",
   { noremap = true, desc = "Copy Neovim config to Ansible repo" })
-
--- Remove unwanted keymaps
-keymap.del("n", "<leader>K")
 
 -- Automatically set indent correctly when entering insert mode
 keymap.set("n", "i", function()
