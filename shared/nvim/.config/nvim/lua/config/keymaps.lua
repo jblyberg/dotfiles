@@ -17,6 +17,31 @@ keymap.del("n", "H")
 keymap.del("n", "L")
 keymap.del("n", "Y")
 
+vim.keymap.del("n", "<leader>-")
+-- vim.keymap.del("n", "<leader>|")
+
+-- vim.keymap.set("n", "<leader>-", "<cmd>split<cr>", { desc = "Split Window Below" })
+-- keymap.set("n", "<leader>-", "<cmd>split<cr><C-w>k", { desc = "Split Below, Stay Here" })
+vim.keymap.set("n", "<leader>-", function()
+  local cursor_row = vim.fn.winline()  -- Cursor's screen row position
+  local cursor_line = vim.fn.line(".") -- Cursor's buffer line number
+  local cursor_col = vim.fn.col(".")   -- Cursor's column position
+
+  vim.cmd("split")
+  vim.cmd("wincmd k")              -- Move to top window
+  vim.cmd("resize " .. cursor_row) -- Resize to cursor position
+
+  -- Restore cursor position in top window
+  vim.fn.cursor(cursor_line, cursor_col)
+
+  vim.cmd("wincmd j") -- Move back to bottom window
+
+  -- Restore cursor position in bottom window
+  vim.fn.cursor(cursor_line, cursor_col)
+end, { desc = "Split at Cursor Position" })
+
+-- keymap.set("n", "<leader>|", "<cmd>vsplit<cr><C-w>h", { desc = "Split Right, Stay Here" })
+
 -- Convenience mappings
 keymap.set("n", "<C-S-x>", ":MarkdownToggleCheckbox<CR>")
 
