@@ -110,7 +110,7 @@ return {
           hl.CursorLine                            = { bg = "#24263a", }
           hl.CursorLineNr                          = { fg = "#e0af68", bg = "#24263a", }
           hl.HelpWinBar                            = { fg = "#afb42b", bg = "#1a1b26", }
-          hl.WinSeparator                          = { fg = "#bebebe", bg = "none", }
+          hl.WinSeparator                          = { fg = "#c3e88d", bg = "none", }
 
           -- Spelling
           hl.SpellBad                              = { sp = "#f7768e", undercurl = true }
