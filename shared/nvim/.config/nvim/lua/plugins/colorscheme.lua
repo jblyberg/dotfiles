@@ -135,8 +135,8 @@ return {
           hl.MiniIconsExtUid                       = { fg = "#B96AC9" }
           hl.MiniIconsFileReadmeMd                 = { fg = "#F97316" }
 
-          hl.SnacksPickerInput                     = { fg = "#ffe0d1", bg = "none" }
-          hl.SnacksPickerInputBorder               = { fg = "#ff7433" }
+          hl.SnacksPickerInput                     = { fg = "#ffe0d1", bg = "#1e2030" }
+          hl.SnacksPickerInputBorder               = { fg = "#e0af68", bg = "#1e2030" }
           hl.SnacksPickerMatch                     = { fg = "#ff7433" }
 
           hl["@markup.heading.markdown"]           = { fg = "#8ab17d", bg = "none", bold = true }
