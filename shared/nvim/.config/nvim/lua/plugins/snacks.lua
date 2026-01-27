@@ -84,11 +84,10 @@ return {
         explorer = {
           layout = {
             -- auto_hide = { "input" },
-            focus = "input",
             preset = "sidebar",
             preview = false,
           },
-          focus = "input",
+          focus = "list",
           auto_close = true,
 
           win = {

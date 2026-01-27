@@ -3,49 +3,31 @@
 -- Add any additional keymaps here
 local keymap = vim.keymap -- for conciseness
 local nvim_tmux_nav = require('nvim-tmux-navigation')
+local SplitWindowAtCursor = require('functions.SplitWindowAtCursor')
+local FixIndentPosition = require('functions.FixIndentPosition')
 
 -- Remove unwanted keymaps
-keymap.del("n", "<leader>K")
 keymap.del("n", "<leader>,")
+keymap.del("n", "<leader>-")
 keymap.del("n", "<leader>.")
-keymap.del("n", "<leader>`")
-keymap.del("n", "<leader>e")
 keymap.del("n", "<leader>E")
+keymap.del("n", "<leader>K")
 keymap.del("n", "<leader>L")
 keymap.del("n", "<leader>S")
+keymap.del("n", "<leader>`")
+keymap.del("n", "<leader>e")
 keymap.del("n", "H")
 keymap.del("n", "L")
 keymap.del("n", "Y")
 
-vim.keymap.del("n", "<leader>-")
--- vim.keymap.del("n", "<leader>|")
-
--- vim.keymap.set("n", "<leader>-", "<cmd>split<cr>", { desc = "Split Window Below" })
--- keymap.set("n", "<leader>-", "<cmd>split<cr><C-w>k", { desc = "Split Below, Stay Here" })
-vim.keymap.set("n", "<leader>-", function()
-  local cursor_row = vim.fn.winline()  -- Cursor's screen row position
-  local cursor_line = vim.fn.line(".") -- Cursor's buffer line number
-  local cursor_col = vim.fn.col(".")   -- Cursor's column position
-
-  vim.cmd("split")
-  vim.cmd("wincmd k")              -- Move to top window
-  vim.cmd("resize " .. cursor_row) -- Resize to cursor position
-
-  -- Restore cursor position in top window
-  vim.fn.cursor(cursor_line, cursor_col)
-
-  vim.cmd("wincmd j") -- Move back to bottom window
-
-  -- Restore cursor position in bottom window
-  vim.fn.cursor(cursor_line, cursor_col)
-end, { desc = "Split at Cursor Position" })
-
--- keymap.set("n", "<leader>|", "<cmd>vsplit<cr><C-w>h", { desc = "Split Right, Stay Here" })
+-- Window split at cursor
+keymap.set("n", "<leader>-", SplitWindowAtCursor, { desc = "Split at Cursor Position" })
 
 -- Convenience mappings
 keymap.set("n", "<C-S-x>", ":MarkdownToggleCheckbox<CR>")
 
--- :W quickly saves (and fixes annoying mis-saves)
+-- :Q and :W quickly quits or saves (and fixes annoying mis-quits/saves)
+vim.cmd("command Q q")
 vim.cmd("command W w")
 
 -- Disable recording macros
@@ -83,17 +65,5 @@ keymap.set("n", "<leader>vc", ":!sh scripts/copy-config-to-repo.sh<CR><CR>",
   { noremap = true, desc = "Copy Neovim config to Ansible repo" })
 
 -- Automatically set indent correctly when entering insert mode
-keymap.set("n", "i", function()
-  local line = vim.fn.getline(".")
-  local col = vim.fn.col(".")
-  local is_empty = #line == 0
-  local is_leading_whitespace = col <= #line:match("^%s*")
-
-  if is_empty then
-    return '"_cc'
-  elseif is_leading_whitespace then -- Comment this out to disable going to end of line
-    return "A"
-  else
-    return "i"
-  end
-end, { desc = "Automatically indent to the appropriate position", silent = true, expr = true })
+keymap.set("n", "i", FixIndentPosition,
+  { desc = "Automatically indent to the appropriate position", silent = true, expr = true })

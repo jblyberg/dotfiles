@@ -1,0 +1,10 @@
+{
+  "diagnostics.globals": [
+    "Snacks",
+    "vim"
+  ],
+  "workspace.library": [
+    "${3rd}/luv/library",
+    "${3rd}/busted/library"
+  ]
+}
