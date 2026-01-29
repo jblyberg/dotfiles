@@ -153,5 +153,19 @@ return {
       end,
       desc = "Toggle Snacks Explorer",
     },
+    {
+      "<leader>bi",
+      function()
+        local cache = vim.fn.stdpath("cache") .. "/snacks/image"
+        vim.fn.delete(cache, "rf")
+
+        -- Refresh current buffer images by reloading the file
+        -- This is the most reliable way to force Snacks to see the cache is gone
+        vim.cmd("edit!")
+
+        Snacks.notify.info("Cache cleared and buffer reloaded")
+      end,
+      desc = "Refresh Inline Images in current buffer",
+    },
   },
 }
