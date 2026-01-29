@@ -13,13 +13,44 @@ return {
       enabled = true,
       inline = true,
       float = false,
+
+      convert = {
+        cmd = "magick",
+        notify = true,
+        magick = {
+          default = { "{src}[0]", "-scale", "1280x720>" },
+          vector = { "-background", "none", "-density", "600", "{src}[0]", "-filter", "lanczos", "-trim" },
+          math = { "-density", 192, "{src}[0]", "-trim" },
+          pdf = { "-density", 192, "{src}[0]", "-background", "white", "-alpha", "remove", "-trim" },
+        },
+      },
+
       doc = {
         enabled = true,
         inline = true,
+        max_width = 120, -- In cells, not pixels
+        max_height = 50,
+      },
 
-        -- Height and width is in cells, not pixels
-        max_width = 60,
-        max_height = 30,
+      icons = {
+        math = "󰪚 ",
+        chart = "󰄧 ",
+        image = " ",
+      },
+
+      styles = {
+        snacks_image = {
+          snacks_image = function()
+            return {
+              relative = "cursor",
+              border = "none",
+              focusable = false,
+              backdrop = false,
+              row = 0,
+              col = 0,
+            }
+          end,
+        },
       },
     }
 
