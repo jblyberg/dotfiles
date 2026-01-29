@@ -8,14 +8,19 @@ return {
       cs = { "roslyn" },
       csproj = { "roslyn" },
       html = { "htmlbeautifier" },
-      javascript = { "prettierd" },
+      javascript = { "prettier" },
       razor = { "roslyn" },
-      typescript = { "prettierd" },
-      vue = { "prettierd" },
+      typescript = { "prettier" },
+      vue = { "prettier" },
       yaml = { "yamlfix" },
     }
 
     opts.formatters = {
+      roslyn = {
+        command = "dotnet",
+        args = { "format", "--include", "$FILENAME" },
+        stdin = false,
+      },
       yamlfix = {
         -- Adds environment args to the yamlfix formatter - https://lyz-code.github.io/yamlfix/
         env = {
