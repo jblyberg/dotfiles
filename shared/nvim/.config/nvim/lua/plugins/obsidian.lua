@@ -4,6 +4,8 @@ return {
   lazy = true,
   ft = "markdown",
   opts = {
+    legacy_commands = false,
+
     ui = {
       enable = false,
       bullets = {},
