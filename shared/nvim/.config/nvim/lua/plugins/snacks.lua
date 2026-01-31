@@ -75,9 +75,6 @@ return {
     }
 
     opts.picker = {
-      hidden = true,
-      ignored = true,
-
       actions = {
         copy_filename = function(picker)
           local item = picker:current()
@@ -114,11 +111,9 @@ return {
       sources = {
         explorer = {
           auto_close = true,
-          exclude = { ".git", "dist", "node_modules" },
           focus = "list",
 
           layout = {
-            -- auto_hide = { "input" },
             preset = "sidebar",
             preview = false,
           },
@@ -128,9 +123,8 @@ return {
               keys = {
                 ['<C-n>'] = { "close", mode = { "i", "n" } },
               },
-
-
             },
+
             list = {
               keys = {
                 ['<C-n>'] = { "close", mode = { "i", "n" } },
@@ -143,7 +137,6 @@ return {
           }
         },
       },
-
     }
   end,
 
