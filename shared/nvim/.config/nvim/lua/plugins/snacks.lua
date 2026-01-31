@@ -113,13 +113,15 @@ return {
 
       sources = {
         explorer = {
+          auto_close = true,
+          exclude = { ".git", "dist", "node_modules" },
+          focus = "list",
+
           layout = {
             -- auto_hide = { "input" },
             preset = "sidebar",
             preview = false,
           },
-          focus = "list",
-          auto_close = true,
 
           win = {
             input = {
