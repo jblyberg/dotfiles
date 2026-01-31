@@ -9,14 +9,6 @@
       "[^${2:#}]: This is the footnote."
     ]
   },
-  "Markdown: Link/URL": {
-    "scope": "markdown",
-    "prefix": "mm-link",
-    "description": "Add an embedded link/URL",
-    "body": [
-      "[${2:Link description}](${1:Link})"
-    ]
-  },
   "Markdown: Image - Inline, local": {
     "scope": "markdown",
     "prefix": "mm-image-inline-local",
@@ -25,16 +17,24 @@
       "![Image description](<${1:image file}>)"
     ]
   },
-  "Markdown: List: Ordered": {
+  "Markdown: Link/URL": {
     "scope": "markdown",
-    "prefix": "mm-list-ordered",
-    "description": "Add an ordered list",
+    "prefix": "mm-link",
+    "description": "Add an embedded link/URL",
     "body": [
-      "1. ${1:First Item}",
-      "2. ${2:Second Item}"
+      "[${2:Link description}](${1:Link})"
     ]
   },
-  "Markdown: List: Unordered": {
+  "Markdown: List - Tasks": {
+    "scope": "markdown",
+    "prefix": "mm-list-tasks",
+    "description": "Add a task list",
+    "body": [
+      "- [ ] ${1:List item 1}",
+      "- [ ] ${2:List item 2}"
+    ]
+  },
+  "Markdown: List - Unordered": {
     "scope": "markdown",
     "prefix": "mm-list-unordered",
     "description": "Add an unordered list",
@@ -43,13 +43,26 @@
       "- ${2:Second Item}"
     ]
   },
-  "Markdown: List: Tasks": {
+  "Markdown: Table - Two columns": {
     "scope": "markdown",
-    "prefix": "mm-list-tasks",
-    "description": "Add a task list",
+    "prefix": "mm-table-2",
+    "description": "Add a a table with two columns",
     "body": [
-      "- [ ] ${1:List item 1}",
-      "- [ ] ${2:List item 2}"
+      "| Header 1 | Header 2 |",
+      "|---|---|",
+      "| Row 1, Col 1 | Row 1, Col 2 |",
+      "| Row 2, Col 1 | Row 2, Col 2 |"
+    ]
+  },
+  "Markdown: Table - Three columns": {
+    "scope": "markdown",
+    "prefix": "mm-table-3",
+    "description": "Add a a table with three columns",
+    "body": [
+      "| Header 1 | Header 2 | Header 3 |",
+      "|---|---|---|",
+      "| Row 1, Col 1 | Row 1, Col 2 | Row 1, Col 3 |",
+      "| Row 2, Col 1 | Row 2, Col 2 | Row 2, Col 3 |"
     ]
   }
 }
