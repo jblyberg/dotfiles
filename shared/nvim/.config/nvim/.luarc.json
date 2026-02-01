@@ -1,7 +1,8 @@
 {
   "diagnostics.globals": [
     "Snacks",
-    "vim"
+    "vim",
+        "LazyVim"
   ],
   "workspace.library": [
     "${3rd}/luv/library",
