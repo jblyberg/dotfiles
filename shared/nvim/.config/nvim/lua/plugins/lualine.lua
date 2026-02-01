@@ -8,7 +8,18 @@ return {
     opts.sections.lualine_c = { "location" }
 
     opts.sections.lualine_x = { "filename" }
-    opts.sections.lualine_y = { "filetype" }
+    opts.sections.lualine_y = {
+      {
+        'filetype',
+        fmt = function(str)
+          if str == 'snacks_picker_list' then
+            return 'File Explorer'
+          end
+
+          return str
+        end,
+      },
+    }
     opts.sections.lualine_z = {
       function()
         local msg = "󱤳 LSP inactive"

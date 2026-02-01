@@ -1,12 +1,14 @@
 return {
   "ibhagwan/fzf-lua",
-
-  -- opts = function(_, opts)
-  -- end,
-
+  opts = {
+    fzf_opts = {
+      ["--exact"] = "",
+    },
+  },
   keys = {
-    { "<leader>/",  false },
-    { "<leader>fB", false },
-    { "<leader>f/", LazyVim.pick("live_grep"), desc = "Grep (Root Dir)" },
+    { "<leader>/",       false },
+    { "<leader>fB",      false },
+    { "<leader>f/",      function() require("fzf-lua").live_grep({ no_hidden = true }) end, desc = "Grep (Root Dir)" },
+    { "<leader><space>", function() require("fzf-lua").files({ hidden = false }) end,       desc = "Find (Root Dir)" },
   },
 }

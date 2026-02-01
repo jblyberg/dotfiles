@@ -119,6 +119,10 @@ return {
             }
           },
 
+          grep = {
+            hidden = false,
+          },
+
           win = {
             input = {
               keys = {
@@ -137,6 +141,7 @@ return {
             },
           }
         },
+
       },
     }
   end,
