@@ -2,16 +2,20 @@ return {
   {
     "folke/noice.nvim",
     -- enabled = false,
-    opts = {
+    opts = function(_, opts)
       -- Disable the Noice command line UI
-      cmdline = { enabled = false },
+      opts.cmdline = { enabled = false }
+
       -- Disable Noice messages/notifications
-      messages = { enabled = false },
+      opts.messages = { enabled = false }
+
       -- Disable the Noice popupmenu (completion UI)
-      popupmenu = { enabled = false },
+      opts.popupmenu = { enabled = false }
+
       -- Disable Noice notify (uses nvim-notify or default instead)
-      notify = { enabled = false },
-      lsp = {
+      opts.notify = { enabled = false }
+
+      opts.lsp = {
         -- Ensure LSP hover is still handled by Noice
         hover = { enabled = true },
         signature = { enabled = true }, -- Often desired alongside hover
@@ -26,8 +30,9 @@ return {
           -- Change the view from "mini" to "notify" to use floating windows
           view = "mini",
         },
-      },
-      views = {
+      }
+
+      opts.views = {
         mini = {
           position = {
             -- -1 is the bottom-most line; -2 moves it one line higher
@@ -35,15 +40,16 @@ return {
             col = "100%", -- Keeps it aligned to the right
           },
         },
-      },
-      presets = {
+      }
+
+      opts.presets = {
         -- Disable presets that affect the cmdline/messages
         bottom_search = false,
         command_palette = false,
         long_message_to_split = false,
         inc_rename = false,
         lsp_doc_border = true,
-      },
-    },
+      }
+    end
   },
 }

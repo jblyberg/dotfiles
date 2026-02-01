@@ -7,16 +7,17 @@ return {
     handle = { blend = 0 },
     handlers = { cursor = false },
     excluded_filetypes = {
-      'alpha',
-      'lazy',
-      'notify',
-      'Trouble',
       'NeoTree',
       'NvimTree',
-      'qf',
-      'prompt',
       'TelescopePrompt',
+      'Trouble',
+      'alpha',
+      'lazy',
       'noice',
+      'notify',
+      'prompt',
+      'qf',
+      'snacks_picker_list',
     },
   }
 }

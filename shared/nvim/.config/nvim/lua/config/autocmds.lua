@@ -14,6 +14,7 @@ autocmd({ "VimEnter", "InsertLeave" }, {
   command = "set relativenumber",
 })
 
+-- Enable relative line numbers when switching to Normal mode
 autocmd({ "InsertEnter" }, {
   desc = "set number",
   group = augroup("set_number", { clear = true }),

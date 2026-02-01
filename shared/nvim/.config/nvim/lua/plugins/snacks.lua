@@ -28,7 +28,7 @@ return {
       doc = {
         enabled = true,
         inline = true,
-        max_width = 120, -- In cells, not pixels
+        max_width = 70, -- In cells, not pixels
         max_height = 50,
       },
 
@@ -112,10 +112,12 @@ return {
         explorer = {
           auto_close = true,
           focus = "list",
-
           layout = {
             preset = "sidebar",
             preview = false,
+            layout = {
+              width = 35,
+            }
           },
 
           win = {
