@@ -2,6 +2,7 @@
 
 return {
   "nvim-telescope/telescope.nvim",
+  enabled = false,
   opts = function(_, opts)
     opts.defaults = {
       prompt_prefix = "   ",

@@ -13,6 +13,13 @@ return {
           },
         },
 
+        lua = {
+          diagnostics = {
+            disable = { "unused-local" },
+            globals = { "vim", "LazyVim" },
+          },
+        },
+
         pico8_ls = {
           filetypes = { "lua", "pico-8" },
         },
