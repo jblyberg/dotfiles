@@ -303,6 +303,7 @@ binds {
     Mod+Shift+E { quit; }
     Mod+Shift+P { power-off-monitors; }
     Mod+T hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
+    Mod+Shift+B { spawn-sh "sudo systemctl restart bluetooth.service";   }
     Mod+Shift+C { spawn-sh "~/.config/niri/scripts/toggle_center_mode.sh"; }
     // Mod+V hotkey-overlay-title="Clipboard Manager" { spawn "dms" "ipc" "call" "clipboard" "toggle"; }
     // Brightness and Audio
