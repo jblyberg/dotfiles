@@ -38,12 +38,12 @@ keymap.set("v", "q", "<Nop>", { noremap = true })
 keymap.set("v", "<C-r>", '"hy:%s/<C-r>h//gc<left><left><left>', { noremap = true })
 
 -- Moving text
-keymap.set("n", "<M-Down>", ":m .+1<CR>==", { noremap = true })
-keymap.set("n", "<M-Up>", ":m .-2<CR>==", { noremap = true })
-keymap.set("i", "<M-Down>", "<Esc>:m .+1<CR>==gi", { noremap = true })
-keymap.set("i", "<M-Up>", "<Esc>:m .-2<CR>==gi", { noremap = true })
-keymap.set("v", "<M-Down>", ":m '>+1<CR>gv=gv", { noremap = true })
-keymap.set("v", "<M-Up>", ":m '<-2<CR>gv=gv", { noremap = true })
+-- keymap.set("n", "<M-Down>", ":m .+1<CR>==", { noremap = true })
+-- keymap.set("n", "<M-Up>", ":m .-2<CR>==", { noremap = true })
+-- keymap.set("i", "<M-Down>", "<Esc>:m .+1<CR>==gi", { noremap = true })
+-- keymap.set("i", "<M-Up>", "<Esc>:m .-2<CR>==gi", { noremap = true })
+-- keymap.set("v", "<M-Down>", ":m '>+1<CR>gv=gv", { noremap = true })
+-- keymap.set("v", "<M-Up>", ":m '<-2<CR>gv=gv", { noremap = true })
 
 -- Copy line
 keymap.set("n", "<S-D-Down>", ":co.<CR>==", { noremap = true })

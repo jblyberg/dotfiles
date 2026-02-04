@@ -7,12 +7,12 @@ return {
       require("tokyonight").setup({
         transparent = true,
         style = "moon",
-        -- on_colors = function(colors)
-        --   colors.hint = "#F97316"
-        --   colors.error = "#f7768e"
-        --   -- colors.bg = "#1c1d2c"
-        --   -- colors.bg_statusline = colors.bg
-        -- end,
+        on_colors = function(colors)
+          colors.hint = "#F97316"
+          colors.error = "#f7768e"
+          -- colors.bg = "#1c1d2c"
+          -- colors.bg_statusline = colors.bg
+        end,
 
         on_highlights = function(hl, colors)
           hl.CursorLine                            = { bg = "#24263a", }
