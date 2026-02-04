@@ -74,7 +74,8 @@ keymap.set("n", "i", FixIndentPosition,
 local column_cmd = is_mac
     and
     [[:!sed 's/ *| */|/g' | /opt/homebrew/opt/util-linux/bin/column -t -s '|' -o '|' | sed 's/|/ | /g; s/^ //; s/ $//'<CR>]]
-    or [[:!sed 's/ *| */|/g' | column -t -s '|' -o '|' | sed 's/|/ | /g; s/^ //; s/ $//'<CR>]]
+    or
+    [[:!sed 's/ *| */|/g' | column -t -s '|' -o '|' | sed 's/|/ | /g; s/^ //; s/ $//'<CR>]]
 
 vim.keymap.set("x", "<leader>mt", column_cmd, {
   desc = "Format selected markdown table",
