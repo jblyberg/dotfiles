@@ -2,6 +2,7 @@
 alias cp='advcp -g'
 alias gc='cd ~/.config/'
 alias gd='cd ~/Code/repositories/dotfiles/'
+alias gg 'gitstatus.sh ~/Code/repositories/dotfiles/ ~/Code/repositories/dotfiles-private/ ~/Shares/syncthing/obsidian/'
 alias lg="lazygit"
 alias lj="lazyjournal"
 alias ls="eza --group-directories-first -gMF"
@@ -10,17 +11,17 @@ alias lq="lazysql"
 alias mv='advmv -g'
 alias nnvim='nvim -u NORC'
 alias t="termscp"
-alias trim="sudo fstrim -av" 
+alias trim="sudo fstrim -av"
 alias unstow='stow --delete'
 alias vim="nvim"
 alias y="yazi"
 
 if test (uname -s) = Linux
-  alias pac_clean="sudo pacman -Qqtd && sudo pacman -Qtdq | sudo pacman -Rns - && yay -Yc"
-  alias pac_orphans="pacman -Qdtq"
-  alias pac_rank="sudo reflector --verbose --sort rate --latest 30 --save /etc/pacman.d/mirrorlist"
-  alias pac_rank="sudo reflector --verbose --sort rate --latest 30 --save /etc/pacman.d/mirrorlist" 
-  alias pac_update="sudo pacman -Syu && yay -Syua && sudo paccache -r && sudo snap refresh && flatpak update"
+    alias pac_clean="sudo pacman -Qqtd && sudo pacman -Qtdq | sudo pacman -Rns - && yay -Yc"
+    alias pac_orphans="pacman -Qdtq"
+    alias pac_rank="sudo reflector --verbose --sort rate --latest 30 --save /etc/pacman.d/mirrorlist"
+    alias pac_rank="sudo reflector --verbose --sort rate --latest 30 --save /etc/pacman.d/mirrorlist"
+    alias pac_update="sudo pacman -Syu && yay -Syua && sudo paccache -r && sudo snap refresh && flatpak update"
 end
 
 # Docker aliases
@@ -46,17 +47,17 @@ alias kgd="kubecolor get deploy -o wide"
 
 # adds alias for "kubectl" to "kubecolor" with completions
 function kubectl --wraps kubectl
-  command kubecolor $argv
+    command kubecolor $argv
 end
 
 # adds alias for "k" to "kubecolor" with completions
 function k --wraps kubectl
-  command kubecolor $argv
+    command kubecolor $argv
 end
 
 # reuse "kubectl" completions on "kubecolor"
 function kubecolor --wraps kubectl
-  command kubecolor $argv
+    command kubecolor $argv
 end
 
 # abbr --global k 'kubectl'
@@ -66,5 +67,3 @@ abbr --global kg 'kubecolor get'
 abbr --global kl 'kubecolor logs'
 abbr --global kcn 'kubecolor config set-context --current --namespace'
 abbr --global kco 'kubecolor config use-context'
-
-
