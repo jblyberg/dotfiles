@@ -5,6 +5,8 @@ local keymap = vim.keymap -- for conciseness
 local nvim_tmux_nav = require('nvim-tmux-navigation')
 local SplitWindowAtCursor = require('functions.SplitWindowAtCursor')
 local FixIndentPosition = require('functions.FixIndentPosition')
+local is_mac = vim.fn.has("macunix") == 1
+
 
 -- Remove unwanted keymaps
 keymap.del("n", "<leader>,")
@@ -67,3 +69,14 @@ keymap.set("n", "<leader>vc", ":!sh scripts/copy-config-to-repo.sh<CR><CR>",
 -- Automatically set indent correctly when entering insert mode
 keymap.set("n", "i", FixIndentPosition,
   { desc = "Automatically indent to the appropriate position", silent = true, expr = true })
+
+-- Format markdown tables. On mac: brew install util-linux
+local column_cmd = is_mac
+    and
+    [[:!sed 's/ *| */|/g' | /opt/homebrew/opt/util-linux/bin/column -t -s '|' -o '|' | sed 's/|/ | /g; s/^ //; s/ $//'<CR>]]
+    or [[:!sed 's/ *| */|/g' | column -t -s '|' -o '|' | sed 's/|/ | /g; s/^ //; s/ $//'<CR>]]
+
+vim.keymap.set("x", "<leader>mt", column_cmd, {
+  desc = "Format selected markdown table",
+  silent = true
+})
