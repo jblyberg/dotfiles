@@ -106,7 +106,7 @@ layout {
 
 prefer-no-csd
 
-screenshot-path "/home/jblyberg/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+screenshot-path "/home/jblyberg/Pictures/Screenshots/Screenshot (linux) from %Y-%m-%d %H-%M-%S.png"
 
 animations {
     workspace-switch {
