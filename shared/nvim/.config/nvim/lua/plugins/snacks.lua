@@ -1,6 +1,13 @@
 return {
   "folke/snacks.nvim",
+
+  init = function()
+    vim.env.SNACKS_GHOSTTY = "true"
+  end,
+
   opts = function(_, opts)
+    local is_mac = vim.fn.has("macunix") == 1
+
     opts.dashboard = { enabled = false }
 
     opts.explorer = {
@@ -13,21 +20,11 @@ return {
       inline = true,
       float = false,
 
-      convert = {
-        cmd = "magick",
-        notify = true,
-        magick = {
-          default = { "{src}[0]", "-scale", "1280x720>" },
-          vector = { "-background", "none", "-density", "600", "{src}[0]", "-filter", "lanczos", "-trim" },
-          math = { "-density", 192, "{src}[0]", "-trim" },
-          pdf = { "-density", 192, "{src}[0]", "-background", "white", "-alpha", "remove", "-trim" },
-        },
-      },
 
       doc = {
         enabled = true,
         inline = true,
-        max_width = 70, -- In cells, not pixels
+        max_width = 50, -- In cells, not pixels
         max_height = 50,
       },
 
@@ -52,6 +49,27 @@ return {
         },
       },
     }
+
+    opts.image.convert = {
+      cmd = "magick",
+      notify = false,
+      magick = {
+        default = { "{src}[0]", "-scale", "1280x720>" },
+        vector = { "-background", "none", "-density", "200", "{src}[0]", "-filter", "lanczos", "-trim" },
+        math = { "-density", 192, "{src}[0]", "-trim" },
+        pdf = { "-density", 192, "{src}[0]", "-background", "white", "-alpha", "remove", "-trim" },
+      },
+    }
+
+    if is_mac then
+      opts.image.convert.cmd = "/opt/homebrew/opt/imagemagick-full/bin/magick"
+      opts.image.convert.magick.vector = {
+        "-background", "transparent",
+        "-density", "200",
+        "{src}[0]", "-filter",
+        "lanczos", "-trim"
+      }
+    end
 
     opts.indent = {
       filter = function(buf)
