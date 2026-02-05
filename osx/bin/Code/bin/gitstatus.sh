@@ -7,7 +7,7 @@ GREEN="\033[32m"
 YELLOW="\033[33m"
 CYAN="\033[36m"
 
-printf "${BOLD}%-25s %-15s %s${RESET}\n" "DIRECTORY" "BRANCH" "STATUS"
+printf "${BOLD}%-25s %-15s %s${RESET}\n" "REPOSITORY" "BRANCH" "STATUS"
 echo "------------------------------------------------------------"
 
 for dir in "$@"; do

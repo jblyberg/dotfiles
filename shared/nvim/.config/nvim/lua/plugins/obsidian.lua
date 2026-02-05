@@ -14,11 +14,11 @@ return {
     workspaces = {
       {
         name = "personal",
-        path = "~/Shares/syncthing/obsidian/Personal Notes",
+        path = "~/Notes/Personal Notes",
       },
       {
         name = "projects",
-        path = "~/Shares/syncthing/obsidian/Projects",
+        path = "~/Notes/Projects",
       },
     },
 
