@@ -2,10 +2,10 @@
 alias cp='advcp -g'
 alias gc='cd ~/.config/'
 alias gd='cd ~/Code/repositories/dotfiles/'
-alias gg 'gitstatus.sh ~/Code/repositories/dotfiles/ \
+alias gg='gitstatus.sh ~/Code/repositories/dotfiles/ \
           ~/Code/repositories/dotfiles-private/ \
           ~/Code/repositories/home-cluster \
-          ~/Shares/syncthing/obsidian/'
+          ~/Notes'
 alias lg="lazygit"
 alias lj="lazyjournal"
 alias ls="eza --group-directories-first -gMF"
