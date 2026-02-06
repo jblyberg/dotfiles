@@ -1,7 +1,6 @@
-[mgr]
+[manager]
 
 cwd = { fg = "#FBD1A2" }
-hovered = { reversed = false, fg = "#FBD1A2", bg = "#292e42" }
 preview_hovered = { underline = false, bg = "#292e42" }
 find_keyword = { fg = "#292e42", bg = "#FBD1A2", bold = true, italic = true, underline = true }
 find_position = { fg = "#bb9af7", bg = "reset", bold = true, italic = true }
@@ -17,10 +16,17 @@ border_symbol = "│"
 border_style = { fg = "#435663" }
 syntect_theme = ""
 
+[indicator]
+current = { open = "", close = "", reversed = false, fg = "#FBD1A2", bg = "#292e42" }
+parent = { open = "", close = "", reversed = false, fg = "#FBD1A2", bg = "#292e42" }
+preview = { open = "", close = "", reversed = false, fg = "#FBD1A2", bg = "#292e42" }
+
 [tabs]
 
-active = { fg = "#292e42", bg = "#7aa2f7", bold = true }
+active = { fg = "#e0af68", bg = "#292e42", bold = true }
 inactive = { fg = "#7aa2f7", bg = "#292e42" }
+sep_inner = { open = "", close = "" }
+sep_outer = { open = "", close = "" }
 
 [mode]
 
