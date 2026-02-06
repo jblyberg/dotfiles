@@ -2,10 +2,12 @@
 alias cp='advcp -g'
 alias gc='cd ~/.config/'
 alias gd='cd ~/Code/repositories/dotfiles/'
+alias gf='cd ~/Documents/'
 alias gg='gitstatus.sh ~/Code/repositories/dotfiles/ \
           ~/Code/repositories/dotfiles-private/ \
           ~/Code/repositories/home-cluster \
           ~/Notes'
+alias gn="cd ~/Notes/Personal\ Notes/"
 alias lg="lazygit"
 alias lj="lazyjournal"
 alias ls="eza --group-directories-first -gMF"
@@ -22,7 +24,6 @@ alias y="yazi"
 if test (uname -s) = Linux
     alias pac_clean="sudo pacman -Qqtd && sudo pacman -Qtdq | sudo pacman -Rns - && yay -Yc"
     alias pac_orphans="pacman -Qdtq"
-    alias pac_rank="sudo reflector --verbose --sort rate --latest 30 --save /etc/pacman.d/mirrorlist"
     alias pac_rank="sudo reflector --verbose --sort rate --latest 30 --save /etc/pacman.d/mirrorlist"
     alias pac_update="sudo pacman -Syu && yay -Syua && sudo paccache -r && sudo snap refresh && flatpak update"
 end
