@@ -101,6 +101,9 @@ icon_error = ""
 [filetype]
 
 rules = [
+  # Folders
+  { if = "dir", fg = "#7aa2f7" },
+
   # Images
   { mime = "image/*", fg = "#e0af68" },
 
