@@ -23,8 +23,8 @@ preview = { open = "", close = "", reversed = false, fg = "#FBD1A2", bg = "#292e
 
 [tabs]
 
-active = { fg = "#e0af68", bg = "#292e42", bold = true }
-inactive = { fg = "#7aa2f7", bg = "#292e42" }
+active = { fg = "#C2A83E", bg = "#292e42", bold = true }
+inactive = { fg = "#a9b1d6", bg = "#1a1b26" }
 sep_inner = { open = "", close = "" }
 sep_outer = { open = "", close = "" }
 
