@@ -12,7 +12,6 @@ prepend_keymap = [
   { on = "<S-p>", run = "plugin clippy-paste", desc = "Paste clipboard content to file and hover after created", for = "macos" },
   { on = "k", run = "plugin parent-arrow -1" },
   { on = "j", run = "plugin parent-arrow 1" },
-  # { on = "q", run = "plugin confirm-quit" },
   { on = [
     "f",
     "r",

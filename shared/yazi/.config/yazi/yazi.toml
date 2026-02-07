@@ -10,6 +10,48 @@ sort_dir_first = true
 sort_reverse = false
 sort_sensitive = true
 
+
+[open]
+
+prepend_rules = [
+  { name = "*.exe", use = "exe" },
+  { name = "*.pdf", use = [ "pdf", "reveal" ] },
+  { mime = "application/pdf", use = [ "pdf", "reveal" ] },
+  # { mime = "audio/*", use = "audio" },
+  { mime = "audio/*", use = "audio" },
+  { mime = "image/*", use = "image" },
+  { mime = "video/*", use = "video" },
+]
+
+[opener]
+audio = [
+  { run = 'mpv --ontop --player-operation-mode=pseudo-gui "$@" & sleep 0.5 && osascript -e "tell application \"System Events\" to set frontmost of process \"mpv\" to true"', orphan = true, for = "macos", desc = "Interactive Preview" },
+  { run = 'mpv --player-operation-mode=pseudo-gui "$@"', orphan = true, for = "linux", desc = "mpv Preview" }
+]
+
+exe = [
+  { run = 'umu-run "$@" -opengl -SkipBuildPatchPrereq', desc = "Open Windows Application" },
+]
+
+image = [
+  { run = 'loupe "$@"', desc = "Open Image", for = "linux" },
+  { run = 'open -a Preview "$@"', desc = "Open Image", for = "macos" },
+]
+
+pdf = [
+  { run = 'zathura "$@"', desc = "Open PDF", block = true, for = "linux" },
+  { run = 'open -a Preview "$@"', desc = "Open PDF", for = "macos" },
+]
+
+video = [
+  { run = 'mpv --ontop --player-operation-mode=pseudo-gui "$@" & sleep 0.5 && osascript -e "tell application \"System Events\" to set frontmost of process \"mpv\" to true"', orphan = true, for = "macos", desc = "Video Preview" },
+  { run = 'mpv --ontop --player-operation-mode=pseudo-gui "$@"', orphan = true, for = "linux", desc = "Video Preview" }
+]
+
+wallpaper = [
+  { run = 'dms ipc call wallpaper set "$1"', desc = "Set as Wallpaper", for = "linux" },
+]
+
 [preview]
 
 cache_dir = "~/.local/cache/yazi"
@@ -17,53 +59,12 @@ max_height = 1500
 max_width = 1500
 wrap = "yes"
 
-[opener]
-audio = [{ run = 'decibels "$@"', desc = "Play Audio File", for = "linux" }]
-image = [
-  { run = 'loupe "$@"', desc = "Open Image", for = "linux" },
-  { run = 'open -a Preview "$@"', desc = "Open Image", for = "macos" },
-]
-video = [{ run = 'showtime "$@"', desc = "Play Video File", for = "linux" }]
-
-# open_exe = [{ run = 'wine "$@"', desc = "Open Windows Application" }]
-exe = [
-  { run = 'umu-run "$@" -opengl -SkipBuildPatchPrereq', desc = "Open Windows Application" },
-]
-
-
-pdf = [
-  { run = 'zathura "$@"', desc = "Open PDF", block = true, for = "linux" },
-  { run = 'open -a Preview "$@"', desc = "Open PDF", for = "macos" },
-]
-
-wallpaper = [
-  { run = 'dms ipc call wallpaper set "$1"', desc = "Set as Wallpaper", for = "linux" },
-]
-
-[open]
-prepend_rules = [
-  { name = "*.exe", use = "exe" },
-  { name = "*.pdf", use = [
-    "pdf",
-    "reveal",
-  ] },
-  { mime = "application/pdf", use = [
-    "pdf",
-    "reveal",
-  ] },
-  { mime = "audio/*", use = "audio" },
-  { mime = "image/*", use = "image" },
-  { mime = "video/*", use = "video" },
-]
-
 [plugin]
 
 prepend_fetchers = [
   { id = "git", name = "*", run = "git" },
   { id = "git", name = "*/", run = "git" },
   { id = "pdf", name = "*.pdf", run = "pdf", prio = "low" },
-  # { id = "mactag", url = "*", run = "mactag" },
-  # { id = "mactag", url = "*/", run = "mactag" },
 ]
 
 prepend_preloaders = [

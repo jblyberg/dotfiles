@@ -10,6 +10,7 @@ return {
       html = { "htmlbeautifier" },
       javascript = { "prettier" },
       razor = { "roslyn" },
+      toml = { "taplo" },
       typescript = { "prettier" },
       vue = { "prettier" },
       yaml = { "yamlfix" },
@@ -21,6 +22,16 @@ return {
         args = { "format", "--include", "$FILENAME" },
         stdin = false,
       },
+
+      taplo = {
+        prepend_args = {
+          "format",
+          "--option", "indent_string=  ",
+          "--option", "column_width=80",
+          "--option", "array_auto_expand=true"
+        },
+      },
+
       yamlfix = {
         -- Adds environment args to the yamlfix formatter - https://lyz-code.github.io/yamlfix/
         env = {
