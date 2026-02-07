@@ -12,14 +12,14 @@ case "$CURRENT_STATE" in
 "OFF")
   cleanup
   # State 2: Start Hidraw
-  sudo setsid ds4drv --hidraw >/dev/null 2>&1 &
+  sudo -b ds4drv --hidraw >/dev/null 2>&1 &
   echo "HIDRAW" >"$STATE_FILE"
   echo "HIDRAW"
   ;;
 "HIDRAW")
   cleanup
   # State 3: Start Xpad Emulation
-  sudo setsid ds4drv --hidraw --emulate-xpad >/dev/null 2>&1 &
+  sudo -b ds4drv --hidraw --emulate-xpad >/dev/null 2>&1 &
   echo "XPAD" >"$STATE_FILE"
   echo "XPAD"
   ;;

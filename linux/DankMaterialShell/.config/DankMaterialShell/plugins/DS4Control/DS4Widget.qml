@@ -44,7 +44,7 @@ PluginComponent {
                     // Custom icon names as requested
                     name: root.status === "Hidraw" ? "󰊴" : root.status === "Xpad" ? "󰖺" : "󰊵"
 
-                    size: Theme.iconSize - 6
+                    size: Theme.iconSize - 4
 
                     // Custom hex colors as requested
                     color: root.status === "Hidraw" ? "#405a78" : root.status === "Xpad" ? "#617840" : Theme.surfaceText
