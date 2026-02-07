@@ -264,14 +264,16 @@
       ],
       "rightWidgets": [
         {
+          "id": "ds4Control",
+          "enabled": true
+        },
+        {
           "id": "cpuUsage",
           "enabled": true
         },
         {
           "id": "memUsage",
-          "enabled": true,
-          "minimumWidth": true,
-          "showSwap": false
+          "enabled": true
         },
         {
           "id": "controlCenterButton",

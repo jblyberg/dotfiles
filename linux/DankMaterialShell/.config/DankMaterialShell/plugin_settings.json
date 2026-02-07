@@ -1,5 +1,8 @@
 {
   "niriWindows": {
     "enabled": true
+  },
+  "ds4Control": {
+    "enabled": true
   }
 }

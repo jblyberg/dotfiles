@@ -1,0 +1,11 @@
+{
+  "id": "ds4Control",
+  "name": "DS4 Controller",
+  "description": "Switches ds4drv states (Off, Hidraw, Xpad)",
+  "version": "1.0.0",
+  "author": "John Blyberg",
+  "component": "./DS4Widget.qml",
+  "icon": "󰊴",
+  "type": "widget",
+  "requires_dms": ">=1.2.0"
+}
