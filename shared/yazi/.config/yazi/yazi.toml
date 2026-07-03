@@ -14,9 +14,9 @@ sort_sensitive = true
 [open]
 
 prepend_rules = [
-  { name = "*.exe", use = "exe" },
-  { name = "*.pdf", use = [ "pdf", "reveal" ] },
-  { mime = "application/pdf", use = [ "pdf", "reveal" ] },
+  { url = "*.exe", use = "exe" },
+  { url = "*.pdf", use = ["pdf", "reveal"] },
+  { mime = "application/pdf", use = ["pdf", "reveal"] },
   # { mime = "audio/*", use = "audio" },
   { mime = "audio/*", use = "audio" },
   { mime = "image/*", use = "image" },
@@ -26,7 +26,7 @@ prepend_rules = [
 [opener]
 audio = [
   { run = 'mpv --ontop --player-operation-mode=pseudo-gui "$@" & sleep 0.5 && osascript -e "tell application \"System Events\" to set frontmost of process \"mpv\" to true"', orphan = true, for = "macos", desc = "Interactive Preview" },
-  { run = 'mpv --player-operation-mode=pseudo-gui "$@"', orphan = true, for = "linux", desc = "mpv Preview" }
+  { run = 'mpv --player-operation-mode=pseudo-gui "$@"', orphan = true, for = "linux", desc = "mpv Preview" },
 ]
 
 exe = [
@@ -45,7 +45,7 @@ pdf = [
 
 video = [
   { run = 'mpv --ontop --player-operation-mode=pseudo-gui "$@" & sleep 0.5 && osascript -e "tell application \"System Events\" to set frontmost of process \"mpv\" to true"', orphan = true, for = "macos", desc = "Video Preview" },
-  { run = 'mpv --ontop --player-operation-mode=pseudo-gui "$@"', orphan = true, for = "linux", desc = "Video Preview" }
+  { run = 'mpv --ontop --player-operation-mode=pseudo-gui "$@"', orphan = true, for = "linux", desc = "Video Preview" },
 ]
 
 wallpaper = [
@@ -62,35 +62,26 @@ wrap = "yes"
 [plugin]
 
 prepend_fetchers = [
-  { id = "git", name = "*", run = "git" },
-  { id = "git", name = "*/", run = "git" },
-  { id = "pdf", name = "*.pdf", run = "pdf", prio = "low" },
+  { group = "git", url = "*", run = "git" },
+  { group = "git", url = "*/", run = "git" },
+  { group = "pdf", url = "*.pdf", run = "pdf", prio = "low" },
 ]
 
 prepend_preloaders = [
-  # Office Documents
-  { mime = "application/ms-*", run = "office" },
-  { mime = "application/msword", run = "office" },
-  { mime = "application/oasis.opendocument.*", run = "office" },
-  { mime = "application/openxmlformats-officedocument.*", run = "office" },
-  { name = "*.docx", run = "office" },
+  # Office Documents (grouped together)
+  { mime = "{application/ms-*,application/msword,application/oasis.opendocument.*,application/openxmlformats-officedocument.*}", run = "office" },
+  { url = "*.docx", run = "office" },
 
-  # 3d objects
-  { name = "*.3mf", run = "f3d-preview" },
-  { name = "*.obj", run = "f3d-preview" },
-  { name = "*.pts", run = "f3d-preview" },
-  { name = "*.ply", run = "f3d-preview" },
-  { name = "*.stl", run = "f3d-preview" },
-  { name = "*.step", run = "f3d-preview" },
-  { name = "*.stp", run = "f3d-preview" },
-  { name = "*.skp", run = "f3d-preview" },
+  # 3D Objects (grouped together into a single glob)
+  { url = "*.{3mf,obj,pts,ply,stl,step,stp,skp}", run = "f3d-preview" },
 
+  # Audio
   { mime = "audio/*", run = "audio-preview" },
 ]
 
 prepend_previewers = [
 
-  { name = "*/", run = "folder", sync = true },
+  { url = "*/", run = "folder", sync = true },
 
   # Misc previewers
   { mime = "application/bittorrent", run = "torrent-preview" },
@@ -102,16 +93,16 @@ prepend_previewers = [
   { mime = "application/oasis.opendocument.*", run = "office" },
   { mime = "application/openxmlformats-officedocument.*", run = "office" },
   { mime = "video/*", run = "video-ffmpeg" },
-  { name = "*.docx", run = "office" },
+  { url = "*.docx", run = "office" },
 
   # 3d objects
-  { name = "*.3mf", run = "f3d-preview" },
-  { name = "*.obj", run = "f3d-preview" },
-  { name = "*.ply", run = "f3d-preview" },
-  { name = "*.pts", run = "f3d-preview" },
-  { name = "*.skp", run = "f3d-preview" },
-  { name = "*.step", run = "f3d-preview" },
-  { name = "*.stl", run = "f3d-preview" },
-  { name = "*.stp", run = "f3d-preview" },
+  { url = "*.3mf", run = "f3d-preview" },
+  { url = "*.obj", run = "f3d-preview" },
+  { url = "*.ply", run = "f3d-preview" },
+  { url = "*.pts", run = "f3d-preview" },
+  { url = "*.skp", run = "f3d-preview" },
+  { url = "*.step", run = "f3d-preview" },
+  { url = "*.stl", run = "f3d-preview" },
+  { url = "*.stp", run = "f3d-preview" },
 
 ]

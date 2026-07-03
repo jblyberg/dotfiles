@@ -108,7 +108,7 @@ icon_error = ""
 
 rules = [
   # Folders
-  { if = "dir", fg = "#7aa2f7" },
+  { mime = "inode/directory", fg = "#7aa2f7" },
 
   # Images
   { mime = "image/*", fg = "#e0af68" },
@@ -134,14 +134,14 @@ rules = [
   { mime = "application/vnd.*", fg = "#9ece6a" },
 
   # Orphan symbolic links
-  { name = "*", is = "orphan", bg = "#FF838B", fg = "#080A0E", crossed = true },
+  { url = "*", is = "orphan", bg = "#FF838B", fg = "#080A0E", crossed = true },
 
   # Location-specific colors
   # { name = "/home/jblyberg/Pictures/Photos/", fg = "#C1666B" },
 
   # Fallback
-  { name = "*", fg = "#c6d0f5" },
-  { name = "*/", fg = "#7aa2f7" },
+  { url = "*", fg = "#c6d0f5" },
+  { url = "*/", fg = "#7aa2f7" },
 
 ]
 
