@@ -182,9 +182,22 @@ window-rule {
 }
 
 window-rule {
-    match app-id="steam"
+    match app-id="steam" title="^Steam$"
     open-floating false
     default-column-width { proportion 0.5; }
+}
+
+// Keeps Steam's pop-ups, chats, and notification toasts floating
+window-rule {
+    match app-id="steam" title="^Notification$"
+    match app-id="steam" title="^Steam - News"
+    match app-id="steam" title=".*Friends List.*"
+    open-floating true
+}
+
+window-rule {
+    match app-id="steam" title=r#"^notificationtoasts_\d+_desktop$"#
+    default-floating-position x=10 y=10 relative-to="bottom-right"
 }
 
 window-rule {
@@ -213,10 +226,6 @@ window-rule {
     shadow { off; }
 }
 
-window-rule {
-    match app-id="steam" title=r#"^notificationtoasts_\d+_desktop$"#
-    default-floating-position x=10 y=10 relative-to="bottom-right"
-}
 
 window-rule {
     match app-id=r#"^gnome-control-center$"#
@@ -229,7 +238,6 @@ window-rule {
 window-rule {
     match app-id=r#"^blueman-manager$"#
     match app-id=r#"^org\.gnome\.Nautilus$"#
-    match app-id=r#"^steam$"#
     match app-id=r#"^xdg-desktop-portal$"#
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
     match app-id="zoom"
