@@ -1,18 +1,21 @@
 # systemctl --user add-wants niri.service xremap.service
-# Check device with: ls -l /dev/input/by-id/
-# Fix permissions with: sudo setfacl -m u:jblyberg:rw /dev/input/event6
 
 [Unit]
-Description=Xremap
+Description=Xremap Keyboard Remapper
 PartOf=graphical-session.target
 After=graphical-session.target
 Requisite=graphical-session.target
 
 [Service]
-ExecStart=/home/jblyberg/Code/bin/xremap --device /dev/input/event10 /home/jblyberg/.config/xremap/config.yml
+# Ensures xremap can see window focus changes in Wayland/X11 environments
+Environment=DISPLAY=:0 WAYLAND_DISPLAY=wayland-0
+
+ExecStart=/home/jblyberg/Code/bin/xremap --device "NuPhy NuPhy Air96 V2" /home/jblyberg/.config/xremap/config.yml
 Restart=on-failure
+RestartSec=2s
 StandardOutput=journal
 StandardError=journal
 
 [Install]
 WantedBy=graphical-session.target
+
