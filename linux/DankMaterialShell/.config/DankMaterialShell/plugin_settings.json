@@ -4,5 +4,8 @@
   },
   "ds4Control": {
     "enabled": true
+  },
+  "emojiLauncher": {
+    "enabled": true
   }
 }

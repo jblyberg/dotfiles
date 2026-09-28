@@ -3,6 +3,7 @@ keymap:
   - name: Firefox Tab Nav
     application:
       only: firefox
+    exact_match: true
     remap:
       Shift-Left: C-Shift-Tab
       Shift-Right: C-Tab
@@ -13,7 +14,7 @@ keymap:
       F12: KEY_VOLUMEUP
   - name: Global Media Controls
     remap:
-      F7: {launch: ["playerctl", "--player=Feishin", "previous"]}
-      F8: {launch: ["playerctl", "--player=Feishin", "play-pause"]}
-      F9: {launch: ["playerctl", "--player=Feishin", "next"]}
+      F7: { launch: ["playerctl", "--player=Feishin", "previous"] }
+      F8: { launch: ["playerctl", "--player=Feishin", "play-pause"] }
+      F9: { launch: ["playerctl", "--player=Feishin", "next"] }
 default_mode: default

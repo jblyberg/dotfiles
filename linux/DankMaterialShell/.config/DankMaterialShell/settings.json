@@ -10,14 +10,36 @@
   "runningAppsCurrentWorkspace": false,
   "monoFontFamily": "ComicCodeLigatures Nerd Font",
   "fontScale": 1.1500000000000001,
-  "acMonitorTimeout": 10800,
-  "acLockTimeout": 3600,
-  "fadeToLockEnabled": false,
+  "notificationSummaryFontSize": 18,
+  "notificationBodyFontSize": 18,
+  "acMonitorTimeout": 600,
+  "acLockTimeout": 1800,
+  "acPostLockMonitorTimeout": 600,
   "dockIconSize": 31,
+  "lockScreenShowProfileImage": false,
+  "lockScreenShowPasswordField": false,
   "maxFprintTries": 3,
+  "lockScreenInactiveColor": "#212121",
+  "lockScreenVideoPath": "/home/jblyberg/Videos/Backgrounds/the-sunset-on-retro-tv.3840x2160.mov",
+  "lockScreenWallpaperPath": "/home/jblyberg/Pictures/Wallpaper/StreamofLight_2560x1600.png",
   "notificationTimeoutLow": 10000,
   "notificationTimeoutNormal": 15000,
   "osdPowerProfileEnabled": true,
+  "powerMenuActions": [
+    "reboot",
+    "logout",
+    "poweroff",
+    "lock",
+    "restart"
+  ],
+  "screenPreferences": {
+    "lockScreen": [
+      {
+        "name": "DP-1",
+        "model": "LG ULTRAGEAR+"
+      }
+    ]
+  },
   "barConfigs": [
     {
       "id": "default",

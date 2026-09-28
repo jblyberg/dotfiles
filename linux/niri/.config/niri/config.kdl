@@ -17,8 +17,7 @@ debug {
   honor-xdg-activation-with-invalid-serial
 }
 
-    cursor {
-    // xcursor-theme "capitaine-cursors"
+cursor {
     xcursor-theme "Bibata-Original-Classic"
     xcursor-size 42
 }
@@ -156,23 +155,13 @@ gestures {
 
 }
 
-// Start at login
+// workspaces
 
-// spawn-at-startup "nm-applet" "--indicator"
-// spawn-at-startup "Telegram"
-// spawn-at-startup "slack"
-// spawn-at-startup "discord"
-// spawn-at-startup "kitty"
-// spawn-at-startup "firefox"
-// spawn-at-startup "niri" "msg" "action" "focus-workspace" "work"
-// spawn-at-startup "waybar"
-// spawn-at-startup "swaybg" "-m" "fill" "-i" "/home/jblyberg/images/wallpaper/wallhaven-5ygkr1.jpg"
-// spawn-at-startup "/home/jblyberg/.config/niri/random-wallpaper.sh"
-// spawn-at-startup "/usr/lib/mate-polkit/polkit-mate-authentication-agent-1"
-
-spawn-at-startup "bash" "-c" "wl-paste --watch cliphist store &"
-spawn-at-startup "dms" "run"
-spawn-at-startup "/home/jblyberg/.config/niri/scripts/screensaver_enable.sh"
+workspace "chat"  { open-on-output "DP-1"; }
+workspace "work"  { open-on-output "DP-1"; }
+workspace "play"  { open-on-output "DP-1"; }
+workspace "side-1"  { open-on-output "DP-2"; }
+workspace "side-2"  { open-on-output "DP-2"; }
 
 // Application-specific window rules
 
@@ -257,12 +246,8 @@ window-rule {
 window-rule {
     match app-id="ghostty"
 }
-// System-wide rules
 
-// window-rule {
-//     match is-active=false
-//     opacity 0.95
-// }
+// System-wide rules
 
 window-rule {
     geometry-corner-radius 4
@@ -283,6 +268,54 @@ layer-rule {
     match namespace="dms:blurwallpaper"
     place-within-backdrop true
 }
+
+
+// Auto-start placement rules
+
+window-rule {
+    match app-id=r#"^bluebubbles$"#
+    open-on-workspace "chat"
+}
+
+window-rule {
+    match app-id=r#"^discord$"#
+    open-on-workspace "chat"
+}
+
+window-rule {
+    match app-id=r#"^firefox$"#
+    open-on-workspace "work"
+}
+
+window-rule {
+    match app-id=r#"^com\.mitchellh\.ghostty$"# title=r#"^startup-term$"#
+    open-on-workspace "work"
+}
+
+window-rule {
+    match app-id=r#"^steam$"# title=r#"^Steam$"#
+    open-on-workspace "play"
+}
+
+window-rule {
+    match app-id=r#"^feishin$"#
+    open-on-workspace "side-1"
+}
+
+// Start at login
+
+spawn-at-startup "bash" "-c" "wl-paste --watch cliphist store &"
+spawn-at-startup "dms" "run"
+spawn-at-startup "bluebubbles"
+spawn-at-startup "discord"
+spawn-at-startup "steam"
+spawn-at-startup "feishin"
+
+
+spawn-sh-at-startup "firefox & sleep 2 && ghostty --title=startup-term -e tmux new-session -A -s system"
+spawn-sh-at-startup "sleep 2 && niri msg action focus-workspace work"
+
+
 
 hotkey-overlay {
     skip-at-startup
@@ -314,7 +347,7 @@ binds {
     Mod+T hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
     Mod+Shift+B { spawn-sh "sudo systemctl restart bluetooth.service";   }
     Mod+Shift+C { spawn-sh "~/.config/niri/scripts/toggle_center_mode.sh"; }
-    // Mod+V hotkey-overlay-title="Clipboard Manager" { spawn "dms" "ipc" "call" "clipboard" "toggle"; }
+
     // Brightness and Audio
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn "dms" "ipc" "call" "audio" "increment" "3"; }
@@ -392,10 +425,10 @@ binds {
     // Window mode toggles
     Mod+V       { toggle-window-floating; }
     Mod+Shift+V { switch-focus-between-floating-and-tiling; }
-    // Mod+W { toggle-column-tabbed-display; }
 
     // Screen Capture
     Print { screenshot show-pointer=false; }
     Ctrl+Print { screenshot-screen; }
     Alt+Print { screenshot-window; }
 }
+
