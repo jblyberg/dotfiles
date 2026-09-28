@@ -62,8 +62,9 @@ output "DP-1" {
 output "DP-2" {
   // off
   mode "3840x2160@59.997"
-  scale 1
+  scale 1.2
   transform "normal"
+  hot-corners { off; }
 }
 
 layout {
