@@ -1,9 +1,17 @@
 {
   "lockfileVersion": 1,
   "plugins": {
+    "amdGpuMonitor": {
+      "repo": "https://github.com/navidagz/dms-amd-gpu-monitor",
+      "commit": "d0f87efb534b86dc07107288c5f86cfeb7ad9cd2"
+    },
     "emojiLauncher": {
       "repo": "https://github.com/devnullvoid/dms-emoji-launcher",
       "commit": "8ff394e3ddfcb2fd755ed2e7b4c6f01f3e26e596"
+    },
+    "homeAssistantMonitor": {
+      "repo": "https://github.com/xxyangyoulin/dms-plugin-hass",
+      "commit": "a2370721cdcb96dc37aaae21e32e84cbb4c7c1fa"
     }
   }
 }

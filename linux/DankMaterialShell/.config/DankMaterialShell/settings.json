@@ -7,6 +7,29 @@
   "controlCenterShowNetworkIcon": false,
   "controlCenterShowPrinterIcon": true,
   "showOccupiedWorkspacesOnly": true,
+  "workspaceFocusedCustomColor": "#00796b",
+  "workspaceNameIcons": {
+    "side-1": {
+      "type": "icon",
+      "value": "desktop_windows"
+    },
+    "side-2": {
+      "type": "icon",
+      "value": "desktop_windows"
+    },
+    "chat": {
+      "type": "icon",
+      "value": "group"
+    },
+    "work": {
+      "type": "icon",
+      "value": "terminal"
+    },
+    "play": {
+      "type": "icon",
+      "value": "sports_esports"
+    }
+  },
   "runningAppsCurrentWorkspace": false,
   "monoFontFamily": "ComicCodeLigatures Nerd Font",
   "fontScale": 1.1500000000000001,
@@ -19,9 +42,9 @@
   "lockScreenShowProfileImage": false,
   "lockScreenShowPasswordField": false,
   "maxFprintTries": 3,
-  "lockScreenInactiveColor": "#212121",
   "lockScreenVideoPath": "/home/jblyberg/Videos/Backgrounds/the-sunset-on-retro-tv.3840x2160.mov",
   "lockScreenWallpaperPath": "/home/jblyberg/Pictures/Wallpaper/StreamofLight_2560x1600.png",
+  "lockScreenFontFamily": "Nunito ExtraLight",
   "notificationTimeoutLow": 10000,
   "notificationTimeoutNormal": 15000,
   "osdPowerProfileEnabled": true,
@@ -72,11 +95,20 @@
         {
           "id": "weather",
           "enabled": true
+        },
+        {
+          "id": "music",
+          "enabled": true,
+          "mediaSize": 2
         }
       ],
       "rightWidgets": [
         {
           "id": "ds4Control",
+          "enabled": true
+        },
+        {
+          "id": "amdGpuMonitor",
           "enabled": true
         },
         {
@@ -88,15 +120,19 @@
           "enabled": true
         },
         {
-          "id": "controlCenterButton",
-          "enabled": true
-        },
-        {
           "id": "colorPicker",
-          "enabled": true
+          "enabled": false
         },
         {
           "id": "clipboard",
+          "enabled": false
+        },
+        {
+          "id": "homeAssistantMonitor",
+          "enabled": true
+        },
+        {
+          "id": "controlCenterButton",
           "enabled": true
         },
         {
@@ -162,6 +198,20 @@
     "hslSaturation": 0,
     "hslLightness": 1,
     "valid": true
+  },
+  "builtInPluginSettings": {
+    "dms_settings_search": {
+      "trigger": "?"
+    },
+    "dms_clipboard_search": {
+      "trigger": "cb"
+    },
+    "dms_power": {
+      "trigger": "pw"
+    },
+    "dms_qr_generator": {
+      "trigger": "qrg"
+    }
   },
   "configVersion": 18
 }

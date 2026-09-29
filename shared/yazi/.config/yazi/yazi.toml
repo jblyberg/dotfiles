@@ -85,24 +85,14 @@ prepend_previewers = [
 
   # Misc previewers
   { mime = "application/bittorrent", run = "torrent-preview" },
-  { mime = "audio/*", run = "exifaudio" },
 
   # Office Documents
   { mime = "application/ms-*", run = "office" },
   { mime = "application/msword", run = "office" },
   { mime = "application/oasis.opendocument.*", run = "office" },
   { mime = "application/openxmlformats-officedocument.*", run = "office" },
-  { mime = "video/*", run = "video-ffmpeg" },
   { url = "*.docx", run = "office" },
 
   # 3d objects
-  { url = "*.3mf", run = "f3d-preview" },
-  { url = "*.obj", run = "f3d-preview" },
-  { url = "*.ply", run = "f3d-preview" },
-  { url = "*.pts", run = "f3d-preview" },
-  { url = "*.skp", run = "f3d-preview" },
-  { url = "*.step", run = "f3d-preview" },
-  { url = "*.stl", run = "f3d-preview" },
-  { url = "*.stp", run = "f3d-preview" },
-
+  { url = "*.{3mf,obj,pts,ply,stl,step,stp,skp}", run = "f3d-preview" }
 ]
