@@ -31,6 +31,9 @@
     }
   },
   "runningAppsCurrentWorkspace": false,
+  "spotlightSectionViewModes": {
+    "apps": "list"
+  },
   "monoFontFamily": "ComicCodeLigatures Nerd Font",
   "fontScale": 1.1500000000000001,
   "notificationSummaryFontSize": 18,
@@ -195,6 +198,24 @@
     "hslLightness": 1,
     "valid": true
   },
+  "desktopWidgetInstances": [
+    {
+      "id": "dw_1790796765448_3ac6jznx5",
+      "widgetType": "keybindingCheatSheet",
+      "name": "Keybinding Cheat Sheet",
+      "enabled": false,
+      "config": {
+        "displayPreferences": [
+          {
+            "name": "DP-1",
+            "model": "LG ULTRAGEAR+"
+          }
+        ],
+        "showOnOverviewOnly": false,
+        "showOnOverlay": true
+      }
+    }
+  ],
   "builtInPluginSettings": {
     "dms_settings_search": {
       "trigger": "?"

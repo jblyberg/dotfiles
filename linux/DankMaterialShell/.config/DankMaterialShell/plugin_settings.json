@@ -15,5 +15,8 @@
     "enabled": true,
     "hassUrl": "https://ha.home.blyberg.net",
     "hassToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiIxMGMyZmQ3NGVlODI0YmJiYjEzNWE0YWFiNDZkMTYzOSIsImlhdCI6MTc5MDY0NjI5OCwiZXhwIjoyMTA2MDA2Mjk4fQ.rtJIXV10FfHxaWvSVbRo9EHFJ5foD5vPjaxJPsIoiGI"
+  },
+  "keybindingCheatSheet": {
+    "enabled": false
   }
 }

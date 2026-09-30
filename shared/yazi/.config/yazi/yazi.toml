@@ -10,53 +10,84 @@ sort_dir_first = true
 sort_reverse = false
 sort_sensitive = true
 
-
 [open]
 
 prepend_rules = [
-  { url = "*.exe", use = "exe" },
-  { url = "*.pdf", use = ["pdf", "reveal"] },
-  { mime = "application/pdf", use = ["pdf", "reveal"] },
-  # { mime = "audio/*", use = "audio" },
-  { mime = "audio/*", use = "audacious" },
-  { url = "*.m4b",    use = "audacious" },
-  { mime = "image/*", use = "image" },
-  { mime = "video/*", use = "video" },
+  { url = "*.exe", use = "umu-run" },
+
+  { url = "*.pdf", use = [
+    "zathura",
+  ] },
+  { mime = "application/pdf", use = [
+    "zathura",
+  ] },
+
+  { mime = "audio/*", use = [
+    "audacious",
+  ] },
+  { url = "*.m4b", use = [
+    "audacious",
+  ] },
+
+  { mime = "image/*", use = [
+    "loupe",
+    "preview",
+  ] },
+
+  { mime = "video/*", use = [
+    "celluloid",
+  ] },
+
+  { mime = "application/vnd.openxmlformats-officedocument.*", use = [
+    "libreoffice",
+  ] },
+  { mime = "application/msword", use = [
+    "libreoffice",
+  ] },
+  { mime = "application/vnd.ms-excel", use = [
+    "libreoffice",
+  ] },
 ]
 
 [opener]
 
+# Linux Openers
+
 audacious = [
-  { run = 'audacious -p %s', orphan = true, for = "linux", desc = "Audacious Play" }
+  { run = 'audacious -p %s', orphan = true, for = "linux", desc = "Play audio with Audacious" },
 ]
 
-audio = [
-  # { run = "mpv --ontop --player-operation-mode=pseudo-gui \"$@\" & sleep 0.5 && osascript -e 'tell application \"System Events\" to set frontmost of process \"mpv\" to true'", orphan = true, for = "macos", desc = "Interactive Preview" },
-  # { run = 'mpv --player-operation-mode=pseudo-gui %s', orphan = true, for = "linux", desc = "mpv Preview" }
-  { run = 'audacious -p "%s"', orphan = true, for = "linux", desc = "Audacious Play" }
+celluloid = [
+  { run = 'celluloid %s', orphan = true, for = "linux", desc = "Play video with Celluloid" },
 ]
 
-exe = [
-  { run = 'umu-run "$@" -opengl -SkipBuildPatchPrereq', desc = "Open Windows Application" },
+libreoffice = [
+  { run = 'SAL_USE_VCLPLUGIN=gtk3 libreoffice %s', orphan = true, for = "linux", desc = "Open with LibreOffice" },
 ]
 
-image = [
-  { run = 'loupe "$@"', desc = "Open Image", for = "linux" },
-  { run = 'open -a Preview "$@"', desc = "Open Image", for = "macos" },
+loupe = [
+  { run = 'loupe %s', orphan = true, for = "linux", desc = "Open image with Loupe" },
 ]
 
-pdf = [
-  { run = 'zathura "$@"', desc = "Open PDF", block = true, for = "linux" },
-  { run = 'open -a Preview "$@"', desc = "Open PDF", for = "macos" },
+umu-run = [
+  { run = 'umu-run "$@" -opengl -SkipBuildPatchPrereq', for = "linux", desc = "Open Windows Application" },
 ]
 
-video = [
-  { run = 'mpv --ontop --player-operation-mode=pseudo-gui "$@" & sleep 0.5 && osascript -e "tell application \"System Events\" to set frontmost of process \"mpv\" to true"', orphan = true, for = "macos", desc = "Video Preview" },
-  { run = 'mpv --ontop --player-operation-mode=pseudo-gui "$@"', orphan = true, for = "linux", desc = "Video Preview" },
+zathura = [
+  { run = 'zathura %s', orphan = true, for = "linux", desc = "Open PDF with Zathura" },
 ]
 
-wallpaper = [
-  { run = 'dms ipc call wallpaper set "$1"', desc = "Set as Wallpaper", for = "linux" },
+# MacOS Openers
+
+preview = [
+  { run = 'open -a Preview "$@"', orphan = true, for = "macos", desc = "Open image with Preview" },
+]
+
+# Shared Openers
+
+office = [
+  { run = 'open %s', orphan = true, for = "macos", desc = "Open with Default App" },
+  { run = 'SAL_USE_VCLPLUGIN=gtk3 libreoffice %s', orphan = true, for = "linux", desc = "Open with LibreOffice" },
 ]
 
 [preview]
@@ -68,16 +99,7 @@ wrap = "yes"
 
 [plugin]
 
-prepend_fetchers = [
-  { group = "git", url = "*", run = "git" },
-  { group = "git", url = "*/", run = "git" },
-  { group = "pdf", url = "*.pdf", run = "pdf", prio = "low" },
-]
-
 prepend_preloaders = [
-  # Office Documents (grouped together)
-  { mime = "{application/ms-*,application/msword,application/oasis.opendocument.*,application/openxmlformats-officedocument.*}", run = "office" },
-  { url = "*.docx", run = "office" },
 
   # 3D Objects (grouped together into a single glob)
   { url = "*.{3mf,obj,pts,ply,stl,step,stp,skp}", run = "f3d-preview" },
@@ -94,12 +116,22 @@ prepend_previewers = [
   { mime = "application/bittorrent", run = "torrent-preview" },
 
   # Office Documents
-  { mime = "application/ms-*", run = "office" },
-  { mime = "application/msword", run = "office" },
-  { mime = "application/oasis.opendocument.*", run = "office" },
-  { mime = "application/openxmlformats-officedocument.*", run = "office" },
-  { url = "*.docx", run = "office" },
+  # --- WORD DOCUMENTS (.docx / .doc) ---
+  { mime = "application/vnd.openxmlformats-officedocument.wordprocessingml.document", run = 'piper -- pandoc -t markdown "$1"' },
+  { mime = "application/msword", run = 'piper -- pandoc -t markdown "$1"' },
+
+  # --- EXCEL SPREADSHEETS (.xlsx / .xls) ---
+  { mime = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", run = 'piper -- xlsx2csv "$1"' },
+  { mime = "application/vnd.ms-excel", run = 'piper -- xlsx2csv "$1"' },
+  
+  # --- FALLBACK PATH GLOB MATCHING ---
+  { url = "*.docx", run = 'piper -- pandoc -t markdown "$1"' },
+  { url = "*.xlsx", run = 'piper -- xlsx2csv "$1"' },
 
   # 3d objects
   { url = "*.{3mf,obj,pts,ply,stl,step,stp,skp}", run = "f3d-preview" },
+
+  # Fonts
+  { url = "*.ttf", run = "font-sample" },
+  { url = "*.otf", run = "font-sample" },
 ]

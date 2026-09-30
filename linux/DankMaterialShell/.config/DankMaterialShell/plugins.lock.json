@@ -3,7 +3,7 @@
   "plugins": {
     "amdGpuMonitor": {
       "repo": "https://github.com/navidagz/dms-amd-gpu-monitor",
-      "commit": "d0f87efb534b86dc07107288c5f86cfeb7ad9cd2"
+      "commit": "c93a377456c8d69ee2777c306c215d5ceeff9f20"
     },
     "emojiLauncher": {
       "repo": "https://github.com/devnullvoid/dms-emoji-launcher",
@@ -12,6 +12,10 @@
     "homeAssistantMonitor": {
       "repo": "https://github.com/xxyangyoulin/dms-plugin-hass",
       "commit": "a2370721cdcb96dc37aaae21e32e84cbb4c7c1fa"
+    },
+    "keybindingCheatSheet": {
+      "repo": "https://github.com/stvnwrgs/dms-keybindings-cheat-sheet.git",
+      "commit": "65ce39ae417e3a08374d028b08fc18bdcb0ba046"
     }
   }
 }
