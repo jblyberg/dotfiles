@@ -104,14 +104,6 @@
       ],
       "rightWidgets": [
         {
-          "id": "ds4Control",
-          "enabled": true
-        },
-        {
-          "id": "amdGpuMonitor",
-          "enabled": true
-        },
-        {
           "id": "cpuUsage",
           "enabled": true
         },
@@ -128,15 +120,19 @@
           "enabled": false
         },
         {
+          "id": "ds4Control",
+          "enabled": true
+        },
+        {
           "id": "homeAssistantMonitor",
           "enabled": true
         },
         {
-          "id": "controlCenterButton",
+          "id": "notificationButton",
           "enabled": true
         },
         {
-          "id": "notificationButton",
+          "id": "controlCenterButton",
           "enabled": true
         },
         {

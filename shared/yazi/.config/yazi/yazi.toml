@@ -18,15 +18,22 @@ prepend_rules = [
   { url = "*.pdf", use = ["pdf", "reveal"] },
   { mime = "application/pdf", use = ["pdf", "reveal"] },
   # { mime = "audio/*", use = "audio" },
-  { mime = "audio/*", use = "audio" },
+  { mime = "audio/*", use = "audacious" },
+  { url = "*.m4b",    use = "audacious" },
   { mime = "image/*", use = "image" },
   { mime = "video/*", use = "video" },
 ]
 
 [opener]
+
+audacious = [
+  { run = 'audacious -p %s', orphan = true, for = "linux", desc = "Audacious Play" }
+]
+
 audio = [
-  { run = 'mpv --ontop --player-operation-mode=pseudo-gui "$@" & sleep 0.5 && osascript -e "tell application \"System Events\" to set frontmost of process \"mpv\" to true"', orphan = true, for = "macos", desc = "Interactive Preview" },
-  { run = 'mpv --player-operation-mode=pseudo-gui "$@"', orphan = true, for = "linux", desc = "mpv Preview" },
+  # { run = "mpv --ontop --player-operation-mode=pseudo-gui \"$@\" & sleep 0.5 && osascript -e 'tell application \"System Events\" to set frontmost of process \"mpv\" to true'", orphan = true, for = "macos", desc = "Interactive Preview" },
+  # { run = 'mpv --player-operation-mode=pseudo-gui %s', orphan = true, for = "linux", desc = "mpv Preview" }
+  { run = 'audacious -p "%s"', orphan = true, for = "linux", desc = "Audacious Play" }
 ]
 
 exe = [
@@ -94,5 +101,5 @@ prepend_previewers = [
   { url = "*.docx", run = "office" },
 
   # 3d objects
-  { url = "*.{3mf,obj,pts,ply,stl,step,stp,skp}", run = "f3d-preview" }
+  { url = "*.{3mf,obj,pts,ply,stl,step,stp,skp}", run = "f3d-preview" },
 ]
