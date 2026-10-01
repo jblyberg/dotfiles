@@ -1,0 +1,124 @@
+// Application-specific window rules
+
+window-rule {
+    match app-id="Calculator"
+    default-column-width {};
+}
+
+window-rule {
+    match app-id="steam" title="^Steam$"
+    open-floating false
+    default-column-width { proportion 0.5; }
+}
+
+// Keeps Steam's pop-ups, chats, and notification toasts floating
+window-rule {
+    match app-id="steam" title="^Notification$"
+    match app-id="steam" title="^Steam - News"
+    match app-id="steam" title=".*Friends List.*"
+    open-floating true
+}
+
+window-rule {
+    match app-id="steam" title=r#"^notificationtoasts_\d+_desktop$"#
+    default-floating-position x=10 y=10 relative-to="bottom-right"
+}
+
+window-rule {
+    match app-id="firefox"
+    match app-id="ghostty"
+    match app-id="Godot"
+    default-column-width { proportion 0.66667; }
+}
+
+window-rule {
+    match app-id="Thunderbird"
+    match app-id="eu.betterbird.Betterbird"
+    exclude title="Write"
+    default-column-width { proportion 0.66667; }
+}
+
+window-rule {
+    match app-id="Thunderbird" title="Write"
+    default-column-width { proportion 0.4; }
+}
+
+window-rule {
+    match title="Kando Menu"
+    open-floating true
+    border { off; }
+    shadow { off; }
+}
+
+
+window-rule {
+    match app-id=r#"^gnome-control-center$"#
+    match app-id=r#"^pavucontrol$"#
+    match app-id=r#"^nm-connection-editor$"#
+    default-column-width { proportion 0.2; }
+    open-floating false
+}
+
+window-rule {
+    match app-id=r#"^blueman-manager$"#
+    match app-id=r#"^org\.gnome\.Nautilus$"#
+    match app-id=r#"^xdg-desktop-portal$"#
+    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    match app-id="zoom"
+    open-floating true
+}
+
+window-rule {
+    match app-id=r#"^org\.wezfurlong\.wezterm$"#
+    match app-id="Alacritty"
+    match app-id="zen"
+    match app-id="com.mitchellh.ghostty"
+    match app-id="kitty"
+    match app-id=r#"^org\.gnome\."#
+    draw-border-with-background false
+}
+
+window-rule {
+    match app-id="ghostty"
+}
+
+// System-wide rules
+
+window-rule {
+    geometry-corner-radius 4
+    clip-to-geometry true
+}
+
+
+// Auto-start placement rules
+
+window-rule {
+    match app-id=r#"^bluebubbles$"#
+    open-on-workspace "chat"
+}
+
+window-rule {
+    match app-id=r#"^discord$"#
+    open-on-workspace "chat"
+}
+
+window-rule {
+    match app-id=r#"^firefox$"#
+    open-on-workspace "work"
+}
+
+window-rule {
+    match app-id=r#"^com\.mitchellh\.ghostty$"# title=r#"^startup-term$"#
+    open-on-workspace "work"
+}
+
+window-rule {
+    match app-id=r#"^steam$"# title=r#"^Steam$"#
+    open-on-workspace "play"
+}
+
+window-rule {
+    match app-id=r#"^feishin$"#
+    open-on-workspace "side-1"
+}
+

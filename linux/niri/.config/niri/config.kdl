@@ -167,97 +167,6 @@ workspace "play"  { open-on-output "DP-1"; }
 workspace "side-1"  { open-on-output "DP-2"; }
 workspace "side-2"  { open-on-output "DP-2"; }
 
-// Application-specific window rules
-
-window-rule {
-    match app-id="Calculator"
-    default-column-width {};
-}
-
-window-rule {
-    match app-id="steam" title="^Steam$"
-    open-floating false
-    default-column-width { proportion 0.5; }
-}
-
-// Keeps Steam's pop-ups, chats, and notification toasts floating
-window-rule {
-    match app-id="steam" title="^Notification$"
-    match app-id="steam" title="^Steam - News"
-    match app-id="steam" title=".*Friends List.*"
-    open-floating true
-}
-
-window-rule {
-    match app-id="steam" title=r#"^notificationtoasts_\d+_desktop$"#
-    default-floating-position x=10 y=10 relative-to="bottom-right"
-}
-
-window-rule {
-    match app-id="firefox"
-    match app-id="ghostty"
-    match app-id="Godot"
-    default-column-width { proportion 0.66667; }
-}
-
-window-rule {
-    match app-id="Thunderbird"
-    match app-id="eu.betterbird.Betterbird"
-    exclude title="Write"
-    default-column-width { proportion 0.66667; }
-}
-
-window-rule {
-    match app-id="Thunderbird" title="Write"
-    default-column-width { proportion 0.4; }
-}
-
-window-rule {
-    match title="Kando Menu"
-    open-floating true
-    border { off; }
-    shadow { off; }
-}
-
-
-window-rule {
-    match app-id=r#"^gnome-control-center$"#
-    match app-id=r#"^pavucontrol$"#
-    match app-id=r#"^nm-connection-editor$"#
-    default-column-width { proportion 0.2; }
-    open-floating false
-}
-
-window-rule {
-    match app-id=r#"^blueman-manager$"#
-    match app-id=r#"^org\.gnome\.Nautilus$"#
-    match app-id=r#"^xdg-desktop-portal$"#
-    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
-    match app-id="zoom"
-    open-floating true
-}
-
-window-rule {
-    match app-id=r#"^org\.wezfurlong\.wezterm$"#
-    match app-id="Alacritty"
-    match app-id="zen"
-    match app-id="com.mitchellh.ghostty"
-    match app-id="kitty"
-    match app-id=r#"^org\.gnome\."#
-    draw-border-with-background false
-}
-
-window-rule {
-    match app-id="ghostty"
-}
-
-// System-wide rules
-
-window-rule {
-    geometry-corner-radius 4
-    clip-to-geometry true
-}
-
 layer-rule {
     match namespace="^quickshell$"
     place-within-backdrop true
@@ -271,38 +180,6 @@ layer-rule {
 layer-rule {
     match namespace="dms:blurwallpaper"
     place-within-backdrop true
-}
-
-// Auto-start placement rules
-
-window-rule {
-    match app-id=r#"^bluebubbles$"#
-    open-on-workspace "chat"
-}
-
-window-rule {
-    match app-id=r#"^discord$"#
-    open-on-workspace "chat"
-}
-
-window-rule {
-    match app-id=r#"^firefox$"#
-    open-on-workspace "work"
-}
-
-window-rule {
-    match app-id=r#"^com\.mitchellh\.ghostty$"# title=r#"^startup-term$"#
-    open-on-workspace "work"
-}
-
-window-rule {
-    match app-id=r#"^steam$"# title=r#"^Steam$"#
-    open-on-workspace "play"
-}
-
-window-rule {
-    match app-id=r#"^feishin$"#
-    open-on-workspace "side-1"
 }
 
 // Start at login
@@ -321,99 +198,12 @@ hotkey-overlay {
 }
 
 overview {
-    backdrop-color "#313244"
     workspace-shadow {
         off
     }
 }
 
-binds {
-        
-    Alt+Shift+N repeat=false hotkey-overlay-title="Notes" { 
-      spawn "kitty" "--class" "notes-window" "-o" "font_size=12" "nvim" "/home/jblyberg/Notes/Personal Notes/!! Notes.md"; 
-    }
-    // Mod+Shift+Slash { show-hotkey-overlay; }
-    Mod+Shift+Slash { spawn "dms" "ipc" "call" "keybinds" "toggle" "niri"; }
-    Alt+Q repeat=false hotkey-overlay-title="Close Current Window" { close-window; }
-    Alt+Shift+C repeat=false hotkey-overlay-title="Calculator" { spawn "gnome-calculator"; }
-    // Alt+Shift+N repeat=false hotkey-overlay-title="Notes" { spawn "ghostty" "-e" "nvim" "/home/jblyberg/Notes/Personal Notes/!! Notes.md"; }
-
-    Alt+Space repeat=false hotkey-overlay-title="Application Launcher" { spawn "dms" "ipc" "call" "spotlight" "toggle"; }
-    Ctrl+Alt+Delete repeat=false hotkey-overlay-title="Lock Screen" { spawn "dms" "ipc" "call" "lock" "lock"; }
-    Mod+Comma repeat=false hotkey-overlay-title="DMS Settings" { spawn "dms" "ipc" "call" "settings" "toggle"; }
-    Mod+M repeat=false hotkey-overlay-title="Task Manager" { spawn "dms" "ipc" "call" "processlist" "toggle"; }
-    Mod+N repeat=false hotkey-overlay-title="Notification Center" { spawn "dms" "ipc" "call" "notifications" "toggle"; }
-    Mod+O repeat=false hotkey-overlay-title="Toggle Overview" repeat=false { toggle-overview; }
-    Mod+Shift+E repeat=false hotkey-overlay-title="Quit Niri" { quit; }
-    Mod+Shift+P repeat=false hotkey-overlay-title="Power off Monitors" { power-off-monitors; }
-    Mod+T repeat=false hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
-    Mod+Shift+B repeat=false hotkey-overlay-title="Restart Bluetooth Service" { spawn-sh "sudo systemctl restart bluetooth.service";   }
-    Mod+Shift+C repeat=false hotkey-overlay-title="Toggle Center Mode" { spawn-sh "~/.config/niri/scripts/toggle_center_mode.sh"; }
-
-    Ctrl+BracketLeft repeat=false hotkey-overlay-title="Consume/Expel Window Left" { consume-or-expel-window-left; }
-    Ctrl+BracketRight repeat=false hotkey-overlay-title="Consume/Expel Window Right" { consume-or-expel-window-right; }
-    Mod+R repeat=false hotkey-overlay-title="Change Window Width Preset" { switch-preset-column-width; }
-    Mod+Shift+R repeat=false hotkey-overlay-title="Change Window Height Preset" { switch-preset-window-height; }
-    Mod+Ctrl+R repeat=false hotkey-overlay-title="Reset Window Height" { reset-window-height; }
-    Mod+F repeat=false hotkey-overlay-title="Maximize Column" { maximize-column; }
-    Mod+Shift+F repeat=false hotkey-overlay-title="Toggle Fullscreen Window" { fullscreen-window; }
-    Mod+Ctrl+F repeat=false hotkey-overlay-title="Expand Column to Available Width" { expand-column-to-available-width; }
-    Mod+C repeat=false hotkey-overlay-title="Center Column" { center-column; }
-    Mod+Ctrl+C repeat=false hotkey-overlay-title="Center Visible Columns" { center-visible-columns; }
-    Mod+Minus repeat=false hotkey-overlay-title="Decrease Column Width by 5%" { set-column-width "-5%"; }
-    Mod+Equal repeat=false hotkey-overlay-title="Increase Column Width by 5%" { set-column-width "+5%"; }
-    Mod+Shift+Minus repeat=false hotkey-overlay-title="Decrease Window Height by 5%" { set-window-height "-5%"; }
-    Mod+Shift+Equal repeat=false hotkey-overlay-title="Increase Window Height by 5%" { set-window-height "+5%"; }
-    Mod+V repeat=false hotkey-overlay-title="Toggle Floating Window" { toggle-window-floating; }
-    Mod+Shift+V repeat=false hotkey-overlay-title="Switch Focus: Floating/Tiling" { switch-focus-between-floating-and-tiling; }
-
-    Print repeat=false hotkey-overlay-title="Screenshot Selection" { screenshot show-pointer=false; }
-    Ctrl+Print repeat=false hotkey-overlay-title="Screenshot Screen" { screenshot-screen; }
-    Alt+Print repeat=false hotkey-overlay-title="Screenshot Window" { screenshot-window; }
-
-    Ctrl+Left repeat=false hotkey-overlay-title="Focus Column Left" { focus-column-left; }
-    Ctrl+Down repeat=false hotkey-overlay-title="Focus Column Right" { focus-workspace-down; }
-    Ctrl+Up repeat=false hotkey-overlay-title="Focus Workspace Up" { focus-workspace-up; }
-    Ctrl+Right repeat=false hotkey-overlay-title="Focus Workspace Down" { focus-column-right; }
-    Ctrl+Shift+Left repeat=false hotkey-overlay-title="Move Column Left" { move-column-left-or-to-monitor-left; }
-    Ctrl+Shift+Down repeat=false hotkey-overlay-title="Move Column Right" { move-column-to-workspace-down; }
-    Ctrl+Shift+Up repeat=false hotkey-overlay-title="Move Column Up" { move-column-to-workspace-up; }
-    Ctrl+Shift+Right repeat=false hotkey-overlay-title="Move Column Down" { move-column-right-or-to-monitor-right; }
-
-    Mod+Shift+Left repeat=false hotkey-overlay-title="Focus Monitor Left" { focus-monitor-left; }
-    Mod+Shift+Down repeat=false hotkey-overlay-title="Focus Monitor Right" { focus-monitor-down; }
-    Mod+Shift+Up repeat=false hotkey-overlay-title="Focus Monitor Up" { focus-monitor-up; }
-    Mod+Shift+Right repeat=false hotkey-overlay-title="Focus Monitor Down" { focus-monitor-right; }
-    Mod+Ctrl+Shift+Down repeat=false hotkey-overlay-title="Move Workspace Down" { move-workspace-down; }
-    Mod+Ctrl+Shift+Up repeat=false hotkey-overlay-title="Move Workspace Up" { move-workspace-up; }
-
-    Mod+1 repeat=false hotkey-overlay-title=null { focus-workspace 1; }
-    Mod+2 repeat=false hotkey-overlay-title=null { focus-workspace 2; }
-    Mod+3 repeat=false hotkey-overlay-title=null { focus-workspace 3; }
-    Mod+4 repeat=false hotkey-overlay-title=null { focus-workspace 4; }
-    Mod+5 repeat=false hotkey-overlay-title=null { focus-workspace 5; }
-    Mod+6 repeat=false hotkey-overlay-title=null { focus-workspace 6; }
-    Mod+7 repeat=false hotkey-overlay-title=null { focus-workspace 7; }
-    Mod+8 repeat=false hotkey-overlay-title=null { focus-workspace 8; }
-    Mod+9 repeat=false hotkey-overlay-title=null { focus-workspace 9; }
-
-    Ctrl+Shift+1 repeat=false hotkey-overlay-title=null { move-column-to-workspace 1; }
-    Ctrl+Shift+2 repeat=false hotkey-overlay-title=null { move-column-to-workspace 2; }
-    Ctrl+Shift+3 repeat=false hotkey-overlay-title=null { move-column-to-workspace 3; }
-    Ctrl+Shift+4 repeat=false hotkey-overlay-title=null { move-column-to-workspace 4; }
-    Ctrl+Shift+5 repeat=false hotkey-overlay-title=null { move-column-to-workspace 5; }
-    Ctrl+Shift+6 repeat=false hotkey-overlay-title=null { move-column-to-workspace 6; }
-    Ctrl+Shift+7 repeat=false hotkey-overlay-title=null { move-column-to-workspace 7; }
-    Ctrl+Shift+8 repeat=false hotkey-overlay-title=null { move-column-to-workspace 8; }
-    Ctrl+Shift+9 repeat=false hotkey-overlay-title=null { move-column-to-workspace 9; }
-
-    XF86AudioRaiseVolume hotkey-overlay-title=null allow-when-locked=true { spawn "dms" "ipc" "call" "audio" "increment" "3"; }
-    XF86AudioLowerVolume hotkey-overlay-title=null allow-when-locked=true { spawn "dms" "ipc" "call" "audio" "decrement" "3"; }
-    XF86AudioMute hotkey-overlay-title=null allow-when-locked=true { spawn "dms" "ipc" "call" "audio" "mute"; }
-    XF86AudioMicMute hotkey-overlay-title=null allow-when-locked=true { spawn "dms" "ipc" "call" "audio" "micmute"; }
-    XF86MonBrightnessUp hotkey-overlay-title=null allow-when-locked=true { spawn "dms" "ipc" "call" "brightness" "increment" "5" ""; }
-    XF86MonBrightnessDown hotkey-overlay-title=null allow-when-locked=true { spawn "dms" "ipc" "call" "brightness" "decrement" "5" ""; }
-}
-
 // DMS Include Configs
+include "config-binds.kdl"
+include "config-window-rules.kdl"
 include "dms/windowrules.kdl"
