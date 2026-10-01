@@ -308,17 +308,13 @@ window-rule {
 // Start at login
 
 spawn-at-startup "bash" "-c" "wl-paste --watch cliphist store &"
-// spawn-at-startup "dms" "run"
 spawn-at-startup "bluebubbles"
 spawn-at-startup "discord"
 spawn-at-startup "steam"
 spawn-at-startup "feishin"
 
-
 spawn-sh-at-startup "firefox & sleep 2 && ghostty --title=startup-term -e tmux new-session -A -s system"
 spawn-sh-at-startup "sleep 2 && niri msg action focus-workspace work"
-
-
 
 hotkey-overlay {
     skip-at-startup
@@ -331,15 +327,17 @@ overview {
     }
 }
 
-
 binds {
+        
+    Alt+Shift+N repeat=false hotkey-overlay-title="Notes" { 
+      spawn "kitty" "--class" "notes-window" "-o" "font_size=12" "nvim" "/home/jblyberg/Notes/Personal Notes/!! Notes.md"; 
+    }
     // Mod+Shift+Slash { show-hotkey-overlay; }
-
-    // ##! Core Controls
-    // ###! Launchers & Overlay
     Mod+Shift+Slash { spawn "dms" "ipc" "call" "keybinds" "toggle" "niri"; }
     Alt+Q repeat=false hotkey-overlay-title="Close Current Window" { close-window; }
     Alt+Shift+C repeat=false hotkey-overlay-title="Calculator" { spawn "gnome-calculator"; }
+    // Alt+Shift+N repeat=false hotkey-overlay-title="Notes" { spawn "ghostty" "-e" "nvim" "/home/jblyberg/Notes/Personal Notes/!! Notes.md"; }
+
     Alt+Space repeat=false hotkey-overlay-title="Application Launcher" { spawn "dms" "ipc" "call" "spotlight" "toggle"; }
     Ctrl+Alt+Delete repeat=false hotkey-overlay-title="Lock Screen" { spawn "dms" "ipc" "call" "lock" "lock"; }
     Mod+Comma repeat=false hotkey-overlay-title="DMS Settings" { spawn "dms" "ipc" "call" "settings" "toggle"; }
@@ -352,7 +350,6 @@ binds {
     Mod+Shift+B repeat=false hotkey-overlay-title="Restart Bluetooth Service" { spawn-sh "sudo systemctl restart bluetooth.service";   }
     Mod+Shift+C repeat=false hotkey-overlay-title="Toggle Center Mode" { spawn-sh "~/.config/niri/scripts/toggle_center_mode.sh"; }
 
-    // # @section Buttholes
     Ctrl+BracketLeft repeat=false hotkey-overlay-title="Consume/Expel Window Left" { consume-or-expel-window-left; }
     Ctrl+BracketRight repeat=false hotkey-overlay-title="Consume/Expel Window Right" { consume-or-expel-window-right; }
     Mod+R repeat=false hotkey-overlay-title="Change Window Width Preset" { switch-preset-column-width; }
@@ -418,4 +415,5 @@ binds {
     XF86MonBrightnessDown hotkey-overlay-title=null allow-when-locked=true { spawn "dms" "ipc" "call" "brightness" "decrement" "5" ""; }
 }
 
-
+// DMS Include Configs
+include "dms/windowrules.kdl"

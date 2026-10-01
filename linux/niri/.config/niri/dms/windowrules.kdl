@@ -6,3 +6,15 @@ window-rule {
     match app-id="^com.danklinux.dms$"
     open-floating true
 }
+
+// @id=wr_1790823714164754143 @name=notes-window
+window-rule {
+    match app-id="^notes-window$"
+    opacity 0.95
+    open-floating true
+    open-focused true
+    default-column-width { fixed 700; }
+    default-window-height { fixed 1660; }
+    geometry-corner-radius 12
+    default-floating-position x=30 y=30
+}

@@ -1,5 +1,6 @@
 {
   "currentThemeName": "blue",
+  "matugenTargetMonitor": "DP-1",
   "cornerRadius": 4,
   "clockFormat": "12h",
   "useFahrenheit": true,
