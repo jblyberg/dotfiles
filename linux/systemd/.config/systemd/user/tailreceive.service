@@ -1,0 +1,12 @@
+[Unit]
+Description=Taildrop Automatic File Receiver
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/tailscale file get --loop --verbose /home/jblyberg/Downloads/Taildrop
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
+

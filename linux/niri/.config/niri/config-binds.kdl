@@ -1,6 +1,7 @@
 
 binds {
-        
+
+    Shift+XF86AudioMute repeat=false hotkey-overlay-title="OBS: Toggle Microphone" { spawn "~/.config/niri/scripts/toggle_obs_mic.sh"; }
     Alt+Shift+N repeat=false hotkey-overlay-title="Notes" { 
       spawn "kitty" "--class" "notes-window" "-o" "font_size=12" "nvim" "/home/jblyberg/Notes/Personal Notes/!! Notes.md"; 
     }

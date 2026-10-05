@@ -57,6 +57,7 @@ output "DP-1" {
     mode "3840x2160@240.084"
     scale 1.2
     transform "normal"
+    variable-refresh-rate
     layout {
     center-focused-column "always"
     }
@@ -189,6 +190,7 @@ spawn-at-startup "bluebubbles"
 spawn-at-startup "discord"
 spawn-at-startup "steam"
 spawn-at-startup "feishin"
+spawn-at-startup "localsend" "--hidden"
 
 spawn-sh-at-startup "firefox & sleep 2 && ghostty --title=startup-term -e tmux new-session -A -s system"
 spawn-sh-at-startup "sleep 2 && niri msg action focus-workspace work"
