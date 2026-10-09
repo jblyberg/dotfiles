@@ -36,6 +36,7 @@
   "spotlightSectionViewModes": {
     "apps": "list"
   },
+  "launcherUseOverlayLayer": true,
   "monoFontFamily": "ComicCodeLigatures Nerd Font",
   "fontScale": 1.1500000000000001,
   "notificationSummaryFontSize": 18,
@@ -44,14 +45,19 @@
   "acLockTimeout": 1800,
   "acPostLockMonitorTimeout": 600,
   "dockIconSize": 31,
+  "notificationOverlayEnabled": true,
   "lockScreenShowProfileImage": false,
   "lockScreenShowPasswordField": false,
   "maxFprintTries": 3,
+  "lockScreenNotificationMode": 2,
   "lockScreenVideoPath": "/home/jblyberg/Videos/Backgrounds/the-sunset-on-retro-tv.3840x2160.mov",
   "lockScreenWallpaperPath": "/home/jblyberg/Pictures/Wallpaper/StreamofLight_2560x1600.png",
   "lockScreenFontFamily": "Nunito ExtraLight",
   "notificationTimeoutLow": 10000,
   "notificationTimeoutNormal": 15000,
+  "notificationIgnoreAppTimeout": true,
+  "notificationShowTimeoutBar": true,
+  "notificationAnimationSpeed": 2,
   "osdPowerProfileEnabled": true,
   "powerMenuActions": [
     "reboot",
@@ -66,7 +72,16 @@
         "name": "DP-1",
         "model": "LG ULTRAGEAR+"
       }
+    ],
+    "notifications": [
+      {
+        "name": "DP-1",
+        "model": "LG ULTRAGEAR+"
+      }
     ]
+  },
+  "showOnLastDisplay": {
+    "notifications": false
   },
   "barConfigs": [
     {
