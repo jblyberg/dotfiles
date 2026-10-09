@@ -1,0 +1,11 @@
+# LocalSend CLI configuration. Command-line flags and environment variables
+# (LOCALSEND_ALIAS, LOCALSEND_PORT, LOCALSEND_DESTINATION) take precedence.
+
+# Device name shown to other devices (default: the hostname).
+#alias = "My Device"
+
+# Port of the HTTP server.
+#port = 53317
+
+# Directory where received files are saved (default: the system Downloads folder).
+#destination = "~/Downloads"

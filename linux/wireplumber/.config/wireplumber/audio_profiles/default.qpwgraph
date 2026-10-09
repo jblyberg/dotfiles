@@ -1,0 +1,86 @@
+<!DOCTYPE patchbay>
+<patchbay name="default" version="1.0.4">
+ <items>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="feishin" port="feishin:output_FL"/>
+   <input node="Starship/Matisse HD Audio Controller Analog Stereo" port="ALC1220 Analog:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="feishin" port="feishin:output_FR"/>
+   <input node="Dedicated Steam Audio Track" port="Dedicated Steam Audio Track:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="feishin" port="feishin:output_FL"/>
+   <input node="CORSAIR VIRTUOSO XT Wireless Gaming Receiver Analog Stereo" port="CORSAIR VIRTUOSO XT Wireless Ga:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Dedicated Steam Audio Track" port="Dedicated Steam Audio Track:output_FR"/>
+   <input node="CORSAIR VIRTUOSO XT USB Gaming Headset Analog Stereo" port="CORSAIR VIRTUOSO XT USB Gaming:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="feishin" port="feishin:output_FL"/>
+   <input node="Dedicated Steam Audio Track" port="Dedicated Steam Audio Track:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Games Audio Track" port="Games Audio Track:output_FR"/>
+   <input node="CORSAIR VIRTUOSO XT Wireless Gaming Receiver Analog Stereo" port="CORSAIR VIRTUOSO XT Wireless Ga:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Dedicated Steam Audio Track" port="Dedicated Steam Audio Track:output_FL"/>
+   <input node="CORSAIR VIRTUOSO XT Wireless Gaming Receiver Analog Stereo" port="CORSAIR VIRTUOSO XT Wireless Ga:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Games Audio Track" port="Games Audio Track:output_FL"/>
+   <input node="CORSAIR VIRTUOSO XT Wireless Gaming Receiver Analog Stereo" port="CORSAIR VIRTUOSO XT Wireless Ga:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Games Audio Track" port="Games Audio Track:output_FR"/>
+   <input node="Starship/Matisse HD Audio Controller Analog Stereo" port="ALC1220 Analog:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Games Audio Track" port="Games Audio Track:monitor_FL"/>
+   <input node="Starship/Matisse HD Audio Controller Analog Stereo" port="ALC1220 Analog:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Dedicated Steam Audio Track" port="Dedicated Steam Audio Track:output_FL"/>
+   <input node="Starship/Matisse HD Audio Controller Analog Stereo" port="ALC1220 Analog:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Games Audio Track" port="Games Audio Track:output_FL"/>
+   <input node="Starship/Matisse HD Audio Controller Analog Stereo" port="ALC1220 Analog:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Games Audio Track" port="Games Audio Track:monitor_FR"/>
+   <input node="Starship/Matisse HD Audio Controller Analog Stereo" port="ALC1220 Analog:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Dedicated Steam Audio Track" port="Dedicated Steam Audio Track:output_FR"/>
+   <input node="Starship/Matisse HD Audio Controller Analog Stereo" port="ALC1220 Analog:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Dedicated Steam Audio Track" port="Dedicated Steam Audio Track:output_FR"/>
+   <input node="CORSAIR VIRTUOSO XT Wireless Gaming Receiver Analog Stereo" port="CORSAIR VIRTUOSO XT Wireless Ga:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Journey.exe" port="Journey.exe:output_FR"/>
+   <input node="Dedicated Steam Audio Track" port="Dedicated Steam Audio Track:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Dedicated Steam Audio Track" port="Dedicated Steam Audio Track:output_FL"/>
+   <input node="CORSAIR VIRTUOSO XT USB Gaming Headset Analog Stereo" port="CORSAIR VIRTUOSO XT USB Gaming:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="feishin" port="feishin:output_FR"/>
+   <input node="CORSAIR VIRTUOSO XT Wireless Gaming Receiver Analog Stereo" port="CORSAIR VIRTUOSO XT Wireless Ga:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="feishin" port="feishin:output_FR"/>
+   <input node="Starship/Matisse HD Audio Controller Analog Stereo" port="ALC1220 Analog:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Journey.exe" port="Journey.exe:output_FL"/>
+   <input node="Dedicated Steam Audio Track" port="Dedicated Steam Audio Track:playback_FL"/>
+  </item>
+ </items>
+</patchbay>
+
