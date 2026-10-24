@@ -12,6 +12,8 @@ prepend_keymap = [
   { on = "<S-p>", run = "plugin clippy-paste", desc = "Paste clipboard content to file and hover after created", for = "macos" },
   { on = "k", run = "plugin parent-arrow -1" },
   { on = "j", run = "plugin parent-arrow 1" },
+  { on = [ "g", "n" ], run = "cd sftp://nas//mnt/pool-main-01", desc = "Go to NAS" },
+  { on = [ "g", "r" ], run = "shell 'ya emit cd \"$(git rev-parse --show-toplevel 2>/dev/null || echo .)\"' --confirm", desc = "Go to the root of current Git repository." },
   { on = [
     "f",
     "r",
@@ -20,9 +22,5 @@ prepend_keymap = [
     "f",
     "a",
   ], run = "plugin fr rga", desc = "Search file by content (rga)" },
-  { on = [
-    "g",
-    "r",
-  ], run = 'shell -- ya emit cd "$(git rev-parse --show-toplevel)"', desc = "Go to the root of current Git repository." },
 
 ]

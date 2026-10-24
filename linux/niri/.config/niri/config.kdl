@@ -37,8 +37,9 @@ input {
     }
 
     touchpad {
-      tap
-      natural-scroll
+      // tap
+      // natural-scroll
+      dwt
     }
 
     mouse {
@@ -192,8 +193,9 @@ spawn-at-startup "steam"
 spawn-at-startup "feishin"
 spawn-at-startup "localsend" "--hidden"
 
-spawn-sh-at-startup "firefox & sleep 2 && ghostty --title=startup-term -e tmux new-session -A -s system"
+spawn-sh-at-startup "zen-browser & sleep 2 && ghostty --title=startup-term -e tmux new-session -A -s system"
 spawn-sh-at-startup "sleep 2 && niri msg action focus-workspace work"
+spawn-sh-at-startup "gotify-desktop"
 
 hotkey-overlay {
     skip-at-startup

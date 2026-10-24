@@ -25,24 +25,19 @@ require("fr"):setup {
     "--follow",
     "--hidden",
     "--no-ignore",
-    "--glob",
-    "'!.git'",
-    "--glob",
-    "!'.venv'",
-    "--glob",
-    "'!node_modules'",
-    "--glob",
-    "'!.history'",
-    "--glob",
-    "'!.Rproj.user'",
-    "--glob",
-    "'!.ipynb_checkpoints'",
+    "--glob", "'!.git'",
+    "--glob", "!'.venv'",
+    "--glob", "'!node_modules'",
+    "--glob", "'!.history'",
+    "--glob", "'!.Rproj.user'",
+    "--glob", "'!.ipynb_checkpoints'",
   },
+  -- Split correctly into separate string entries for argument arrays
   rga_preview = {
-    "--colors 'line:fg:green'"
-    .. " --colors 'match:fg:blue'"
-    .. " --colors 'match:bg:black'"
-    .. " --colors 'match:style:nobold'",
+    "--colors", "line:fg:green",
+    "--colors", "match:fg:blue",
+    "--colors", "match:fg:black",
+    "--colors", "match:style:nobold",
   },
 }
 

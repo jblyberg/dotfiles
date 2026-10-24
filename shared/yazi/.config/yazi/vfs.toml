@@ -1,0 +1,5 @@
+[sftp.nas]
+host = "nas.home.blyberg.net"
+user = "jblyberg"
+key_file = "~/.ssh/id_rsa"
+port = 22

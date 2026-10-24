@@ -1,8 +1,9 @@
 MenuBar=Disabled
 
 [CompactMode]
+IconSize=48
 UseSystemFont=false
-ViewFont=Monospace,11,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+ViewFont=Noto Sans Mono,15,-1,5,400,0,0,0,0,0,0,0,0,0,0,1,,0,0
 
 [ContextMenu]
 ShowCopyToOtherSplitView=false
@@ -10,20 +11,22 @@ ShowMoveToOtherSplitView=false
 ShowOpenTerminal=false
 
 [DetailsMode]
-IconSize=22
-PreviewSize=16
+IconSize=32
+PreviewSize=22
 UseSystemFont=false
-ViewFont=ComicCodeLigatures Nerd Font,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+ViewFont=Noto Sans,16,-1,5,400,0,0,0,0,0,0,0,0,0,0,1,,0,0
 
 [General]
+OpenExternallyCalledFolderInNewTab=true
+ShowFullPathInTitlebar=true
 Version=202
 ViewPropsTimestamp=2025,11,4,12,26,44.348
 
 [IconsMode]
-IconSize=22
-PreviewSize=22
+IconSize=48
+PreviewSize=48
 UseSystemFont=false
-ViewFont=Monospace,11,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+ViewFont=Noto Sans Mono,16,-1,5,400,0,0,0,0,0,0,0,0,0,0,1,,0,0
 
 [InformationPanel]
 previewsShown=false
@@ -37,4 +40,4 @@ Places Icons Static Size=22
 MenuBar=Disabled
 
 [PreviewSettings]
-Plugins=appimagethumbnail,audiothumbnail,glycin-heif,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,heif,imagethumbnail,glycin-image-rs,jpegthumbnail,glycin-jxl,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,opendocumentthumbnail,glycin-svg,svgthumbnail,gsf-office
+Plugins=glycin-image-rs,appimagethumbnail,audiothumbnail,glycin-heif,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,imagethumbnail,jpegthumbnail,glycin-jxl,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,gsf-office,opendocumentthumbnail,glycin-svg,svgthumbnail

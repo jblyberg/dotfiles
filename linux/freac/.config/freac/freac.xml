@@ -4,16 +4,16 @@
   <section name="Settings">
    <value name="LastOutputDirectory1">/home/jblyberg/Music/audiobooks/</value>
    <value name="Language">internal</value>
-   <value name="StartCount">3</value>
+   <value name="StartCount">6</value>
    <value name="WindowPosX">0</value>
    <value name="WindowPosY">0</value>
    <value name="WindowSizeX">694</value>
    <value name="WindowSizeY">781</value>
    <value name="Encoder">fdkaac-enc</value>
    <value name="WindowMaximized">0</value>
-   <value name="ShowTips">1</value>
-   <value name="NextTip">3</value>
-   <value name="EncodeToSingleFile">1</value>
+   <value name="ShowTips">0</value>
+   <value name="NextTip">5</value>
+   <value name="EncodeToSingleFile">0</value>
    <value name="EncodeOnTheFly">1</value>
    <value name="KeepWaveFiles">0</value>
    <value name="RemoveTracks">1</value>
@@ -40,7 +40,7 @@
    <value name="LastOutputDirectory4"/>
    <value name="LastOutputDirectory3"/>
    <value name="LastOutputDirectory2">/home/jblyberg/Music/</value>
-   <value name="LastSelectedOpenDir">/home/jblyberg/Downloads/John Scalzi - The Kaiju Preservation Society</value>
+   <value name="LastSelectedOpenDir">/home/jblyberg/Downloads/Counting by 7s</value>
    <value name="LastSelectedSaveDir">/home/jblyberg/Music/audiobooks/John Scalzi - The Kaiju Preservation Society</value>
   </section>
   <section name="Tags">
@@ -93,7 +93,7 @@
    <value name="ActiveDrive">0</value>
   </section>
   <section name="Donate">
-   <value name="StartCount">3</value>
+   <value name="StartCount">6</value>
   </section>
   <section name="Joblist">
    <value name="FieldSizes">120,300,50,80,100</value>
