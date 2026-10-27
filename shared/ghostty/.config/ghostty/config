@@ -27,7 +27,7 @@
 # ==========================
 # # The config file consists of simple key-value pairs,
 # # separated by equals signs.
-font-family = ComicCodeLigatures Nerd Font
+font-family = "ComicCodeLigatures Nerd Font"
 
 cursor-style = block
 cursor-style-blink = false

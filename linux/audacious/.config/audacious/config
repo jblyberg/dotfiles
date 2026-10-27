@@ -1,4 +1,24 @@
 
+[audacious]
+use_xwayland=TRUE
+
+[audqt]
+icon_theme=audacious-flat-dark
+theme=dark
+
+[gtkui]
+column_widths=10,275,175,10,175,175,10,100,40,10,275,275,275,10,275,175,75,10,50,50
+player_height=1746
+player_width=1588
+player_x=0
+player_y=0
+
+[gtkui-layout]
+item_count=0
+
 [qtui]
-player_height=1743
-player_width=1585
+player_height=1746
+player_width=1588
+
+[skins]
+skin=/usr/share/audacious/Skins/Default
