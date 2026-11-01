@@ -65,6 +65,7 @@ window-rule {
     match app-id=r#"^org\.gnome\.Nautilus$"#
     match app-id=r#"^xdg-desktop-portal$"#
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    match app-id=r#"^zen$"# title="^Bitwarden$"
     match app-id="zoom"
     open-floating true
 }
@@ -105,10 +106,7 @@ window-rule {
 
 window-rule {
     match app-id=r#"^firefox$"#
-    open-on-workspace "work"
-}
-
-window-rule {
+    match app-id=r#"^zen$"#
     match app-id=r#"^com\.mitchellh\.ghostty$"# title=r#"^startup-term$"#
     open-on-workspace "work"
 }

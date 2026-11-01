@@ -4,7 +4,7 @@
   <section name="Settings">
    <value name="LastOutputDirectory1">/home/jblyberg/Downloads/Audiobooks/done/</value>
    <value name="Language">internal</value>
-   <value name="StartCount">7</value>
+   <value name="StartCount">10</value>
    <value name="WindowPosX">0</value>
    <value name="WindowPosY">0</value>
    <value name="WindowSizeX">694</value>
@@ -34,7 +34,8 @@
    <value name="ActiveDrive">0</value>
   </section>
   <section name="Donate">
-   <value name="StartCount">7</value>
+   <value name="StartCount">10</value>
+   <value name="ShowAgain">0</value>
   </section>
   <section name="Playlist">
    <value name="CreatePlaylist">0</value>
